@@ -1,5 +1,33 @@
 body * {
-  outline: 0px solid #007FFF;
+  outline: 1px solid lightgrey;
+}
+div[class="container main-nav"] > ul {
+  display: flex;
+  list-style: none;
+}
+div[class="container main-nav"] {
+  border: 3px solid red;
 }
 
-
+div[class="container sub-menu"] {
+  border: 3px dashed green;  
+}
+div[class="container blocks"]  {
+  border: 3px solid red;
+}
+div[class="container blocks"] > span {
+  display: list-item;
+  list-style: none;
+}
+p > div[class="container blocks"] {
+  color: green;
+}
+div[class="container"] {
+  border: 3px solid red;
+}
+div[class="container inline"] > p {
+  display: inline-block;
+}
+div[class="container inline"] {
+  border: 3px solid green;
+}

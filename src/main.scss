@@ -10,7 +10,8 @@ div[class="container main-nav"] {
 }
 
 div[class="container sub-menu"] {
-  border: 3px dashed green;  
+  border: 3px green; 
+  border-style: dotted; 
 }
 div[class="container blocks"]  {
   border: 3px solid red;
@@ -19,7 +20,7 @@ div[class="container blocks"] > span {
   display: list-item;
   list-style: none;
 }
-p > div[class="container blocks"] {
+div[class="container blocks"] > p {
   color: green;
 }
 div[class="container"] {
@@ -27,7 +28,9 @@ div[class="container"] {
 }
 div[class="container inline"] > p {
   display: inline-block;
+  color: blue;
 }
 div[class="container inline"] {
   border: 3px solid green;
+  border-style: double;
 }

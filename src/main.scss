@@ -1,36 +1,51 @@
 body * {
-  outline: 1px solid lightgrey;
+  outline: 0px solid lightgrey;
 }
-div[class="container main-nav"] > ul {
-  display: flex;
-  list-style: none;
+.rectangle1 {
+ margin: auto;
+ margin-top: 34px;
+ width: 41%;
+ height: 60px;
+ background: #358765;
 }
-div[class="container main-nav"] {
-  border: 3px solid red;
+.inline1 {
+ display: flex;
+ justify-content: center;
+ margin-top: 34px;
 }
-
-div[class="container sub-menu"] {
-  border: 3px green; 
-  border-style: dotted; 
+.box {
+ margin-inline: 68px;
+ width: 25%;
+ height: 153px;
+ background: #588924;
 }
-div[class="container blocks"]  {
-  border: 3px solid red;
+.flag {
+ display: flex;
+ justify-content: center;
+ margin-top: 34px;
 }
-div[class="container blocks"] > span {
-  display: list-item;
-  list-style: none;
+.red {
+ margin: 1px;
+ width: 29%;
+ height: 217px;
+ background: #EE2525;
 }
-div[class="container blocks"] > p {
-  color: green;
+.blue {
+ margin: 1px;
+ width: 29%;
+ height: 217px;
+ background: #2D4BB5;
 }
-div[class="container"] {
-  border: 3px solid red;
+.yellow {
+ margin: 1px;
+ width: 29%;
+ height: 217px;
+ background: #EDF111;
 }
-div[class="container inline"] > p {
-  display: inline-block;
-  color: blue;
-}
-div[class="container inline"] {
-  border: 3px solid green;
-  border-style: double;
+.rectangle2 {
+ margin: auto;
+ margin-top: 34px;
+ width: 88%;
+ height: 55px;
+ background: #C4C4C4;
 }

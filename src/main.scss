@@ -1,51 +1,69 @@
-body * {
-  outline: 0px solid lightgrey;
-}
-.rectangle1 {
- margin: auto;
- margin-top: 34px;
- width: 41%;
- height: 60px;
- background: #358765;
-}
-.inline1 {
- display: flex;
- justify-content: center;
- margin-top: 34px;
-}
-.box {
- margin-inline: 68px;
- width: 25%;
- height: 153px;
- background: #588924;
-}
-.flag {
- display: flex;
- justify-content: center;
- margin-top: 34px;
-}
-.red {
- margin: 1px;
- width: 29%;
- height: 217px;
- background: #EE2525;
-}
-.blue {
- margin: 1px;
- width: 29%;
- height: 217px;
- background: #2D4BB5;
-}
-.yellow {
- margin: 1px;
- width: 29%;
- height: 217px;
- background: #EDF111;
-}
-.rectangle2 {
- margin: auto;
- margin-top: 34px;
- width: 88%;
- height: 55px;
- background: #C4C4C4;
-}
+body
+ header{
+  margin-top: 20px;
+ }
+ .menu *{
+  margin: 0;
+  padding: 0;
+ }
+ .menu ul,
+ .menu ol{
+  list-style: none;
+ }
+ .menu > ul{
+  display: flex;
+  justify-content: left;
+ }
+ .menu > ul li{
+  position: relative;
+  border-right: 1px solid white;
+ }
+ .menu > ul li:first-child{
+  border-left: 1px solid white;
+ }
+ .menu > ul li:last-child{
+  border-right: 1px solid white;
+ }
+ .menu > ul li > a i.fa{
+  position:absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 20px;
+ }
+ .menu > ul li a{
+  display: block;
+  background: blue;
+  color: white;
+  padding: 15px 50px 15px 50px;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform:uppercase;
+  transition: all 0.3s ease;
+ }
+ .menu li a:hover{
+  background: -webkit-linear-gradient(top,  rgb(255, 255, 255) 0%,rgb(79, 79, 190) 2%,rgb(84, 84, 223) 98%,rgb(255, 255, 255) 100%);
+  color: #ffffff;
+  box-shadow: 1px 5px 10px -5px black;
+  transition: all 0.3s ease;
+ }
+ .menu li ul{
+  position: absolute;
+  min-width: 158px;
+  display: none;
+ }
+ .menu li > ul li{
+  border: 1px solid #c7c8ca;
+ }
+ .menu li > ul li a{
+  padding: 10px;
+  text-transform: none;
+  background: lightblue;
+ }
+ .menu li > ul li ul{
+  position: absolute;
+  right: -150px;
+  top: 0;
+ }
+ .menu li:hover > ul{
+  display: block;
+ }

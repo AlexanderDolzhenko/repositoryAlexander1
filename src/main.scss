@@ -1,20 +1,19 @@
-body
- .content {
- display: block;
- width: auto;
- max-height: 2252px;
- border: 1px solid grey;
- }
-.page-header {
- display: block;
- width: auto;
- height:fit-content;
+@import "./partials/logo/logo.scss"
+body * {
+    outline: 1pxsolid   lightgrey;
 }
-.slider {
-    display:block;
-    width: auto;
-    height: auto;
-    border-bottom: 2px #fb9b05;
-    border-bottom: 2px #fb9b05;
-    
+ 
+.container {
+    max-width: 1220px;
+    margin: 0 auto;
+
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: ;
+}
+.slider,
+.footer {
+    background-color: red;
 }

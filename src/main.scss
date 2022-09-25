@@ -1,19 +1,29 @@
-@import "./partials/logo/logo.scss"
-body * {
-    outline: 1pxsolid   lightgrey;
-}
- 
-.container {
-    max-width: 1220px;
-    margin: 0 auto;
+@import "./sprites.scss";
+@import "./partials/logo/logo.scss";
+@import "./partials/menu-item/menu-item.scss";
 
+body
+
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
 }
+
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
 }
+
+.main-menu {
+  display: flex;
+  column-gap: 10px;
+  flex-direction: row-reverse;
+}
+
 .slider,
 .footer {
-    background-color: red;
+  background-color: tomato;
 }

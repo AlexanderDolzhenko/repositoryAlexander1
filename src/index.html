@@ -10,31 +10,32 @@
 </head>
 <body>
   <header>
-
-  
-<div class="header">
-<div class="container header">
-<div class="logo">logo</div>
-</div>
-</div>
-</header>
-<div class="slider">
-  <div class="container">
-    Slider
-
+  <div class="container header">
+    @@include("./partials/logo/_logo.html", {"firstLine": "orange", "secondLine": "rabbit"})
+  <nav class="main-menu">
+    @@include("./partials/menu-item/_menu-item.html", {"menuItem": "home"})
+    @@include("./partials/menu-item/_menu-item.html", {"menuItem": "about"})
+    @@include("./partials/menu-item/_menu-item.html", {"menuItem": "work"})
+    @@include("./partials/menu-item/_menu-item.html", {"menuItem": "blog"})
+    @@include("./partials/menu-item/_menu-item.html", {"menuItem": "contact"})
+  </nav>
   </div>
-</div>
-<div class="main-content">
+ </header>
+ <main>
+  <div class="slider">
   <div class="container">
-    main content
+Slider
   </div>
-</div>
-
-<div class="footer">
+  </div>
+  <div class="container">
+  @@include("./partials/logo/_logo.html", {"firstLine": "Smth", "secondLine": "next"})
+  </div>
+  </main>
+  <footer>
   <div class="container">
 footer
   </div>
-</div>
-</body>
+  </footer>
+  </body>
 </html>
 </html>

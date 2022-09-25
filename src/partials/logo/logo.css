@@ -3,17 +3,20 @@
     column-gap: 40px;
     align-items: center;
 }
+
 .description {
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 5px;
 }
+
 .first-line {
-color:orange;
+    color: orange;
 }
+
 .second-line {
-    color: grey;
+    color: gray;
     text-transform: uppercase;
     font-size: 25px;
 }

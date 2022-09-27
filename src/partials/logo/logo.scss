@@ -3,18 +3,15 @@
     column-gap: 40px;
     align-items: center;
 }
-
 .description {
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 5px;
 }
-
 .first-line {
     color: orange;
 }
-
 .second-line {
     color: gray;
     text-transform: uppercase;

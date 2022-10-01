@@ -59,6 +59,21 @@ body * {
   font-weight: bold;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.container-lorem {
+  display: flex;
+  max-height: 25%;
+  }
+.paragraph {
+  max-height: 140px;
+  font-weight: bold;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.read {
+  color:#fb9b05;
+  font-style: italic;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  
+}
 .footer {
   display: flex;
   background-color: #fb9b05;

@@ -70,18 +70,17 @@ body * {
   justify-content: space-between;
   font-weight: bold;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
+  padding-right: 16px;
+  padding-left: 16px;
 }
 p {
   max-height: 112px;
   overflow: hidden;
-  margin-bottom: 0px;
-  margin-right: 16px;
-  margin-left: 16px;
+  margin-bottom: 0px;  
 }
 a {
  color:$main-color;
- text-align: right;
- margin-right: 22px;
+ text-align: right; 
 }
 .Meet {
   display:flex;
@@ -94,7 +93,6 @@ a {
 }
 .rabteam {
   max-width: 1220px;
-  margin: 0 auto;  
   display: flex;
   justify-content: space-around;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -107,7 +105,7 @@ a {
 }
 .animalname {
   font-size: 22px;
-  margin: 10px 0 20px 0;
+  padding: 10px 0 20px 0;
   text-align: center;
  }
  .colortext {
@@ -118,9 +116,11 @@ a {
   padding: 0;
   border: 5px solid $main-color;
   border-radius: 50%;
-}
+  width: 350px;
+  height: 350px;
+  }
 .description {
-  max-width: 85%;
+ padding: 0px 46px 0px 46px;
 }
 .inputs {
   display: flex;
@@ -168,12 +168,12 @@ button:hover {
   background-color: #4c4f4f;
 }
 .footer {
-  display: flex;
+  display: block;
   background-color: $main-color;
   color: white;
   text-transform: uppercase;
   font-size: 25px;
-  align-content: center;
+  text-align: center;
   padding: 20px 0 25px;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }

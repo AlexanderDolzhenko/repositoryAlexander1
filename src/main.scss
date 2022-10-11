@@ -60,9 +60,34 @@ body * {
   font-weight: bold;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.lorem {
-  display: flex;
+.bajan {
+  display:flex;  
+  &__content {
+    overflow: hidden;
+    max-height: 200px;
+    transition: max-height ease 1s;
   }
+  &__togglers {
+    display: inline-block;
+    text-align: right;
+  }
+  &__input--open:checked ~ &__content {
+    max-height: 100vh;
+    transition: max-height ease 1s;
+  }
+  &__input--open, &__input--close {
+    display: none;
+  }
+  &__input--open:checked ~ &__toggler--open {
+    display: none;    
+  }
+  &__input--close:checked ~ &__toggler--close {
+    display: none;    
+  }
+}
+input:checked ~ label {
+color: $main-color;
+}
 .columns {
   width: 25%;
   display: flex;
@@ -72,15 +97,6 @@ body * {
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   padding-right: 16px;
   padding-left: 16px;
-}
-p {
-  max-height: 112px;
-  overflow: hidden;
-  margin-bottom: 0px;  
-}
-a {
- color:$main-color;
- text-align: right; 
 }
 .Meet {
   display:flex;
@@ -136,7 +152,7 @@ a {
   margin: 40px 0;
   padding: 0px 10px 0px 10px;
 }
-label {
+.form1__input {
   display: flex;
   align-items: center;
   color: $main-color;

@@ -5,3 +5,27 @@
 body * {
   outline: 1px solid  lightgreen;
 }
+width: 30px;
+height: 30px;
+border-radius: 50%;
+align-items: center;
+position: absolute;
+right: -15px;
+top: -15px;
+box-shadow: 0 0 2px 2px rgb(153,146,146)
+}
+
+&__input {
+  display: none;
+}
+&__input.close:checked ~ &__overlay {
+  display:none;
+}
+}
+label {
+  cursor: pointer;
+}
+.no-scroll {
+  max-height: 100vh;
+  overflow: hidden;
+}

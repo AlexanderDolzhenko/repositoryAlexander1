@@ -68,8 +68,7 @@ body * {
     transition: max-height ease 1s;
   }
   &__togglers {
-    display: inline-block;
-    text-align: right;
+    display: inline-block;    
   }
   &__input--open:checked ~ &__content {
     max-height: 100vh;
@@ -83,6 +82,12 @@ body * {
   }
   &__input--close:checked ~ &__toggler--close {
     display: none;    
+  }
+  &__toggler--open, &__toggler--close {
+    text-align: right;
+    display:flex;
+    justify-content: flex-end;
+    margin-bottom: auto;
   }
 }
 input:checked ~ label {

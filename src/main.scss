@@ -1,15 +1,9 @@
-@import "./partials/footer/footer.scss";
+@import "./partials/header/header.scss";
+@import "./variables.scss";
 body * {
   outline: 1px solid  lightgreen;
 }
 .container {
   max-width: 1200px;
   margin: 0 auto;
-}
-.footermain {
-  display: block;
-  color: black;
-  font-size: 25px;
-  text-align: left;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }

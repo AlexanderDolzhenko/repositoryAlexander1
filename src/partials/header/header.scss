@@ -1,14 +1,17 @@
 @import "../../color";
-
 .header {
     display: flex;
     align-items: baseline;
    
     &.primary {
-    color: var(--highlight-color);
-    font-size: 22px;
+    color: var(--highlight-color-a);
+    font-size: var(--large-a);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    &::after {
+    border-color: var(--color-a);
     }
+    }
+
     &::after {
     content: "";
     border-bottom: 2px solid black;
@@ -17,4 +20,20 @@
     margin-left: 10px;
     
     }
+}
+.secondary {
+    color: var(--highlight-color-b);
+    font-size: var(--large-a);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    &::after {
+    border-color: var(--color-b);
+    }
+    
+    &::after {
+    content: "";
+    border-bottom: 2px solid black;
+    display: block;
+    flex: 1 0 auto;
+    margin-left: 10px;
+}
 }

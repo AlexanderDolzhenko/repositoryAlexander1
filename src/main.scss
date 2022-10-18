@@ -1,5 +1,7 @@
-@import "./partials/header/header.scss";
 @import "./variables.scss";
+@import "./partials/header/header.scss";
+@import "./partials/texticon/texticon.scss";
+@import "./partials/listlink/listlink.scss";
 body * {
   outline: 1px solid  lightgreen;
 }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./main.scss">
     <title>First project</title>
+    <script src="https://kit.fontawesome.com/cdb428d9a8.js" crossorigin="anonymous"></script>
     <script src="./js/main.js" defer></script>
   </head>
 </head>
@@ -12,6 +13,15 @@
   <main> 
 <div class="container">
   @@include('./partials/header/header.html', {"type": "primary", "text": "Last News"})
+  @@include('./partials/header/header.html', {"type": "secondary", "text": "Main News"})
+  @@include('./partials/texticon/texticon.html', {
+    "text": "Raúl bids goodbye in style",
+    "icons": "camera video" 
+  })
+  @@include('./partials/listlink/listlink.html', {
+    "text": "Raúl bids goodbye in style",
+    "icons": "camera video" 
+  })
 </div>
 </main>
 <div class="container">

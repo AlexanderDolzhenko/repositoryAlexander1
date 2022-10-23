@@ -6,15 +6,17 @@ body * {
   outline: 1px solid  lightgreen;
 }
 .container {
-  max-width: 1200px;
+  max-width: 978px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 868px 332px;  
+  grid-template-columns: 654px 324px;  
+}
+.box-A {
+  max-width: 868px;
 }
 .mnews {
   margin: 0px 18px 0px 18px;
 }
-
 .manews {  
   display: flex;  
   column-gap: 20px;
@@ -24,22 +26,18 @@ body * {
 .mainnews1 {
   width: 25%;
   display: flex;
-  flex-direction: column;
- 
+  flex-direction: column; 
 }
 .photomain {
   width: 100%;
-  padding: 0px;   
-   
+  padding: 0px;     
  }
  img {  
-  width: 100%;
-  
+  width: 100%;  
   }
 .descriptionmain {
   max-width: 100%;
-  text-align: left; 
-   
+  text-align: left;    
 }
 .descriptionmainIcon {
  max-width: 100%;

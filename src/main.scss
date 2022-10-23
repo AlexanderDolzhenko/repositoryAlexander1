@@ -8,4 +8,35 @@ body * {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 868px 332px;  
+}
+.box-A {
+  width: 100%;
+  display: inline-block;
+  justify-content:space-between;
+  
+}
+.mainnews1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 25%;
+}
+.photo {
+  max-width: 100%;
+  padding: 0px;   
+ }
+ img {  
+  max-width: 100%;
+  }
+.description {
+  max-width: 100%;
+ 
+}
+.box-B {
+  width: 100%;
+  display: inline-block;
+  justify-content:space-between;
 }

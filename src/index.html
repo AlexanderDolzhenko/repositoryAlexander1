@@ -13,13 +13,11 @@
 <main> 
 <div class="container">
 <div class="box-A">
-
-
 <div class="menuslider">
 CCc
 </div>
 <div class="mnews">
-@@include('./partials/header/header.html', {"type": "secondary", "text": "Main News"})
+@@include('./partials/header/_header.html', {"type": "secondary", "text": "Main News"})
 </div>
 <div class="manews">
 <div class="mainnews1"> 
@@ -51,28 +49,62 @@ CR7 also, but not so much
 <img src="/img/mainnews/ribery.png" alt="ribery">
 </div>
 <div class="descriptionmainIcon">
-@@include('./partials/texticon/texticon.html', {
+@@include('./partials/texticon/_texticon.html', {
 "text": "Ribery got vase!",
 "icons": "camera" 
 })
 </div>
 </div>
 </div>
-</div>
 <div class="gridA2">
 <div class="lastnews2">
   <div class="lastnews">
- @@include('./partials/header/header.html', {"type": "primary", "text": "Last News"})
- <li> 
-  @@include('./partials/texticon/texticon.html', {
+ @@include('./partials/header/_header.html', {"type": "primary", "text": "Last News"})</div>
+ <ul> 
+ <li>Real Madrid players to gaffer: up and at 'em!</li>
+ <li>Swedes indebted to talismanic Ibrahimovic<a href="marca.com" class="marca">marca.com</a></li> 
+ <li>2016 European Championship to go ahead in France</li>
+ <li>
+  @@include('./partials/listlink/_listlink.html', {
+    "link": "#"
+  }) </li>
+  <li>Walters double secures Euro 2016 spot for Ireland</li>
+ <li>"They intended to set off an explosive inside the stadium" - eyewitness</li>
+  <li>@@include('./partials/texticon/_texticon.html', {
   "text": "Raúl bids goodbye in style",
-  "icons": "camera video"  })</li>  
-  <li>
-    @@include('./partials/listlink/listlink.html', {
-      "link": "#"
-    }) </li>
-<div class="threephoto">
+  "icons": "camera video"  
+}) </li>
+<li>Five reasons Belgium vs. Spain was called off</li> 
+<li>Niggles won't keep Benzema out of 'Clásico'</li>
+<li>Abdeslam suspected to have been near King Baudouin Stadium</li>  
+</ul>
+<div class="newsfeed1">
+  <div class="lastnews">
+    @@include('./partials/header/_header.html', {"type": "primary", "text": "Newsfeed"})</div>
+<div class="zlatannews"> 
+<div class="zlatanphoto"> 
+<img src="/img/mainnews/ribery.png" alt="ribery">
+</div>
+<div class="zlatdesc">
+@@include('./partials/texticon/_texticon.html', {
+      "text": "Zlatan Ibrahimovic on target as Sweden qualify with draw in Denmark",
+      "icons": "camera" 
+})
+</div>
+</div>
+<ul>
+<li>Alvaro Morata insists Juventus are "still hungry" and targets victory over Milan on Saturday</li> 
+<li>@@include('./partials/texticon/_texticon.html', {
+  "text": "Ecuador stay perfect as Argentina, brazil win",
+  "icons": "video"  
+}) </li>
+<li>Sweden, Ukraine complete Euro line-up<a href="fifa.com" class="marca">fifa.com</a></li>
+<li>Aubameyang penalty gives Gabon World Cup joy</li>  
+</ul>
+</div>
 
+
+<div class="threephoto">
 <div class="3photo1"> 
 <div class="photo3"> 
 <img src="/img/mainnews/goldball.png" alt="goldball">
@@ -99,16 +131,7 @@ Bayern Munich vs Barcelona. Fangirls :)
 </div>
 
 
-</div>
-    
-   
 
-</div>
-
-
-
-  
-</div>
 
 
 

@@ -1,7 +1,7 @@
 @import "./variables.scss";
-@import "./partials/header/header.scss";
-@import "./partials/texticon/texticon.scss";
-@import "./partials/listlink/listlink.scss";
+@import "./partials/header/_header.scss";
+@import "./partials/texticon/_texticon.scss";
+@import "./partials/listlink/_listlink.scss";
 body * {
   outline: 1px solid  lightgreen;
 }
@@ -12,7 +12,7 @@ body * {
   grid-template-columns: 654px 324px;  
 }
 .box-A {
-  max-width: 868px;
+  max-width: 654px;
 }
 .mnews {
   margin: 0px 18px 0px 18px;
@@ -44,4 +44,21 @@ body * {
 }
 .lastnews {
   margin: 0px 18px 0px 18px;
+}
+ul {
+  margin: 0px 18px 0px 18px;
+  padding: 0 0 0 18px;
+}
+li {
+  padding: 0 0 10px 0;
+}
+.marca {
+  padding-left: 6px;
+  text-decoration: none;
+  color: rgb(191, 191, 192);
+
+  &:hover {
+  color: var(--highlight-color-a);
+  text-decoration: underline;        
+}
 }

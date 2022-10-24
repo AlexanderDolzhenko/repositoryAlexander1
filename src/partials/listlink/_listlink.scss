@@ -1,0 +1,9 @@
+.listlink {
+    text-decoration: none;
+        color: var(--color-b);
+    &:hover {
+        color: var(--highlight-color-a);
+        text-decoration: underline;
+        cursor: url("/img/cursor.png") 4 12, auto;
+    }
+}

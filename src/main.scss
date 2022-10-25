@@ -6,13 +6,14 @@ body * {
   outline: 1px solid  lightgreen;
 }
 .container {
-  max-width: 978px;
+  max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 654px 324px;  
+  grid-template-columns: 900px 500px;  
+  
 }
 .box-A {
-  max-width: 654px;
+  max-width: 900px;  
 }
 .mnews {
   margin: 0px 18px 0px 18px;
@@ -21,7 +22,7 @@ body * {
   display: flex;  
   column-gap: 20px;
   object-fit: fill;
-  margin: 0px 18px 0px 18px;
+  margin: 0px 18px 40px 18px;
 }
 .mainnews1 {
   width: 25%;
@@ -42,12 +43,37 @@ body * {
 .descriptionmainIcon {
  max-width: 100%;
 }
+.gridA2 {
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: 550px 332px;
+  margin: 0px 18px 40px 18px;
+}
+.lastnewsfeed {
+  margin-bottom: 18px;
+}
 .lastnews {
-  margin: 0px 18px 0px 18px;
+margin: 0px 0px 6px 0px;
+}
+
+.zlatannews {
+  display: flex;
+  flex-direction:row; 
+  max-width: 100%;
+  object-fit: fill;
+  
+}
+.zlatanphoto {
+  width: 30%;
+  margin: 0px 10px 0px 0px;
+  object-fit: fill;
+}
+.zlatdesc {
+  max-width: 100%;
+  font-weight: bold;
 }
 ul {
-  margin: 0px 18px 0px 18px;
-  padding: 0 0 0 18px;
+    padding: 0 0 0 18px;
 }
 li {
   padding: 0 0 10px 0;
@@ -61,4 +87,25 @@ li {
   color: var(--highlight-color-a);
   text-decoration: underline;        
 }
+}
+.threephoto {  
+ margin: 0px 18px 40px 18px;
+ max-width: 100%; 
+}
+.thereephoto3 {
+  display: flex;
+  flex-direction: column;
+  object-fit: fill;
+  max-width: 100%;  
+}
+.photo3 {
+  width: 100%;
+  padding: 0px;      
+ }
+
+ .descphoto3 {
+  width: 100%;
+  text-align: left; 
+  font-weight: bold;   
+  font-size: 22px;
 }

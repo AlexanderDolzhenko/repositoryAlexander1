@@ -12,11 +12,11 @@ body * {
   grid-template-columns: 900px 500px;  
   
 }
-.box-A {
+.grid-item1 {
   max-width: 900px;  
 }
 .mnews {
-  margin: 0px 18px 0px 18px;
+  margin: 0px 18px 6px 18px;
 }
 .manews {  
   display: flex;  
@@ -108,4 +108,7 @@ li {
   text-align: left; 
   font-weight: bold;   
   font-size: 22px;
+}
+.grid-item2 {
+  max-width: 500px;  
 }

@@ -1,18 +1,32 @@
-.texticon {
-    display: flex;
+.text-with-icon {
+    display: inline-block;
     align-items: center;
-    column-gap: 5px;     
-    &.camera:after {
+    column-gap: 5px;
+    font-size: 14px;
+
+.camera-icon:before {
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
         content: "\f030";
-        color: var(--color-c);
-    }    
-    &.video::before {
-        font-family: "Font Awesome 6 Brands";
+        font-style: normal;
+        display: none;
+    }
+
+.video-icon:before {
+        font-family: "Font Awesome 5 Brands";
         font-weight: 900;
         content: "\f167";
         order: 3;
-        color: var(--color-c);
+        font-style: normal;
+        display: none;
+    }
+
+&.video .video-icon:before {
+        display: inline;
+    }
+
+&.camera .camera-icon:before {
+        display: inline;
+    }
 }
-}
+

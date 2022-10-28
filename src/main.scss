@@ -2,6 +2,7 @@
 @import "./partials/header/_header.scss";
 @import "./partials/texticon/_texticon.scss";
 @import "./partials/listlink/_listlink.scss";
+@import "./partials/imgicon/_imgicon.scss";
 body * {
   outline: 1px solid  lightgreen;
 }
@@ -98,10 +99,7 @@ li {
   object-fit: fill;
   max-width: 100%;  
 }
-.photo3 {
-  width: 100%;
-  padding: 0px;      
- }
+
 
  .descphoto3 {
   width: 100%;

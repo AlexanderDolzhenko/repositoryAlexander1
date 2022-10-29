@@ -38,3 +38,29 @@
     margin-left: 10px;
 }
 }
+.tertiary {
+color: #6a0099;
+font-size: var(--large-a);
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;    
+&::after {
+    border-color: var(--color-b);
+    }    
+    &::after {
+    content: "";
+    border-bottom: 2px solid black;
+    flex: 1 0 auto;
+    margin-left: 10px;       
+    }
+&::before {
+    border-color: var(--color-b);    
+}
+    &::before {
+    content: "";
+    border-bottom: 2px solid black;
+    flex: 1 0 auto;
+    margin-right: 10px;     
+}
+}

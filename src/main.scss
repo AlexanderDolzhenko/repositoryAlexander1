@@ -3,6 +3,7 @@
 @import "./partials/texticon/_texticon.scss";
 @import "./partials/listlink/_listlink.scss";
 @import "./partials/imgicon/_imgicon.scss";
+@import "./partials/imgicon2/_imgicon2.scss";
 body * {
   outline: 1px solid  lightgreen;
 }
@@ -99,14 +100,61 @@ li {
   object-fit: fill;
   max-width: 100%;  
 }
-
-
  .descphoto3 {
   width: 100%;
   text-align: left; 
   font-weight: bold;   
   font-size: 22px;
+  margin-bottom: 18px;
 }
 .grid-item2 {
   max-width: 500px;  
+  display: grid;
+  grid-template-columns: 300px 200px;
+  margin: 0px 18px 0px 0px;
+}
+.videocolumn {
+  
+  margin-top: 18px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.videoflex {
+  display: flex;
+  flex-direction: row;
+}
+
+.fivevideo {
+  object-fit: fill;
+  width: 100%;  
+}
+.descvideo {
+width: 100%;
+text-align: left; 
+font-weight: bold;   
+margin: 0px 0px 18px 10px;
+}
+
+
+
+
+
+.interestcolumn {
+margin-bottom: 40px;
+border-bottom: 5px var(--color-b) ;
+}
+.statesint {
+  color: var(--highlight-color-b);
+  font-size: var(--large-a);
+   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  &::after {
+  border-color: var(--color-b);
+  } 
+  &::after {
+  content: "";
+  border-bottom: 2px solid black;
+  display: block;
+  flex: 1 0 auto;
+}
 }

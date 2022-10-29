@@ -6,107 +6,53 @@
 body * {
   outline: 1px solid  lightgreen;
 }
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 900px 500px;  
-  
-}
-.grid-item1 {
-  max-width: 900px;  
-}
-.mnews {
-  margin: 0px 18px 6px 18px;
-}
-.manews {  
-  display: flex;  
-  column-gap: 20px;
-  object-fit: fill;
-  margin: 0px 18px 40px 18px;
-}
-.mainnews1 {
-  width: 25%;
-  display: flex;
-  flex-direction: column; 
-}
-.photomain {
-  width: 100%;
-  padding: 0px;     
- }
- img {  
-  width: 100%;  
+@keyframes animate {
+  0% {
+    left: 0;
+    transform: translate(0, -50%);
   }
-.descriptionmain {
-  max-width: 100%;
-  text-align: left;    
-}
-.descriptionmainIcon {
- max-width: 100%;
-}
-.gridA2 {
-  max-width: 900px;
-  display: grid;
-  grid-template-columns: 550px 332px;
-  margin: 0px 18px 40px 18px;
-}
-.lastnewsfeed {
-  margin-bottom: 18px;
-}
-.lastnews {
-margin: 0px 0px 6px 0px;
-}
 
-.zlatannews {
-  display: flex;
-  flex-direction:row; 
-  max-width: 100%;
-  object-fit: fill;
+  25% {
+    background-color: green;
+  }
+
+  50% {
+    left: 100%;
+    transform: translate(-100%, -50%) rotate(90deg);
+    
+  }
   
-}
-.zlatanphoto {
-  width: 30%;
-  margin: 0px 10px 0px 0px;
-  object-fit: fill;
-}
-.zlatdesc {
-  max-width: 100%;
-  font-weight: bold;
-}
-ul {
-    padding: 0 0 0 18px;
-}
-li {
-  padding: 0 0 10px 0;
-}
-.marca {
-  padding-left: 6px;
-  text-decoration: none;
-  color: rgb(191, 191, 192);
+  100% {
+    left: 0;
+    transform: translate(0, -50%) rotate(360deg);
 
-  &:hover {
-  color: var(--highlight-color-a);
-  text-decoration: underline;        
-}
-}
-.threephoto {  
- margin: 0px 18px 40px 18px;
- max-width: 100%; 
-}
-.thereephoto3 {
-  display: flex;
-  flex-direction: column;
-  object-fit: fill;
-  max-width: 100%;  
+  }
 }
 
+.animation {
+  height: 50vh;
+  position: relative;
 
- .descphoto3 {
-  width: 100%;
-  text-align: left; 
-  font-weight: bold;   
-  font-size: 22px;
-}
-.grid-item2 {
-  max-width: 500px;  
+ 
+
+  .item {
+    width: 50px;
+    height: 50px;
+    background-color: tomato;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    // transition: all 5s linear;
+    animation: animate 2s ease 0s infinite forwards paused;
+  }
+
+  // &:hover .item {
+  //   left: 100%;
+  //   transform: translate(-100%, -50%);
+  // }
+
+  &:hover .item {
+    animation-play-state: running;
+  }
 }

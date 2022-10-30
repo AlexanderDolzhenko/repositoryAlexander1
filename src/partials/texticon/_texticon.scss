@@ -28,5 +28,16 @@
 &.camera .camera-icon:before {
         display: inline;
     }
+
+.arrow-icon::before {
+font-weight: 900;
+content: "\f061";
+font-family: "Font Awesome 6 Free";
+font-style: normal;
+display: none;
+}
+&.arrow .arrow-icon::before {
+    display: inline;
+}
 }
 

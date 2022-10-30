@@ -12,6 +12,7 @@ body * {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 900px 500px;  
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   
 }
 .grid-item1 {
@@ -110,19 +111,19 @@ li {
 .grid-item2 {
   max-width: 500px;  
   display: grid;
-  grid-template-columns: 300px 200px;
+  grid-template-columns: 350px 150px;
   margin: 0px 18px 0px 0px;
 }
-.videocolumn {
-  
+.videocolumn {  
   margin-top: 18px;
   max-width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  
 }
 .videoflex {
   display: flex;
   flex-direction: row;
+  margin-bottom: 10px;
 }
 
 .fivevideo {
@@ -133,18 +134,25 @@ li {
 width: 100%;
 text-align: left; 
 font-weight: bold;   
-margin: 0px 0px 18px 10px;
+margin: 0px 0px 0px 10px;
 }
-
-
-
-
-
+.morevideo {
+  text-decoration: none;
+  color: var(--highlight-color-a);
+  font-weight: bold;
+  padding: 10px 0px 10px 0px;
+  &:hover {
+  color: var(--highlight-color-a);
+  text-decoration: underline;        
+}
+}
 .interestcolumn {
-margin-bottom: 40px;
-border-bottom: 5px var(--color-b) ;
+padding: 60px 0px 0px 0px;
+border-top: 5px solid var(--color-b);
+border-bottom: 5px solid var(--color-b);
 }
 .statesint {
+  padding-bottom: 8px;
   color: var(--highlight-color-b);
   font-size: var(--large-a);
    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -156,5 +164,48 @@ border-bottom: 5px var(--color-b) ;
   border-bottom: 2px solid black;
   display: block;
   flex: 1 0 auto;
+}
+}
+.interestsection {  
+max-width: 100%;
+display: flex;
+flex-direction: column;  
+}
+.interflex {
+display: flex;
+flex-direction: row;
+margin-bottom: 10px;
+}
+.interphoto {
+object-fit: fill;
+max-width: 100%;  
+}
+.descinter {
+width: 100%;
+text-align: left; 
+margin: 0px 0px 0px 10px;
+}
+.feed1 {
+  width: 114px;
+  height: 20px;
+  overflow: hidden;
+  transform: rotate(-90deg) translateY(320%) translateX(-350%);
+}
+.feedback {  
+  max-width: 100%;  
+  background-color: rgb(191, 191, 192);
+  color: white;
+  font-size:small;
+  border-width: 3px;
+  border-style: double;
+  Border-color: #ffff;
+  
+ 
+&:hover {
+  position: relative;
+  top: 1px;
+  left: 1px;
+  background-color: #4c4f4f;
+  cursor: pointer;
 }
 }

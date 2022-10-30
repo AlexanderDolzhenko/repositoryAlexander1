@@ -23,7 +23,7 @@ body * {
   margin: 0px 18px 0px 18px;
 }
 .menuslider {
-  border-bottom: 5px solid var(--color-a);
+ 
   margin: 20px 0px 40px 0px;
 }
 .menutabs {
@@ -43,15 +43,47 @@ body * {
   background-color: rgb(191, 191, 192);
   display: inline;
   color: white;
-  padding: 5px 0px 5px 0px;
+  padding: 5px 18px 5px 18px;
   }
 .panels {
   width: 100%;
   margin-top: 20px;
+  border-bottom: 5px solid var(--color-a);
   }
 .panel {
   display: none;
   animation: fadein 0.8s;
+  }
+.panel-title1 {  
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;  
+  }
+  .jurg1 {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(244, 245, 247);
+  }
+  .jurgphoto {
+  object-fit: fill;
+  width: 100%;  
+  }
+  .descjurg {
+  max-width: 100%;
+  text-align: left; 
+  margin: 18px 18px 0px 18px;
+  display: flex;
+  flex-direction: column;
+ 
+  .jurgtext1 {
+    color: var(--color-a);
+    font-size: 36px;
+    font-weight: bold;
+    padding-bottom: 18px;
+  }
+  .jurgtext2 {
+    font-size: large;
+  }
   }
 @keyframes fadein {
   from {

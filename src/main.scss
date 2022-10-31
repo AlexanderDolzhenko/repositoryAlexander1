@@ -1,3 +1,5 @@
+@import "./slick/slick.scss";
+@import "./slick/slick-theme.scss";
 @import "./variables.scss";
 @import "./partials/header/_header.scss";
 @import "./partials/texticon/_texticon.scss";
@@ -302,7 +304,7 @@ margin-bottom: 10px;
 }
 .interphoto {
 object-fit: fill;
-max-width: 100%;  
+width: 80%;  
 }
 .descinter {
 width: 100%;
@@ -336,4 +338,9 @@ margin-left: 10px;
 }
 .review {
   margin: 0px 0px 6px 18px;
+}
+
+.slick-slider {
+  width: 80vw;
+  margin: 0 auto;
 }

@@ -1,1 +1,5 @@
-//here will by JavaScript code ...
+$(document).ready(function(){
+    $('.your-class').slick({
+    });
+  });
+  

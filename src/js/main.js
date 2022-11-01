@@ -1,5 +1,8 @@
 $(document).ready(function(){
-    $('.your-class').slick({
+    $('.slick-slider').slick({
+      adaptiveHeight: true,
+      appendArrows: $('.slick-arrows')
+
     });
   });
   

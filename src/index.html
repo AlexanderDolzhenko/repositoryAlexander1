@@ -32,10 +32,16 @@
 <div class="panel-title1">
    
  
-  <div class="slick-arrows"></div>
+  <div class="slick-arrows">
+    <div class="numb">@@include('./partials/texticon/_texticon.html', {
+      "text": "7/20",
+      "icons": "chart-pie" 
+      })</div>
+  </div>
   <div class="slick-slider">
     
-    <div class="slider-item"><div class="jurg1">
+    <div class="slider-item">
+      <div class="jurg1">
       <div class="jurgphoto"> 
       <img src="/img/jurg.png" alt="jurg">
       </div>
@@ -44,8 +50,8 @@
       <span class="jurgtext2">Liverpool outcast Jose Enrique set to be handled lifeline by Jurgen Klopp</span>
       </div>
       </div></div>
-    <div class="slider-item"><img src="/img/memes.png" alt="memes"></div>
-    <div class="slider-item"><img src="/img/nice.png" alt="nice"></div>
+    <div class="slider-item"><img class="memes" src="/img/memes.png" alt="memes"></div>
+    <div class="slider-item"><img class="nice" src="/img/nice.png" alt="nice"></div>
     
   </div>
  
@@ -322,6 +328,9 @@
 <div class="footer">
   <div class="review"> @@include('./partials/header/_header.html', {"type": "secondary", "text": "Обзор"})</div>
   fff
+  @@include('./partials/texticon/_texticon.html', {
+    "text": "7/20",
+    "icons": "chart-pie" })
 </div>
 </div>
 </main>

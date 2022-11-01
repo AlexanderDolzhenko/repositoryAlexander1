@@ -49,41 +49,55 @@ body * {
 .panels {
   width: 100%;
   margin-top: 20px;
-  border-bottom: 5px solid var(--color-a);
+  border-bottom: 5px solid var(--color-a);  
   }
 .panel {
   display: none;
-  animation: fadein 0.8s;
+  animation: fadein 0.8s;  
   }
 .panel-title1 {  
   max-width: 100%;
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;   
   }
   .slick-arrows {
     position: absolute;
   }
+  .numb {
+   position: absolute;
+   z-index: 3;
+   top: 290px;
+  left: 734px;
+    width: 50px;
+  }
   .slick-prev {
+    background-color: red;
     top: 300px;
-   left: 750px;
+   left: 700px;
     z-index: 1;
   }
   .slick-next {
+    background-color: red;    
    top: 300px;
     left: 800px;
     z-index: 2;
   }
+
+
   .slick-slider {
   max-width: 100%;
+  max-height: 320px;
   position: relative;
- 
-  }
+  
+   }
   .slider-item {
     max-width: 100%;
-    max-height: 100%;    
+    max-height: 100%;
+     .memes, .nice {
+      max-height: 320px;
+      object-fit: fill;
+    }
   }
-  
-
   .jurg1 {
   display: flex;
   flex-direction: row;

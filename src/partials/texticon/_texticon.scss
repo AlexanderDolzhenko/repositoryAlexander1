@@ -39,5 +39,17 @@ display: none;
 &.arrow .arrow-icon::before {
     display: inline;
 }
+.chart-pie-icon::before {
+    font-weight: 900;
+    content: "\f200";
+    font-family: "Font Awesome 6 Free";
+    font-style: normal;
+    display: none;
+    }
+    &.chart-pie .chart-pie-icon::before {
+        display: inline;
+    }
+    
 }
+
 

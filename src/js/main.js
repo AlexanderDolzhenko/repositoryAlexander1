@@ -1,11 +1,11 @@
 $(document).ready(function(){
-    $('.slick-slider').slick({
+    $('#slider').slick({
             appendArrows: $('.slick-arrows')
  });
-$('.lasthope').slick({
+$('#lasthope').slick({
 centerMode: true,
 centerPadding: '60px',
-slidesToShow: 3,
+slidesToShow: 5,
 responsive: [
 {
 breakpoint: 768,
@@ -26,7 +26,6 @@ slidesToShow: 1
 }
 }
 ],
-appendArrows: $('.last')
 });
 });
   

@@ -64,31 +64,41 @@ body * {
   display: flex;
   flex-direction: column;   
   }
-  .slick-arrows {
-    position: absolute;   
-  }
   .numb {
-   position: absolute;
-   z-index: 3;
-   top: 296px;
+  position: absolute;
+  z-index: 3;
+  top: 295px;
   left: 740px;
-    width: 50px;
+  width: 50px;
   }
-  .slick-prev {
+
+.slick-arrows {
+position: absolute;   
+}
+.slick-arrow {
+&:before {
+font-family: "Font Awesome 6 Free";
+color: var(--color-a);
+font-size: 30px;
+font-weight: 900;
+opacity: 0.9;
+    }
+  }
+.slick-prev {
     top: 300px;
     left: 700px;
     z-index: 1;
+&:before {
+content: "\f053"; 
   }
-  .slick-prev::before, .slick-next::before {
-    font-size: 30px;
-    font-weight: 900;
-    color: var(--color-a);
-    opacity: 0.9;
-  }
+}
   .slick-next {
     top: 300px;
     left: 800px;
     z-index: 2;
+    &:before  {
+      content: "\f054";
+    }
   }
   .slick-slider {
   max-width: 100%;
@@ -385,14 +395,14 @@ margin-left: 10px;
 }
 .footslid {
   border-bottom: 5px solid var(--color-b);
-}
-.lasthope {
-  position: relative;  
-  margin-bottom: 18px;
   
 }
+.hope {
+  position: relative;  
+  margin-bottom: 18px;  
+}
 .slick-item-2 {
-  padding: 0px 18px 0px 18px;
+  padding: 0px 18px 40px 18px;
   &:hover {
     color: var(--highlight-color-a);
     text-decoration: underline;
@@ -413,8 +423,7 @@ margin-left: 10px;
   max-width: 100%;
   text-align: left;  
   font-size: larger;  
-  text-decoration: none;
- 
+  text-decoration: none; 
   color: var( --highlight-color-a);
   &:hover {
     color: var(--highlight-color-a);
@@ -422,6 +431,43 @@ margin-left: 10px;
     cursor: pointer;
 }
 }
-.last {
-  position: absolute;  
+#lasthope .slick-arrow:before {
+font-size: 60px;
+color: var(--color-a);
+font-weight: 900;
+opacity: 0.9;
+}
+
+#lasthope .slick-prev::before {
+  right: 670px;  
+  bottom: 190px;
+  position: absolute;
+}
+#lasthope .slick-next::before {
+  left: 385px;  
+  bottom: 190px;
+  position: absolute;
+}
+#lasthope .slick-list {
+position: relative;
+&:before {
+  content: "";
+  width: 100px;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #fff 0%, transparent 70%);
+  position: absolute;
+  z-index: 2;
+  }
+&:after {
+  content: "";
+  width: 100px;
+  right:0;
+  top: 0;
+  height: 100%;
+  background: linear-gradient(270deg, #fff 0%, transparent 70%);
+  position: absolute;
+  z-index: 2;
+  }
 }

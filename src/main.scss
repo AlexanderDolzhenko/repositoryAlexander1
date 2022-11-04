@@ -65,8 +65,8 @@ body * {
   .numb {
   position: absolute;
   z-index: 3;
-  top: 265px;
-  left: 710px;
+  top: 255px;
+  left: 690px;
   width: 50px;
   }
 
@@ -83,16 +83,16 @@ opacity: 0.9;
     }
   }
 .slick-prev {
-    top: 270px;
-    left: 670px;
+    top: 260px;
+    left: 650px;
     z-index: 1;
 &:before {
 content: "\f053"; 
   }
 }
   .slick-next {
-    top: 270px;
-    left: 770px;
+    top: 260px;
+    left: 750px;
     z-index: 2;
     &:before  {
       content: "\f054";
@@ -410,12 +410,12 @@ opacity: 0.9;
 }
 
 #lasthope .slick-prev::before {
-  right: 640px;  
+  right: 620px;  
   bottom: 160px;
   position: absolute;
 }
 #lasthope .slick-next::before {
-  left: 400px;  
+  left: 420px;  
   bottom: 160px;
   position: absolute;
 }

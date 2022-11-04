@@ -14,21 +14,20 @@ body * {
   outline: 1px solid  lightgreen;
 }
 .bigcont {
-  max-width: 1200px;
+  max-width: 1218px;
   margin: 0 auto;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
 }
 .container {
-  max-width: 1200px;
+  max-width: 1218px;
   margin-top: 20px;
   display: grid;
   column-gap: 18px;
   grid-template-columns: 1fr 400px;    
 }
 .grid-item1 {
-  max-width: 800px;  
-  
-}
+  max-width: 800px;
+} 
 .menuslider { 
   margin: 0px 0px 40px 0px;
 }
@@ -102,13 +101,13 @@ content: "\f053";
     }
   }
   .slick-slider {
-  max-width: 100%;
+  width: 100%;
   max-height: 320px;
   position: relative;
   
    }
   .slider-item {
-    max-width: 100%;
+    width: 100%;
     max-height: 100%;
      .memes, .nice {
       max-height: 320px;
@@ -122,7 +121,7 @@ content: "\f053";
   }
   .jurgphoto {
   object-fit: fill;
-  max-width: 100%; 
+  width: 100%; 
   }
   .descjurg {
   max-width: 100%;
@@ -363,9 +362,8 @@ margin-left: 10px;
 }
 
 .footer {
-  max-width:1200px;
-  margin-left: 18px;
-}
+  max-width:1218px;
+ }
 .review {
   margin-bottom: 6px;
 }

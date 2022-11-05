@@ -14,12 +14,12 @@ body * {
   outline: 1px solid  lightgreen;
 }
 .bigcont {
-  max-width: 1218px;
+  width: 1218px;
   margin: 0 auto;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
 }
 .container {
-  max-width: 1218px;
+  width: 1218px;
   margin-top: 20px;
   display: grid;
   column-gap: 18px;
@@ -106,7 +106,7 @@ content: "\f053";
    }
   .slider-item {
     width: 100%;
-    .memes, .nice {
+    .jurg1, .memes, .nice {
       max-height: 294px;
       object-fit: fill;
     }

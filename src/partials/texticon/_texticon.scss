@@ -1,8 +1,7 @@
 .text-with-icon {
     display: inline-block;
     align-items: center;
-    column-gap: 5px;
-    font-size: 14px;
+    font-size: 12px;
 
 .camera-icon:before {
         font-family: "Font Awesome 5 Free";
@@ -49,7 +48,18 @@ display: none;
     &.chart-pie .chart-pie-icon::before {
         display: inline;
     }
-    
+.xmark-icon::before {
+font-weight: 900;
+content: "\f00d";
+font-family: "Font Awesome 6 Free";
+font-style: normal;
+display: none;
+}
+&.xmark .xmark-icon::before {
+display: inline;
+padding-left: 20px;
+}      
+
 }
 
 

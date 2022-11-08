@@ -6,6 +6,28 @@
 @import "./partials/listlink/_listlink.scss";
 @import "./partials/imgicon/_imgicon.scss";
 @import "./partials/imgicon2/_imgicon2.scss";
+
 body * {
   outline: 1px solid  lightgreen;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+}
+.container-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.blackheader {
+  background-color: black;
+  color: #FCEC4F;
+  align-items: center;
+  text-align: center;
+}
+.webdev1 {
+  font-size: 12px;
+}
+.webdev2 {
+  text-decoration: underline;
+  padding-left: 4px;
+  font-size: 12px;
 }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./main.scss">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <title>Diplom project</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous" defer></script>
@@ -15,18 +16,49 @@
 <body>
 <main> 
 <div class="blackheader">
-<div class="container-fluid">
+<div class="container-md">
 <div class="row">    
-<div class="col-xxl-12">
+<div class="col-md-12">
 @@include('./partials/texticon/_texticon.html', {
 "text": "Спецпредложение: купи авто по цене и получи дубликаты госномеров в подарок!",
 "icons": "xmark" 
 })</div>
 </div>
 </div> 
-</div><!-- blackконтейнер -->
-fdfdff
+</div>
 
+
+
+<div class="container-md">
+  <div class="row">
+  <div class="col-md-6">           
+    @@include("./partials/logo/_logo.html", {"firstLine": "Аренда автомобилей <br> с выкупом №1 на Юге России</br>", "secondLine": "Выгодные и честные условия"})
+    </div>
+    <div class="col-md-6"> 
+      <div class="geandtel">     
+        <div class="twocol">   
+     <div class="geo">
+      @@include('./partials/icontext/_icontext.html', {
+        "text": "Ставрополь ул. Доваторцев, 21",
+        "icons": "location-dot"    
+        }) </div>
+        <a href="https://goo.gl/maps/ABoNi75gNjQmd9DD8" class="greytext">Выбрать город</a></div>         
+        <div class="twocol">   <div class="telephone">
+     @@include('./partials/icontext/_icontext.html', {
+      "text": "8 (962) 495-55-54",
+      "icons": "phone"    
+      })     </div>
+      <a href="tel:89624955554" class="greytext">Заказать звонок</a></div>   
+</div>  <!-- geandtel див -->
+ </div><!-- colxxl див -->
+   
+
+
+
+
+
+  </div><!-- row див -->
+  </div> <!-- флюид див -->
 
 
 
@@ -44,15 +76,12 @@ fdfdff
 
 
 <div class="blackheader"> 
-<div class="container-fluid">
+<div class="container-md">
 <div class="row">
-<div class="col-xxl-6">           
-  @@include('./partials/texticon/_texticon.html', {
-  "text": "&copy 2010-2021 ООО&#171Бери Рули&#187"       
-  })      
+<div class="col-md-6">           
+ <span>&copy 2010-2021 ООО&#171Бери Рули&#187"</span>  
   </div>
-<div class="col-xxl-6">       
-<div class="webdev">Разработка сайта <u>WEBELEMENT</u></div>
+<div class="col-md-6"><span>Разработка сайта <u>WEBELEMENT</u></span></div>
 </div>
 </div>
 </div>

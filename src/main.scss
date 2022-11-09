@@ -6,7 +6,8 @@
 @import "./partials/listlink/_listlink.scss";
 @import "./partials/imgicon/_imgicon.scss";
 @import "./partials/imgicon2/_imgicon2.scss";
-
+@import "./partials/logo/_logo.scss";
+@import "./partials/icontext/_icontext.scss";
 body * {
   outline: 1px solid  lightgreen;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
@@ -17,13 +18,38 @@ body * {
   justify-content: center;
   
 }
+.row>* {
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+}
 .blackheader {
   background-color: black;
   color: #FCEC4F;
   align-items: center;
   text-align: center;
+  font-size: 14px;
 }
-.webdev {
-  font-size: 12px;
+.geandtel {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
-
+.twocol {
+ display: flex;
+ flex-direction: column;
+ align-items: left;
+ 
+ width: 50%;
+ 
+}
+.greytext {
+  color: #989898;
+    font-size: 14px;
+   text-decoration: underline;
+    padding-left: 18px;
+    &:hover {
+      color: #0088CF;
+      text-decoration: underline;
+      cursor: pointer;
+  }
+}

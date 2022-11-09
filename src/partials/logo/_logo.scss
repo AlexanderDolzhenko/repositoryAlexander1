@@ -1,22 +1,23 @@
 .logo {
     display: flex;
-    column-gap: 40px;
+   
     align-items: center;
 }
 .description {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     row-gap: 5px;
+    padding-left: 16px;
+   
 }
 .first-line {
-    color: orange;
+    color: black;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 14px;
 }
 .second-line {
-    color: gray;
-    text-transform: uppercase;
-    font-size: 25px;
+    color: #989898;
+    font-size: 14px;
     font-weight: bold;
 }

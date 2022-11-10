@@ -1,0 +1,6 @@
+  @mixin tablet-view {
+    @media (max-width: 768px) and (min-width: 330px) {
+        @content;
+       
+}
+  }

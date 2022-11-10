@@ -8,9 +8,10 @@
 @import "./partials/imgicon2/_imgicon2.scss";
 @import "./partials/logo/_logo.scss";
 @import "./partials/icontext/_icontext.scss";
+@import "./_mixins.scss";
 body * {
-  outline: 1px solid  lightgreen;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+  outline: 0px solid  lightgreen;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .container-content {
   display: flex;
@@ -68,8 +69,7 @@ body * {
   font-weight: 900;
   display: flex;
   flex-direction: column;
-  font-size: 14px;
-  
+  font-size: 14px;  
 }
 .navbar {
   column-gap: 20px;
@@ -97,7 +97,7 @@ body * {
 .sldescr1 {
   font-size: 42px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .sldescr2 {
   color: #0088CF;
@@ -124,12 +124,12 @@ border-style: solid;
 }
 .partext {
   font-weight: bold;
-font-size: 30px;
+  font-size: 30px;
 }
 .textpar {
   font-weight: 500;
-font-size: 18px;
-margin: 20px 0px 40px 0px;
+  font-size: 18px;
+  margin: 20px 0px 40px 0px;
 }
 .autobig {
   margin-top: 100px;
@@ -150,12 +150,50 @@ margin: 20px 0px 40px 0px;
   width: 100%;
   height: 100%;
   position: absolute;
+  @include  tablet-view {
+   visibility: hidden;;
+}
 }
 .img {
   width: 100%;
 }
-@media (max-width: 767px) {
-  .autobig, .greimg, .whiimg {
-    visibility: hidden;
+.credits {
+  display: flex;  
+  column-gap: 20px;
+  margin-bottom: 100px;
 }
+.creditcol1 { 
+  display: flex;
+  flex-direction: column;  
+  text-align: center;  
+  border-color: #E5E5E5;
+  border-width: 1px;
+  border-style: solid;
+  padding: 40px 80px 40px 80px;
+}
+.credtext {
+  font-weight: bold;
+  font-size: 20px;  
+}
+.credtext2 {
+  font-weight: 400;
+  font-size: 18px;
+}
+.creditcol2 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;  
+  color: white;
+  background: #0088CF;
+  border-radius: 5px;
+  border-style: none;
+  padding: 40px 80px 40px 80px;
+}
+.credtext3 {
+  font-weight: bold;
+  font-size: 20px;  
+}
+.credtext4 {
+  font-weight: 400;
+  font-size: 18px;
 }

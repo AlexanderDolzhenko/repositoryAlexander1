@@ -1,17 +1,17 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./main.scss">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <title>Diplom project</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous" defer></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
-    <script src="https://kit.fontawesome.com/cdb428d9a8.js" crossorigin="anonymous"></script>
-    <script src="./js/main.js" defer></script>
-  </head>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./main.scss">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+<title>Diplom project</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous" defer></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
+<script src="https://kit.fontawesome.com/cdb428d9a8.js" crossorigin="anonymous"></script>
+<script src="./js/main.js" defer></script>
+</head>
 </head>
 <body>
 <main> 
@@ -26,61 +26,145 @@
 </div>
 </div> 
 </div>
-
-
-
 <div class="container-md">
-  <div class="row">
-  <div class="col-md-6">           
-    @@include("./partials/logo/_logo.html", {"firstLine": "Аренда автомобилей <br> с выкупом №1 на Юге России</br>", "secondLine": "Выгодные и честные условия"})
-    </div>
-    <div class="col-md-6"> 
-      <div class="geandtel">     
-        <div class="twocol">   
-     <div class="geo">
-      @@include('./partials/icontext/_icontext.html', {
-        "text": "Ставрополь ул. Доваторцев, 21",
-        "icons": "location-dot"    
-        }) </div>
-        <a href="https://goo.gl/maps/ABoNi75gNjQmd9DD8" class="greytext">Выбрать город</a></div>         
-        <div class="twocol">   <div class="telephone">
-     @@include('./partials/icontext/_icontext.html', {
-      "text": "8 (962) 495-55-54",
-      "icons": "phone"    
-      })     </div>
-      <a href="tel:89624955554" class="greytext">Заказать звонок</a></div>   
+<div class="row">
+<div class="col-md-6">           
+@@include("./partials/logo/_logo.html", {"firstLine": "Аренда автомобилей <br> с выкупом №1 на Юге России</br>", "secondLine": "Выгодные и честные условия"})
+</div>
+<div class="col-md-6"> 
+<div class="geandtel">     
+<div class="twocol">   
+<div class="geo">
+@@include('./partials/icontext/_icontext.html', {
+"text": "Ставрополь ул. Доваторцев, 21",
+"icons": "location-dot"    
+}) </div>
+<a href="https://goo.gl/maps/ABoNi75gNjQmd9DD8" class="greytext">Выбрать город</a></div>         
+<div class="twocol">   <div class="telephone">
+@@include('./partials/icontext/_icontext.html', {
+"text": "8 (962) 495-55-54",
+"icons": "phone"    
+})     </div>
+<a href="tel:89624955554" class="greytext2">Заказать звонок</a></div>   
 </div>  <!-- geandtel див -->
- </div><!-- colxxl див -->
-   
+</div><!-- colmd див -->
+</div><!-- row див -->
+</div> <!-- md container див -->
+<div class="grcolor">
+<div class="container-md">
+<div class="row">    
+<div class="col-md-12">
+<div class="navmenu">
+<ul class="navbar">
+  <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  Каталог автомобилей
+  </a>
+  <ul class="dropdown-menu">
+  <li><a class="dropdown-item" href="#">Новые авто</a></li>
+  <li><a class="dropdown-item" href="#">Авто с пробегом</a></li>      
+  </ul>
+  </li>
+  <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  Варианты покупки
+  </a>
+  <ul class="dropdown-menu">
+  <li><a class="dropdown-item" href="#">Аренда с выкупом</a></li>
+  <li><a class="dropdown-item" href="#">Рассрочка</a></li>
+  <li><a class="dropdown-item" href="#">Наличные</a></li>
+  <li><a class="dropdown-item" href="#">В кредит</a></li>
+  </ul>
+  </li>
+  <li class="nav-item dropdown">
+  <a class="nav-link" href="#" role="button" aria-expanded="false">
+  Дубликаты госномеров
+  </a>    
+  </li>
+  <li class="nav-item dropdown">
+  <a class="nav-link" href="#" role="button" aria-expanded="false">
+  Истории выкупа
+  </a>    
+  </li>
+  <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+  О компании
+  </a>
+  <ul class="dropdown-menu">
+  <li><a class="dropdown-item" href="#">Вакансии</a></li>
+  <li><a class="dropdown-item" href="#">Команда</a></li>
+  <li><a class="dropdown-item" href="#">Новости</a></li>
+  </ul>
+  </li>
+  <li class="nav-item">
+  <a class="nav-link" href="#" role="button" aria-expanded="false">
+  Контакты
+  </a>    
+  </li>
+  <li class="nav-item">
+  <a class="nav-link" href="##" role="button" aria-expanded="false">
+  @@include('./partials/icontext/_icontext.html', {
+  "text": "Личный кабинет",
+  "icons": "user"  })
+  </a>    
+  </li>
+</ul><!-- nav bar -->
+</div><!-- nav menu -->
+</div><!-- colmd див -->
+</div><!-- row див -->
+</div> <!-- md container див -->
+</div><!-- grey -->
+<div class="container-md">
+<div class="row">    
+<div class="col-md-6">
+
+  <div class="sldescrmain">  
+    <div class="sldescr1">Аренда автомобиля с выкупом <br>в Ставрополе<span class="sldescr2"> от 530 ₽ в сутки</span></br></div>
+    <div class="sldescr3">Удобнее и выгоднее, чем копить на машину</div>
+    <button class="autocatalog">Смотреть каталог авто</button>
+    <div class="partext">Без кредита</div>
+    <div class="textpar">Оформив аренду авто с последующим выкупом, вы можете сразу же получить автомобиль в свое распоряжение, погашая его стоимость частями.</div>
+    </div>
+
+
+
+
+</div><!-- colmd див -->
+
+
+<div class="col-md-6"> 
+  <div class="greimg"><img src="/img/DIPIMGS/recgrey.png" alt="gre"></div>
+  <div class="whiimg"> <img src="/img/DIPIMGS/recwhite.png" alt="whi"></div>
+  <div class="autobig">     
+    <img src="/img/DIPIMGS/bigauto.png" alt="bigauto">
+    </div>
+ 
+
+</div><!-- colmd див -->
+
+
+ 
+</div><!-- row див -->
+</div> <!-- md container див -->
 
 
 
 
 
-  </div><!-- row див -->
-  </div> <!-- флюид див -->
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+ 
+  
+  
 
 <div class="blackheader"> 
 <div class="container-md">
 <div class="row">
 <div class="col-md-6">           
- <span>&copy 2010-2021 ООО&#171Бери Рули&#187"</span>  
-  </div>
+<span>&copy 2010-2021 ООО&#171Бери Рули&#187"</span>  
+</div>
 <div class="col-md-6"><span>Разработка сайта <u>WEBELEMENT</u></span></div>
 </div>
 </div>

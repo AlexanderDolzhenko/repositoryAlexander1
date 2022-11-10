@@ -27,4 +27,16 @@ font-style: normal;
  &.phone .phone-icon::before {
  display: inline;
  }      
-        }
+ .user-icon::before {
+  font-weight: 900;
+ content: "\f007";
+font-family: "Font Awesome 6 Free";
+font-style: normal;
+ display: none;
+ padding-right: 4px;
+ color: #0088CF;
+}
+ &.user .user-icon::before {
+ display: inline;
+ }      
+}

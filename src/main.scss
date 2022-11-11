@@ -200,8 +200,8 @@ border-style: solid;
 .checktext {
   font-weight: bold;
   font-size: 30px;
-  padding-bottom: 50px;
-  padding-top: 50px;
+  padding-bottom: 45px;
+  padding-top: 45px;
 }
 .greycolmain {
   display: flex;
@@ -226,4 +226,53 @@ padding-right: 20px;
 }
 .checklistblue li {
   padding: 10px 0px 10px 0px;
+}
+.framerow {
+  display: flex;
+  border-color: #0088CF;
+  border-width: 1px;
+  border-style: solid;
+  background-color: #F5F5F9;
+  border-radius: 5px;  
+  margin-bottom: 60px;
+}
+.grcol1 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;  
+}
+.checklistgr {
+  font-size: 18px;
+  font-weight: 400;
+  list-style: none;
+  padding-left: 10px;
+  }
+  .checklistgr li:before {
+  content: "\f058";
+  font-family: "Font Awesome 6 Free";
+  color:#0088CF;
+  padding-right: 20px;
+  font-weight: 400;
+  }
+  .checklistgr li {
+  padding: 20px 0px 0px 0px;
+  font-weight: bold;
+  }
+ .logo2 {
+  display: flex;   
+  align-items: center;
+}
+.description2 {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  row-gap: 5px;
+  padding-left: 16px;
+}
+.first-line2 {
+  font-weight: bold;
+  font-size: 20px;
+}
+.second-line2 {
+  font-size: 18px;
 }

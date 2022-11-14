@@ -9,6 +9,7 @@
 @import "./partials/logo/_logo.scss";
 @import "./partials/icontext/_icontext.scss";
 @import "./_mixins.scss";
+
 body * {
   outline: 1px solid  lightgreen;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -133,7 +134,7 @@ border-style: solid;
 .textpar {
   font-weight: 500;
   font-size: 18px;
-  margin: 20px 0px 40px 0px;
+  margin: 20px 0px 35px 0px;
 }
 .autobig {
   margin-top: 100px;
@@ -286,7 +287,6 @@ padding-right: 20px;
   flex-direction: column;
   align-items: left; 
   padding-left: 10px;
-  
 }
 .first-line2 {
   font-weight: bold;
@@ -346,12 +346,13 @@ font-weight: bold;
   .autocol {
   display: flex;
   column-gap: 30px;  
-  margin-bottom: 130px;
+  margin-bottom: 115px;
   }
   .autocard {
   display: flex;
   flex-direction: column;
-  width: 33.3%;
+  width: 33.3%; 
+  border: 1px solid #E5E5E5;
   }
   .carblock {
   background-image: url("../img/DIPIMGS/lada1.png");
@@ -444,4 +445,72 @@ background-color: rgba(0, 136, 207, 1);
 width: 130px;
 padding: 10px 10px 0px 10px;
 border-radius: 5px;
+}
+.checktextgr {
+  font-weight: bold;
+  font-size: 30px;
+  padding-top: 45px;
+}
+.progbar {
+  display: flex;
+  column-gap: 35px;
+  margin-bottom: 90px;
+}
+.butstep {
+  display: flex;   
+}
+.stepbar {
+display: flex;
+flex-direction: column;
+width: 25%;
+}
+.step1back {
+font-weight: bold;
+font-size: 20px;
+background-image: url("../img/DIPIMGS/bar.png");
+background-size:cover;
+padding: 20px 0px 20px 30px;
+background-color: rgba(245, 245, 249, 1);
+}
+.stepdescr {
+font-weight: 400;
+font-size: 16px;
+margin: 25px 0px 15px 0px;
+}
+.descrnum {
+font-weight: bold;
+font-size: 24px;
+margin-bottom: 40px;
+}
+.stepcall {
+  width: 235px;
+  height:55px;
+  color: white;
+  background: #0088CF;
+  border-radius: 5px;
+  border-style: none;
+  font-size: 16px;
+  font-weight: bold;
+  &:active {
+  color: #0088CF ;
+  background: white;
+  border-color: #0088CF;
+  border-style: solid;
+  }
+  }
+.step1back2 {
+  font-weight: bold;
+  font-size: 20px;
+  background-image: url("../img/DIPIMGS/bar2.png");
+  background-size:cover;
+  padding: 20px 0px 20px 30px;
+  background-color: rgba(245, 245, 249, 1);
+  }
+
+.autocard2 {
+  display: flex;
+  flex-direction: column;
+  width: 33.3%;
+  background-color: #F5F5F9;
+  border: 1px solid #E5E5E5;
 }

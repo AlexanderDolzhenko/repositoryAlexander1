@@ -514,3 +514,120 @@ margin-bottom: 40px;
   background-color: #F5F5F9;
   border: 1px solid #E5E5E5;
 }
+.form1col {
+  display: flex;
+  flex-direction: column;
+  margin: 55px 40px 55px 40px;
+}
+.formhead {
+font-weight: bold;
+font-size: 36px;
+text-align: left;
+margin-bottom: 30px;
+}
+.formdescr {
+  font-weight: 400;
+font-size: 18px;
+margin-bottom: 10px;
+}
+.formnum {
+  color: #0088CF;
+  font-weight: bold;
+font-size: 24px;
+text-align: left;
+}
+.form1col2 {
+  margin: 72px 40px 0px 40px;
+}
+.mb-3>* {
+  margin-bottom: 30px;
+}
+.descrcheckbox {
+  font-weight: 400;
+font-size: 16px;
+margin-left: 20px;
+}
+.checkboxbut {
+  display: flex;
+}
+.butstep2 {
+  margin-left: auto;
+}
+
+.footcol1 {
+  display: flex;
+  flex-direction: column;
+  margin: 70px 0px 30px 0px;
+}
+.footdescr1 {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+font-size: 14px;
+}
+.footdescr1 div {
+  padding: 5px 0px 5px 0px;
+}
+.fbluetextunder {
+  text-decoration-line: underline;
+color: #0088CF;
+}
+.fbluetext {
+  color: #0088CF;
+}
+.footbold {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 5px 0px 5px 0px;
+}
+
+.linkicons {
+  display: flex;
+  column-gap: 10px;
+  margin-left: 10px;
+ 
+}
+.linkicons2 {
+  display: flex;
+  align-items: center;
+  width: 55px;
+  height: 55px;  
+  background-color: #F5F5F9;
+}
+
+.linksfooter {
+  color: black;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+.linf {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  height: 55px; 
+}
+.col-md-3>* {
+  margin-bottom: 40px;
+}
+#myBtn {
+  width: 55px;
+  height: 55px;
+  display: none; 
+  position: fixed;
+  bottom: 10vh;
+  left: 85vw; 
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  background-color: #0088CF; 
+  color: white; 
+  cursor: pointer; 
+}
+#myBtn:hover {
+  background-color: #0088CF; 
+  border: solid;
+  outline: #ffff;
+}

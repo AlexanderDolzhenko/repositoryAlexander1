@@ -60,6 +60,18 @@ display: inline;
 padding-left: 20px;
 }      
 
+.chevron-right-icon::before {
+    color: rgba(80, 80, 80, 0.12);
+font-weight: 900;
+content: "\f054";
+font-family: "Font Awesome 6 Free";
+font-style: normal;
+display: none;
+    }
+    &.chevron-right .chevron-right-icon::before {
+display: inline;
+padding-left: 10px;
+    }      
 }
 
 

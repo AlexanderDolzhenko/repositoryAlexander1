@@ -1,7 +1,7 @@
 @import "./slick/slick.scss";
 @import "./slick/slick-theme.scss";
 @import "./variables.scss";
-@import "./partials/header/_header.scss";
+@import "./partials/header/_bar.scss";
 @import "./partials/texticon/_texticon.scss";
 @import "./partials/listlink/_listlink.scss";
 @import "./partials/imgicon/_imgicon.scss";
@@ -479,10 +479,14 @@ width: 25%;
 .step1back {
 font-weight: bold;
 font-size: 20px;
-background-image: url("../img/DIPIMGS/bar.png");
-background-size:cover;
+display: flex;
+flex-direction: row;
+background: linear-gradient(90deg, rgba(0, 136, 207, 0.15) 23%, rgba(245, 245, 249, 1) 10%, rgba(245, 245, 249, 1) 10%);
 padding: 20px 0px 20px 30px;
-background-color: rgba(245, 245, 249, 1);
+}
+.chevron-right {
+  display: flex;  
+  align-items: center;  
 }
 .stepdescr {
 font-weight: 400;
@@ -510,14 +514,6 @@ margin-bottom: 40px;
   border-color: #0088CF;
   border-style: solid;
   }
-  }
-.step1back2 {
-  font-weight: bold;
-  font-size: 20px;
-  background-image: url("../img/DIPIMGS/bar2.png");
-  background-size:cover;
-  padding: 20px 0px 20px 30px;
-  background-color: rgba(245, 245, 249, 1);
   }
 
 .autocard2 {

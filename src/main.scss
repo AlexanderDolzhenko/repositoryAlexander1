@@ -110,7 +110,7 @@ body * {
   color: #989898;
   font-size: 18px;
 }
-.autocatalog {
+.maketbutton {
 width: 300px;
 height:60px;
 margin: 100px 0px 100px 0px;
@@ -324,15 +324,15 @@ font-weight: bold;
   display: flex;
   align-items: center;
   height: 100%;
-  text-align: right;
- 
+ justify-content: end; 
 }
-.autocatalog2 {
+.maketbutton._modif1 {
   width: 255px;
   height:55px;
   margin-left: auto;
-  color: white;
-  background: #0088CF;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
   border-radius: 5px;
   border-style: none;
   font-size: 18px;
@@ -494,10 +494,11 @@ font-weight: bold;
 font-size: 24px;
 margin-bottom: 40px;
 }
-.stepcall {
+.maketbutton._modif2 {
   width: 235px;
   height:55px;
   color: white;
+  margin: 0px 0px 0px 0px;
   background: #0088CF;
   border-radius: 5px;
   border-style: none;

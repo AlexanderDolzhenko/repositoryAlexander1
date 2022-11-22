@@ -95,7 +95,7 @@ body * {
 .sldescrmain {
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
+  margin-top: 80px;
 }
 .sldescr1 {
   font-size: 42px;
@@ -113,7 +113,7 @@ body * {
 .maketbutton {
 width: 300px;
 height:60px;
-margin: 100px 0px 100px 0px;
+margin: 70px 0px 70px 0px;
 color: white;
 background: #0088CF;
 border-radius: 5px;
@@ -136,28 +136,11 @@ border-style: solid;
   font-size: 18px;
   margin: 20px 0px 35px 0px;
 }
-.autobig {
-  margin-top: 100px;
-  z-index: 3;
-}
+
 .greimg {
-  z-index: 1;
-  top: 56px;
-  transform: translateX(28%);
-  overflow: hidden;
-}
-.whiimg {
-  z-index: 2;
-  top: 50px;
-  transform: translateX(30%);
-}
-.autobig, .greimg, .whiimg {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  @include  tablet-view {
-   visibility: hidden;;
-}
+ background-image: url("../img/DIPIMGS/autof.png");
+ width: 125%;
+ height: 100%;
 }
 .img {
   width: 100%;

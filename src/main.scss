@@ -141,6 +141,7 @@ border-style: solid;
  background-image: url("../img/DIPIMGS/autof.png");
  width: 125%;
  height: 100%;
+ background-repeat: no-repeat;
 }
 .img {
   width: 100%;
@@ -149,6 +150,7 @@ border-style: solid;
   display: flex;  
   column-gap: 20px;
   margin-bottom: 100px;
+  height: 100%;
 }
 .light { 
   display: flex;
@@ -233,7 +235,7 @@ padding-right: 20px;
   font-size: 18px;
   font-weight: 400;
   list-style: none;
-  padding: 20px 0px 0px 0px;
+  padding: 20px 0px 0px 10px;
   }
   .checklistgr li:before {
   content: "\f058";
@@ -242,22 +244,16 @@ padding-right: 20px;
   padding-right: 20px;
   font-weight: 400;
   }
-  .checklistgr li {
-  padding-left: 10px;
+  .checklistgr li {  
   padding-bottom: 10px;
   font-weight: bold;
   }
- .logo2 {
-  display: flex;     
-  column-gap: 10px;
-}
+ 
 .logo2col {
   display: flex;
   flex-direction: column;
-  width: 33.3%;
-  justify-content: space-between;
-  column-gap: 10px;
-}
+   justify-content: space-between;
+  }
 .picturedescr {
   display: flex;
 }
@@ -280,7 +276,7 @@ padding-right: 20px;
 }
 .backcols {
   display: flex;
-  column-gap: 30px;  
+ 
   margin-bottom: 105px;
 }
 .turndescr {
@@ -290,7 +286,8 @@ padding-right: 20px;
 .backimg {
   display: flex;
   flex-direction: column;
-  width: 33.3%;
+  width: 90%;
+  height: 50%;
   background-image: url("../img/DIPIMGS/blackpho.png");
   background-size: cover;
 }
@@ -310,16 +307,14 @@ font-weight: bold;
  justify-content: end; 
 }
 .maketbutton._modif1 {
-  width: 255px;
-  height:55px;
+  min-width: 235px;
+  min-height:55px;
   margin-left: auto;
   margin-top: 0px;
   margin-right: 0px;
   margin-bottom: 0px;
   border-radius: 5px;
-  border-style: none;
   font-size: 18px;
-  font-weight: bold;
   &:active {
   color: #0088CF ;
   background: white;
@@ -328,14 +323,13 @@ font-weight: bold;
   }
   }
   .autocol {
-  display: flex;
-  column-gap: 30px;  
   margin-bottom: 115px;
   }
+  
   .autocard {
   display: flex;
   flex-direction: column;
-  width: 33.3%; 
+   
   border: 1px solid #E5E5E5;
   }
   .carblock {
@@ -343,7 +337,7 @@ font-weight: bold;
     flex-direction: column;
   }
   .imagecol img {
-    min-width: 100%;   
+    width: 100%;   
   }
   .yelblock {
   position: absolute;
@@ -364,7 +358,7 @@ font-weight: bold;
   font-weight: 500;
   height: 35px;
   background-color: rgba(252, 236, 79, 0.77);
-  width: 145px;
+  min-width: 145px;
   padding: 10px 10px 10px 10px;
   margin: 60px 0px 0px 10px;
   border-radius: 5px;
@@ -441,14 +435,35 @@ width: 130px;
 padding: 10px 10px 0px 10px;
 border-radius: 5px;
 }
+@media screen and (max-width: 1400px) {
+  .blueblock {
+    margin: 15px 10px 0px 230px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .blueblock {
+    margin: 15px 10px 0px 180px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .blueblock {
+    margin: 99px 10px 0px 10px;
+    width: 145px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .blueblock {
+    margin: 15px 10px 0px 200px;
+  }
+}
+.progbar {
+  padding-right: 20px;
+}
+ 
 .checktextgr {
   font-weight: bold;
   font-size: 30px;
   padding-top: 45px;
-}
-.progbar {
-  display: flex;
-  column-gap: 35px;
 }
 .butstep {
   display: flex;   
@@ -457,7 +472,6 @@ border-radius: 5px;
 .stepbar {
 display: flex;
 flex-direction: column;
-width: 25%;
 }
 .step1back {
 font-weight: bold;
@@ -482,15 +496,11 @@ font-size: 24px;
 margin-bottom: 40px;
 }
 .maketbutton._modif2 {
-  width: 235px;
-  height:55px;
-  color: white;
+  min-width: 235px;
+  min-height:55px;
   margin: 0px 0px 0px 0px;
   background: #0088CF;
-  border-radius: 5px;
-  border-style: none;
   font-size: 16px;
-  font-weight: bold;
   &:active {
   color: #0088CF ;
   background: white;
@@ -498,11 +508,38 @@ margin-bottom: 40px;
   border-style: solid;
   }
   }
+  .maketbutton2 {
+  color: white;
+  border-radius: 5px;
+  border-style: none;
+  font-weight: bold;
+  width: 235px;
+  height:55px;
+    margin: 0px 0px 0px 0px;
+    background: #0088CF;
+    font-size: 16px;
+    &:active {
+    color: #0088CF ;
+    background: white;
+    border-color: #0088CF;
+    border-style: solid;
+    }
+    }
 
+  @media screen and (max-width: 991px) and (min-width: 768px) {
+    .maketbutton2 {
+     width: 100%;
+       }
+  }
+  @media screen and (max-width: 767px) and (min-width: 350px) {
+    .maketbutton2 {
+     width: 90%;
+    
+       }
+  }
 .autocard2 {
   display: flex;
   flex-direction: column;
-  width: 33.3%;
   background-color: #F5F5F9;
   border: 1px solid #E5E5E5;
 }
@@ -530,6 +567,11 @@ text-align: left;
 }
 .form1col2 {
   margin: 72px 40px 0px 40px;
+}
+@media screen and (max-width: 540px) {
+  .form1col2 {
+    margin: 72px 0px 0px 0px;
+  }
 }
 .mb-3>* {
   margin-bottom: 30px;
@@ -610,7 +652,7 @@ color: #0088CF;
   display: none; 
   position: fixed;
   bottom: 10vh;
-  left: 85vw; 
+  left: 90%; 
   z-index: 99; 
   border: none; 
   outline: none; 

@@ -25,11 +25,10 @@ function averageСost(arr) { // ЗАДАЧА 1*
   let cyl = new Cylinder(2, 1) 
   console.log("volume:", cyl.volume().toFixed(2) + ", " + "area:", cyl.area().toFixed(2));
  
-  function odd() { 
-    for (let i = 1; i < 8; i += 1) {
+  function odd(start, finish) { 
+    for (let i = 2; i <= 8; i += 1) {
         if (i % 2 !== 0) {
-          console.log(i);
-        }
+          return i}
       }
     }
-  console.log(odd(2,7));
+  

@@ -40,7 +40,7 @@ function reverseString(str) {
 return str.split("").reverse().join("");
 };
 console.log(reverseString("abc")); 
-// ЗАДАЧА 5
+// ЗАДАЧА 5 :(
 let arr = ['madam was looking on the radar for a kaya']
 const palindrome = (arr) => {
   let count = 0

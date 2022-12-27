@@ -1,6 +1,6 @@
 "use strict";
-
-function averageСost(arr) { // ЗАДАЧА 1*
+// ЗАДАЧА 1*
+function averageСost(arr) { 
     let sum = 0;
     for (let i = 0; i < arr.length; i++) {
         sum += arr[i];
@@ -11,8 +11,8 @@ function averageСost(arr) { // ЗАДАЧА 1*
  console.log(averageСost([50, 100, 60]));
 
 
-
- function Cylinder(r, h) { // ЗАДАЧА 2
+// ЗАДАЧА 2
+ function Cylinder(r, h) { 
     this.cyl_r = r;
     this.cyl_h = h;
   }
@@ -25,10 +25,39 @@ function averageСost(arr) { // ЗАДАЧА 1*
   let cyl = new Cylinder(2, 1) 
   console.log("volume:", cyl.volume().toFixed(2) + ", " + "area:", cyl.area().toFixed(2));
  
-  function odd(start, finish) { 
-    for (let i = 2; i <= 8; i += 1) {
-        if (i % 2 !== 0) {
-          return i}
-      }
+// ЗАДАЧА 3 :(
+  function odd(start, finish){
+  for (let i = 2; i <= 7; i++)
+   {
+    if (i % 2 !== 0);
+        {
+      console.log(i);
     }
-  
+  }
+}
+//ЗАДАЧА 4
+function reverseString(str) { 
+return str.split("").reverse().join("");
+};
+console.log(reverseString("abc")); 
+// ЗАДАЧА 5
+let arr = ['madam was looking on the radar for a kaya']
+const palindrome = (arr) => {
+  let count = 0
+  for(let key of arr){
+    if(key.length > 5 || key.length < 5){
+      continue
+    }
+    if(parseInt(key).toString().length != key.length){
+      continue
+    }
+    if(+key == +key.split('').reverse().join('')){
+      count++
+    }
+  }
+  return count
+}
+let rezult = palindrome(arr) 
+console.log(rezult)
+console.log(palindrome(arr)) 
+

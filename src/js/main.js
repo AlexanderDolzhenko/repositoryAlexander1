@@ -27,13 +27,14 @@ function averageСost(arr) {
  
 // ЗАДАЧА 3 :(
   function odd(start, finish){
-  for (let i = 2; i <= 7; i++)
+  for (let i = start; i <= finish; i++)
    {
     if (i % 2 !== 0);
         {
       console.log(i);
     }
   }
+  odd (2,7)
 }
 //ЗАДАЧА 4
 function reverseString(str) { 
@@ -58,6 +59,6 @@ const palindrome = (arr) => {
   return count
 }
 let rezult = palindrome(arr) 
-console.log(rezult)
+console.log(result)
 console.log(palindrome(arr)) 
 

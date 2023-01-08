@@ -74,15 +74,12 @@ const symbol = ['+'];
 function censorship (str1, forbidden, symbol) {
  const arr = str1.split(' ');
  let result = '';
- const filteredArr = arr.filter(item => item === forbidden);
- for (let i = 0; i < arr.length; i++) {
-if (arr.includes(filteredArr)) {
-  result = arr.splice(4, 1, symbol)
+if (arr.includes(forbidden[0])) {
+result = symbol
 }
+ 
 }
-return result
-}
-console.log(censorship(str, forbidden, '+')) 
+console.log(censorship(str1, forbidden, '+')) 
 
 // ЗАДАЧА 7 
 function urlParser(str) {

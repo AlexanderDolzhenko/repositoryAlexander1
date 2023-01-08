@@ -31,7 +31,7 @@ function averageСost(arr) {
   for (let i = start; i <= finish; i++)
    {
     if (i % 2 !== 0) {
-      result = result + " " + (i); {
+      result = result + (i) + " " ; {
       }
     }
    }
@@ -64,3 +64,93 @@ if (pal.length >= 2) {
 return result;
 }
 console.log(palindromes('madam was looking on the radar for a kayak'));
+
+
+
+// ЗАДАЧА 6 не ок 
+const forbidden = ['ship', 'blow', 'blew up'];
+const str1 =  'There once was a ship that put to sea\nThe name of the ship was the Billy of Tea\nThe winds blew up, her bow dipped down\nOh blow, my bully boys, blow (huh)'
+const symbol = ['+'];
+function censorship (str1, forbidden, symbol) {
+ const arr = str1.split(' ');
+ let result = '';
+ const filteredArr = arr.filter(item => item === forbidden);
+ for (let i = 0; i < arr.length; i++) {
+if (arr.includes(filteredArr)) {
+  result = arr.splice(4, 1, symbol)
+}
+}
+return result
+}
+console.log(censorship(str, forbidden, '+')) 
+
+// ЗАДАЧА 7 
+function urlParser(str) {
+  let myObj = {
+    protocol: '',
+    domain: '',
+    way: '' };
+  let arr; 
+  let arr1;
+    arr = str.split("://");
+  for (let i = 0; i < arr.length; i++) {
+  myObj.protocol = arr[0];
+  arr1 = arr[1].split("/"); 
+  myObj.domain = arr1[0];
+  }   
+  arr1.shift();
+  myObj.way = arr1.join("/");      
+return myObj;
+}
+console.log(urlParser('http://www.devbg.org/forum/index.php'))
+
+// ЗАДАЧА 8
+function backToFront(str, num){
+let arr = str;
+let result = '';
+for (let i = 0; i < arr.length; i++) {
+if (arr == str) {
+  result = arr.slice(-num) + arr + arr.slice(-num);
+}
+}
+return result
+}
+console.log(backToFront('government', 3))
+
+// ЗАДАЧА 9
+function digitSum(num){
+ let sum = 0, tmp;
+ while (num) {
+ tmp = num % 10;
+ num = (num - tmp) / 10;
+ sum += tmp;
+ }
+ return sum;
+}
+console.log(digitSum(9999))
+
+// ЗАДАЧА 9 альтернатива
+function digitSum2(num){
+return num.toString().split('').reduce(function(a, b) {
+return +a + +b;})
+}
+console.log(digitSum2(29)) 
+
+// ЗАДАЧА 10
+function socialRole (age) {
+  let result = '';
+  if (age >= 0 && age < 15) {
+    result = "Ребенок";
+  }
+  else if (age >= 15 && age < 25) {
+    result = "Юноша";
+  }
+  else if (age >=25 && age < 65) {
+  result = "Взрослый";
+  }
+  else if (age >= 65) {
+    result = "Пожилой";
+  }
+  return result
+}
+console.log(socialRole(70))

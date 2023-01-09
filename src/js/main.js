@@ -72,14 +72,18 @@ const forbidden = ['ship', 'blow', 'blew up'];
 const str1 =  'There once was a ship that put to sea\nThe name of the ship was the Billy of Tea\nThe winds blew up, her bow dipped down\nOh blow, my bully boys, blow (huh)'
 const symbol = ['+'];
 function censorship (str1, forbidden, symbol) {
- const arr = str1.split(' ');
+ const arr = str1;
  let result = '';
-if (arr.includes(forbidden[0])) {
-result = symbol
+ for (let i = 0; i < arr.length; i++) {
+if (arr.includes(forbidden[0])) 
+if (arr.includes(forbidden[1])) 
+if (arr.includes(forbidden[2])) {
+result = arr.replace(new RegExp(forbidden[0], "g"), symbol).replace(new RegExp(forbidden[1], "g"), symbol).replace(new RegExp(forbidden[2], "g"), symbol);
 }
- 
 }
-console.log(censorship(str1, forbidden, '+')) 
+return result
+}
+console.log(censorship(str1, forbidden, '++++')) 
 
 // ЗАДАЧА 7 
 function urlParser(str) {

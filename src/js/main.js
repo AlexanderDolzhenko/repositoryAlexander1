@@ -75,6 +75,7 @@ function censorship (str1, forbidden, symbol) {
  const arr = str1;
  let result = '';
  for (let i = 0; i < arr.length; i++) {
+
 if (arr.includes(forbidden[0])) 
 if (arr.includes(forbidden[1])) 
 if (arr.includes(forbidden[2])) {

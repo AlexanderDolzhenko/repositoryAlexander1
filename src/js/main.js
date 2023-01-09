@@ -83,7 +83,7 @@ result = arr.replace(new RegExp(forbidden[0], "g"), symbol).replace(new RegExp(f
 }
 return result
 }
-console.log(censorship(str1, forbidden, '++++')) 
+console.log(censorship(str1, forbidden, '+')) 
 
 // ЗАДАЧА 7 
 function urlParser(str) {

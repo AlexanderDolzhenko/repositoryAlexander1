@@ -79,7 +79,9 @@ function censorship (str1, forbidden, symbol) {
 if (arr.includes(forbidden[0])) 
 if (arr.includes(forbidden[1])) 
 if (arr.includes(forbidden[2])) {
-result = arr.replace(new RegExp(forbidden[0], "g"), symbol).replace(new RegExp(forbidden[1], "g"), symbol).replace(new RegExp(forbidden[2], "g"), symbol);
+result = arr.replace(new RegExp(forbidden[0], "g"), symbol.repeat(forbidden[0].length))
+.replace(new RegExp(forbidden[1], "g"), symbol.repeat(forbidden[1].length))
+.replace(new RegExp(forbidden[2], "g"), symbol.repeat(forbidden[2].length));
 }
 }
 return result

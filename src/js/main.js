@@ -67,7 +67,7 @@ console.log(palindromes('madam was looking on the radar for a kayak'));
 
 
 
-// ЗАДАЧА 6 не ок 
+// ЗАДАЧА 6 
 const forbidden = ['ship', 'blow', 'blew up'];
 const str1 =  'There once was a ship that put to sea\nThe name of the ship was the Billy of Tea\nThe winds blew up, her bow dipped down\nOh blow, my bully boys, blow (huh)'
 const symbol = ['+'];

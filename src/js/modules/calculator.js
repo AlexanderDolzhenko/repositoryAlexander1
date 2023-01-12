@@ -8,19 +8,19 @@ export class Calculator {
         const symbolStr = String(symbol);
 
         if(!VALID_SYMBOLS.test(symbolStr)) {
-            return this.getCurrentString();
+            return this.#getCurrentString();
         }
         if (ACTIONS.test(symbol) && !this.#secondNumber) {
             this.#action = symbol;
-            return this.getCurrentString();
+            return this.#getCurrentString();
         }
-        if (!ACTIONS.test(symbol) && this.#action) {
+        if (!ACTIONS.test(symbol) && !this.#action) {
             this.#firstNumber += symbol;
-            return this.getCurrentString();
+            return this.#getCurrentString();
         } 
         if (!ACTIONS.test(symbol) && this.#action) {
             this.#secondNumber += symbol;
-            return this.getCurrentString();
+            return this.#getCurrentString();
         } 
     }
     #getCurrentString() {

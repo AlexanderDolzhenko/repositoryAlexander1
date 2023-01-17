@@ -8,7 +8,7 @@ function averageСost(arr) {
     return sum / arr.length;
  }
  
- console.log(averageСost([50, 100, 60]));
+ console.log(averageСost([50, 100]));
 
 
 // ЗАДАЧА 2
@@ -17,8 +17,7 @@ function averageСost(arr) {
     this.cyl_h = h;
   }
   Cylinder.prototype.volume = function () {
-    return this.cyl_h * Math.PI * Math.pow(this.cyl_r, 2);
-  };
+    return this.cyl_h * Math.PI * Math.pow(this.cyl_r, 2);  };
   Cylinder.prototype.area = function () {
     return 2 * Math.PI * this.cyl_r * (this.cyl_h + this.cyl_r);
   };
@@ -28,12 +27,10 @@ function averageСost(arr) {
 // ЗАДАЧА 3 
   function odd(start, finish){
   let result = "";
-  for (let i = start; i <= finish; i++)
-   {
+  for (let i = start; i <= finish; i++) {
     if (i % 2 !== 0) {
-      result = result + (i) + " " ; {
-      }
-    }
+    result = result + (i) + " " ; {}
+   }
    }
    return result;
 }
@@ -42,24 +39,21 @@ console.log(str);
 
 //ЗАДАЧА 4
 function reverseString(str) { 
-return str.split("").reverse().join("");
-};
+return str.split("").reverse().join("");};
 console.log(reverseString("abc")); 
 
 // ЗАДАЧА 5
 function palindromes(str) {
 let arr = str.split(' ');
 let result = '';
-for (let i = 0; i < arr.length; i++) {
-let pal = arr[i];
+    for (let i = 0; i < arr.length; i++) {
+    let pal = arr[i];
 function reverse(pal) {
-return pal.split("").reverse().join("");
+    return pal.split("").reverse().join("");
 }
 const palReverse = reverse(pal);
-if(pal === palReverse)
-if (pal.length >= 2) {
- result = result + pal + " "; 
-}
+    if(pal === palReverse && pal.length >= 2) {
+    result = result + pal + " ";}
 }
 return result;
 }
@@ -70,18 +64,17 @@ console.log(palindromes('madam was looking on the radar for a kayak'));
 // ЗАДАЧА 6 
 const forbidden = ['ship', 'blow', 'blew up'];
 const str1 =  'There once was a ship that put to sea\nThe name of the ship was the Billy of Tea\nThe winds blew up, her bow dipped down\nOh blow, my bully boys, blow (huh)'
-const symbol = ['+'];
+const symbol = '+';
 function censorship (str1, forbidden, symbol) {
  const arr = str1;
  let result = '';
  for (let i = 0; i < arr.length; i++) {
-
-if (arr.includes(forbidden[0])) 
-if (arr.includes(forbidden[1])) 
-if (arr.includes(forbidden[2])) {
-result = arr.replace(new RegExp(forbidden[0], "g"), symbol.repeat(forbidden[0].length))
-.replace(new RegExp(forbidden[1], "g"), symbol.repeat(forbidden[1].length))
-.replace(new RegExp(forbidden[2], "g"), symbol.repeat(forbidden[2].length));
+    if (arr.includes(forbidden[0])
+    && arr.includes(forbidden[1])
+    && arr.includes(forbidden[2])) {
+    result = arr.replace(new RegExp(forbidden[0], "g"), symbol.repeat(forbidden[0].length))
+    .replace(new RegExp(forbidden[1], "g"), symbol.repeat(forbidden[1].length))
+    .replace(new RegExp(forbidden[2], "g"), symbol.repeat(forbidden[2].length));
 }
 }
 return result
@@ -97,13 +90,13 @@ function urlParser(str) {
   let arr; 
   let arr1;
     arr = str.split("://");
-  for (let i = 0; i < arr.length; i++) {
-  myObj.protocol = arr[0];
-  arr1 = arr[1].split("/"); 
-  myObj.domain = arr1[0];
+    for (let i = 0; i < arr.length; i++) {
+    myObj.protocol = arr[0];
+    arr1 = arr[1].split("/"); 
+    myObj.domain = arr1[0];
   }   
-  arr1.shift();
-  myObj.way = arr1.join("/");      
+    arr1.shift();
+    myObj.way = arr1.join("/");      
 return myObj;
 }
 console.log(urlParser('http://www.devbg.org/forum/index.php'))
@@ -112,10 +105,8 @@ console.log(urlParser('http://www.devbg.org/forum/index.php'))
 function backToFront(str, num){
 let arr = str;
 let result = '';
-for (let i = 0; i < arr.length; i++) {
-if (arr == str) {
-  result = arr.slice(-num) + arr + arr.slice(-num);
-}
+    if (arr == str) {
+    result = arr.slice(-num) + arr + arr.slice(-num);
 }
 return result
 }
@@ -145,16 +136,12 @@ function socialRole (age) {
   let result = '';
   if (age >= 0 && age < 15) {
     result = "Ребенок";
-  }
-  else if (age >= 15 && age < 25) {
+  } else if (age >= 15 && age < 25) {
     result = "Юноша";
-  }
-  else if (age >=25 && age < 65) {
+  } else if (age >=25 && age < 65) {
   result = "Взрослый";
-  }
-  else if (age >= 65) {
+  } else if (age >= 65) {
     result = "Пожилой";
-  }
-  return result
+  } return result
 }
 console.log(socialRole(70))

@@ -3,8 +3,7 @@
 function averageСost(arr) { 
     let sum = 0;
     for (let i = 0; i < arr.length; i++) {
-        sum += arr[i];
-    }
+        sum += arr[i];}
     return sum / arr.length;
  }
  
@@ -29,8 +28,7 @@ function averageСost(arr) {
   let result = "";
   for (let i = start; i <= finish; i++) {
     if (i % 2 !== 0) {
-    result = result + (i) + " " ; {}
-   }
+    result = result + (i) + " " ; {}}
    }
    return result;
 }
@@ -49,8 +47,7 @@ let result = '';
     for (let i = 0; i < arr.length; i++) {
     let pal = arr[i];
 function reverse(pal) {
-    return pal.split("").reverse().join("");
-}
+    return pal.split("").reverse().join("");}
 const palReverse = reverse(pal);
     if(pal === palReverse && pal.length >= 2) {
     result = result + pal + " ";}
@@ -74,8 +71,7 @@ function censorship (str1, forbidden, symbol) {
     && arr.includes(forbidden[2])) {
     result = arr.replace(new RegExp(forbidden[0], "g"), symbol.repeat(forbidden[0].length))
     .replace(new RegExp(forbidden[1], "g"), symbol.repeat(forbidden[1].length))
-    .replace(new RegExp(forbidden[2], "g"), symbol.repeat(forbidden[2].length));
-}
+    .replace(new RegExp(forbidden[2], "g"), symbol.repeat(forbidden[2].length));}
 }
 return result
 }
@@ -93,8 +89,7 @@ function urlParser(str) {
     for (let i = 0; i < arr.length; i++) {
     myObj.protocol = arr[0];
     arr1 = arr[1].split("/"); 
-    myObj.domain = arr1[0];
-  }   
+    myObj.domain = arr1[0];}   
     arr1.shift();
     myObj.way = arr1.join("/");      
 return myObj;

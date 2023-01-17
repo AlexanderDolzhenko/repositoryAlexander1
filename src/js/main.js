@@ -107,6 +107,22 @@ return myObj;
 }
 console.log(urlParser('http://www.devbg.org/forum/index.php'))
 
+// ЗАДАЧА 7 АЛЬТЕРНАТИВА
+
+function urlParser2(str1) {
+    let match = str1.match(/^(https?\:)\/\/(([^:\/?#]*)(?:\:([0-9]+))?)([\/]{0,1}[^?#]*)/);
+    return match && {
+        protocol: match[1],
+        domain: match[2],       
+        way: match[5],       
+    }
+}
+console.log(urlParser2('http://www.devbg.org/forum/index.php'))
+
+
+
+
+
 // ЗАДАЧА 8
 function backToFront(str, num){
 let arr = str;

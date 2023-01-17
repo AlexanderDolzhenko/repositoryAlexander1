@@ -9,6 +9,17 @@ function averageСost(arr) {
  
  console.log(averageСost([50, 100]));
 
+ // ЗАДАЧА 1-1
+function avCost2() {
+    let len = arguments.length;
+    let sum = 0;
+    for (let i = 0; i < len; i++) {
+        sum += +arguments[i];
+    }
+    return sum/len;
+ }
+
+console.log(avCost2(50, 100, 30));
 
 // ЗАДАЧА 2
  function Cylinder(r, h) { 

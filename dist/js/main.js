@@ -12,7 +12,7 @@ function sequence1(arr) {
                 ind = i;
                 length = 1;}
         if (length > maxLength) {
-            maxPos = ind;
+            maxInd = ind;
             maxLen = length;}
 }
 return arr.slice(maxInd, maxInd + maxLength);

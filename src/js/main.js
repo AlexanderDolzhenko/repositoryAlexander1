@@ -34,6 +34,19 @@ console.log(avCost2(50, 100, 30));
   let cyl = new Cylinder(2, 1) 
   console.log("volume:", cyl.volume().toFixed(2) + ", " + "area:", cyl.area().toFixed(2));
  
+// ЗАДАЧА 2 - альтернатива
+  function calculateVolumeAndArea(length) {
+    let volume = 0;
+   let area = 0;
+   volume = length * length * length;
+   area = 6 * (length * length);
+   return `volume: ${volume}, area: ${area}`;
+   }
+console.log(calculateVolumeAndArea(5));
+
+
+
+
 // ЗАДАЧА 3 
   function odd(start, finish){
   let result = "";

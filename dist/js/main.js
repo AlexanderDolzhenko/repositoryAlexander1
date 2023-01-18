@@ -18,5 +18,5 @@ function sequence1(arr) {
 return arr.slice(maxInd, maxInd + maxLength);
 }
 
-console.log(sequence1([0,1,2,3,4,4,4,4,5,6,7,7,7,7,8,8,8,4]));
+console.log(sequence1([0,1,2,3,4,4,4,4,5,6,7,7,7,7,8,8,8,4,4]));
 

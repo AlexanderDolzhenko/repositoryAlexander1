@@ -51,7 +51,7 @@
               position: absolute;
               top: 2px;
               right: 10px;
-              background: url('../icons/search.svg') center (center / cover) no-repeat;
+              background: url('../img/icons/search.svg') center (center / cover) no-repeat;
               width: 24px;
               height: 24px;
           }
@@ -177,7 +177,7 @@
               transform: translateY(-50%);
               width: 20px;
               height: 20px;
-              background: url('../icons/Star.svg') center (center / cover) no-repeat;
+              background: url('../img/icons/Star.svg') center (center / cover) no-repeat;
           }
           &:before {
               content: '';
@@ -198,7 +198,7 @@
                   transform: translateY(-50%);
                   width: 20px;
                   height: 20px;
-                  background: url('../icons/trash.png') center (center / cover) no-repeat;
+                  background: url('../img/icons/trash.png') center (center / cover) no-repeat;
                   cursor: pointer;
               }
           }

@@ -1,6 +1,6 @@
 'use strict';
 
-const personalMovieDB = {
+/* const personalMovieDB = {
 count: 0,
 movies: {},
 actors: {},
@@ -73,7 +73,22 @@ writeyourGenres: () => {
             console.log(`Любимый жанр ${i + 1} - это ${item}`);
         })
 }
+}; */
+
+
+const movieDB = {
+    movies: [
+        "Логан",
+        "Лига справедливости",
+        "Ла-ла лэнд",
+        "Одержимость",
+        "Скотт Пилигрим против..."
+    ]
 };
+const adv = document.querySelectorAll('.promo_adv img');
+adv.forEach(item => {
+    item.remove();
+});
 
 
 

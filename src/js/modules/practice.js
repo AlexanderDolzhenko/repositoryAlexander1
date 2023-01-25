@@ -1,11 +1,11 @@
-export function getCard({name, imgPath, price, count}) {
+function getCard({name, imgPath, price, count}) {
     const card = document.createElement('div');
     card.innerHTML = `${name}`;
     card.classList.add('cardgood');
 
     const pictures = document.createElement('img');
-    pictures.src = 'img';
-    pictures.innerHTML = `${imgPath}`;
+    pictures.classList.add('imggood');
+    pictures.src = `${imgPath}`;
     card.appendChild(pictures);
 
     const prices = document.createElement('div');
@@ -22,7 +22,6 @@ export function getCard({name, imgPath, price, count}) {
     return card
 }
 
+export {getCard};
 
-const card = getCard({name: 'Milky way'}, {imgPath: '/img/milky.jpg'}, {price: '2$'}, {count: '2'});
 
-document.body.appendChild(card);

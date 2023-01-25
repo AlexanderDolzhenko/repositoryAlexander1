@@ -4,7 +4,8 @@ export function getCard({name, imgPath, price, count}) {
     card.classList.add('cardgood');
 
     const pictures = document.createElement('img');
-    pictures.src = `${imgPath}`;
+    pictures.src = 'img';
+    pictures.innerHTML = `${imgPath}`;
     card.appendChild(pictures);
 
     const prices = document.createElement('div');

@@ -1,17 +1,17 @@
-import { Calculator } from "./modules/calculator.js";
+function getCard({name, imgPath, price, count}) {
+    const card = document.createElement('div');
+    card.innerHTML = `${name}`;
+    const pictures = document.createElement('img');
+    pictures.innerHTML= `${imgPath}`;
+    const prices = document.createElement('span');
+    prices.innerHTML= `${price}`;
+    const stockCount = document.createElement('input');
+    stockCount.innerHTML= `${count}`;
+    
+    return card, pictures, prices, stockCount;
+}
 
-const calculator = new Calculator();
-console.log(calculator.setSign('1'));
-console.log(calculator.setSign('5'));
-console.log(calculator.setSign('0'));
-console.log(calculator.setSign('+'));
-console.log(calculator.setSign('10'));
-console.log(calculator.calculate());
-console.log(calculator.setSign('1'));
-console.log(calculator.setSign('0'));
-console.log(calculator.setSign('+'));
-console.log(calculator.calculate());
-console.log('11', calculator.setSign('+'));
-console.log('11', calculator.setSign('1'));
-console.log('11', calculator.setSign('0'));
-console.log('11', calculator.setSign('*'));
+const card = getCard({name: 'Milky way'}, {imgPath: '/img/milky.jpg'}, {price: '2$'}, {count: '2'});
+
+document.body.appendChild(card);
+

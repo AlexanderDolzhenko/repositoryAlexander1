@@ -14,8 +14,12 @@ function getCard({name, imgPath, price, count}) {
 
     const rate = document.createElement('div');
     rate.classList.add('rateGood');
-    rate.innerText = '';
     card.appendChild(rate);
+
+    const iRate = document.createElement('i');
+    iRate.classList.add('fa-solid');
+    iRate.classList.add('fa-star');
+    rate.appendChild(iRate);
 
     const pictures = document.createElement('img');
     pictures.classList.add('imgGood');
@@ -28,12 +32,12 @@ function getCard({name, imgPath, price, count}) {
 
     const prices = document.createElement('div');
     prices.classList.add('cardPrice');
-    prices.innerText = `${price}`;
+    prices.innerText = `Цена: ${price}`;
     cardfooter.appendChild(prices);
 
     const stockCount = document.createElement('div');
     stockCount.classList.add('stockNumber');
-    stockCount.innerText = `${count}`;
+    stockCount.innerText = `На складе: ${count}`;
     cardfooter.appendChild(stockCount);
 
     return card

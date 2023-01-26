@@ -25,18 +25,19 @@
    width: 100%;
 }
 
-.rateGood {
+.fa-solid, .fa-star {
   height: 14px;
   line-height: 14px;
-  margin-top: 5px;
+  margin-top: 5px;  
 }
 
-.rateGood:before {
+.fa-star:before {
   content: "\f005\f005\f005\f005\f5c0";
-  color: #EFB71C;
-  font-size: 14px;
-  font-family: "Font Awesome 6 Free";
+color: #EFB71C;
+font-size: 14px;
+font-family: "Font Awesome 6 Free";
 }
+
 
 .cardFooter {
   display: flex;

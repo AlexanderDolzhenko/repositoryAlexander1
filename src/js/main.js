@@ -133,6 +133,12 @@ function urlParser2(str1) {
 console.log(urlParser2('http://www.devbg.org/forum/index.php'))
 
 
+// ЗАДАЧА 7 АЛЬТЕРНАТИВА-2
+const url1 = 'http://www.devbg.org/forum/index.php';
+
+const regexp1 = /^(https?|ftp):\/\/([^/]+)\/([^/]+\/?)+/;
+
+console.log(url1.match(regexp1));
 
 
 

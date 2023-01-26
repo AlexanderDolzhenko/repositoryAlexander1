@@ -1,3 +1,76 @@
-.cardgood {
-    outline: 2px solid red;
+.goodsCard {
+  width: 300px;
+  margin: 0 auto;
+  padding: 10px 10px 5px 10px;
+  border: 3px solid #eee;
+  background: white;
+  font-family: "Open Sans";
+  overflow: hidden; 
+  &:hover {
+    transform: scale(1.1);
   }
+}
+
+.cardHeader {
+  font-weight: 700;
+  text-align: center;
+  color: #39404B;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 2;
+  }
+.cardImg img {
+  display: block;
+   width: 100%;
+}
+
+.rateGood {
+  height: 14px;
+  line-height: 14px;
+  margin-top: 5px;
+}
+
+.rateGood:before {
+  content: "\f005\f005\f005\f005\f5c0";
+  color: #EFB71C;
+  font-size: 14px;
+  font-family: "Font Awesome 6 Free";
+}
+
+.cardFooter {
+  display: flex;
+  flex-direction: row;
+  padding: 2px 0px 2px 0px;
+}
+
+.cardPrice {
+  color: #E34D38;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.stockNumber {
+  margin-left: auto;
+  font-family: 'Open Sans', serif;
+  color: #19e619;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

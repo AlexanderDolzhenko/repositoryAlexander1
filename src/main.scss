@@ -9,6 +9,7 @@
 @import "./partials/logo/_logo.scss";
 @import "./partials/icontext/_icontext.scss";
 @import "./_mixins.scss";
+@import "./partials/forcalculator/calc.scss";
 
 body * {
   outline: 1px solid  lightgreen;

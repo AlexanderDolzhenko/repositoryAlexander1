@@ -1,11 +1,13 @@
 class Calculator {
+    #actions;
     #buttons;
     #root;
     #display;
     #actionsRef;
+    #defaultButtons = [7, 8, 9, 4, 5, 6, 1, 2, 3, 0, ',', '='];
 
-    constructor(buttons, root) {
-        this.#buttons = buttons;
+    constructor(actions, root) {
+        this.#actions = actions;
         this.#root = root;
     }
 
@@ -38,9 +40,17 @@ class Calculator {
         const calculatorActions = document.createElement('div');
         this.#actionsRef = calculatorActions;
         calculatorActions.classList.add('calculator__actions');
+        const defaultBtns = this.#defaultButtons.map(btn => this.#getButton(btn));
+        const numbers = document.createElement('div');
+        numbers.classList.add('calculator__buttons');
+        numbers.append(...defaultBtns);
 
-        const actions = this.#buttons.map(btn => this.#getButton(btn));
-        calculatorActions.append(...actions);
+        const actionEls = this.#actions.map(btn => this.#getButton(btn));
+        const actions = document.createElement('div');
+        actions.classList.add('calculator__buttons');
+        actions.append(...actionEls);
+
+        calculatorActions.append(numbers, actions);
         calculator.appendChild(calculatorActions);
 
         return calculator;

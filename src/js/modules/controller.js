@@ -14,7 +14,10 @@ class Controller {
     }
 
     #handleClick(e) {
-        const {target: {innerText}} = e;
+        if (e.target === this.#view.getActionsRef()) {
+            return;
+        }
+        const {target: {innerText}} = e; 
         let displayString = '';        
         if (innerText !== '=') {
             this.#calculator.setSign(innerText);

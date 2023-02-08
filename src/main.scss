@@ -1,6 +1,20 @@
 @import "./partials/forcalculator/calc.scss";
 @import "./partials/displaycalc/display.scss";
 @import "./partials/mathcalculator/calculator.scss";
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap&subset=cyrillic-ext');
+@import "./variables/_variables.scss";
+@import "./variables/_variables2.scss";
+@import "./_base.scss";
+@import "./partials/header/_header.scss";
+@import "./partials/sidepanel/_sidepanel.scss";
+@import "./partials/preview/_preview.scss";
+@import "./partials/offer/_offer.scss";
+@import "./partials/calculating/_calculating.scss";
+@import "./partials/menu/_menu.scss";
+@import "./partials/order/_order.scss";
+@import "./partials/promotion/_promotion.scss";
+@import "./partials/footer/_footer.scss";
+@import "./partials/modal/_modal.scss";
 
 body * {
   outline: 1px solid  lightgreen;

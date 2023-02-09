@@ -50,11 +50,23 @@ class Truck extends Veichle {
     get loadcapacity() {
         return this.#loadcapacity;
     }
+    get vin() {
+        return super.vin;
+    }
+    get color() {
+        return super.color;
+    }
     set loadcapacity(loadcapacity) {
         if (typeof loadcapacity !== 'number') {
             throw new Error('loadcapacity should be a number');
         }
         this.#loadcapacity = loadcapacity;
+    }
+    set vin(vin) {
+        super.vin = vin;
+    }
+    set color(color) {
+        super.color = color;
     }
 }
 class Bus extends Veichle {
@@ -66,14 +78,27 @@ class Bus extends Veichle {
     get sitsCapacity() {
         return this.#sitsCapacity;
     }
+    get vin() {
+        return super.vin;
+    }
+    get color() {
+        return super.color;
+    }
     set sitsCapacity(sitsCapacity) {
         if (typeof sitsCapacity !== 'number') {
             throw new Error('sitsCapacity should be a number');
         }
         this.#sitsCapacity = sitsCapacity;
     }
+    set vin(vin) {
+        super.vin = vin;
+    }
+    set color(color) {
+        super.color = color;
+    }
 }
-
+const ale = new Bus;
+console.log(ale);
 class Dealer {
     #title;
     #veicles;
@@ -144,3 +169,7 @@ const DATABASE = {
 };
 const dealer = DATABASE;
 console.log(dealer);
+const busic = new Bus(7733, 'Light Green', 50);
+console.log(busic);
+const truckSell = new Truck(1112);
+console.log(truckSell);

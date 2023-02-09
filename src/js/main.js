@@ -43,7 +43,8 @@ class Veichle {
 }
 class Truck extends Veichle {
 #loadcapacity;
-constructor(loadCapacity) {
+constructor(vin, color, loadCapacity) {
+    super(vin, color);
     this.#loadcapacity = loadCapacity;
 }
 get loadcapacity() {
@@ -58,7 +59,8 @@ set loadcapacity(loadcapacity) {
 }
 class Bus extends Veichle {
 #sitsCapacity;
-constructor(sitsCapacity) {
+constructor(vin, color, sitsCapacity) {
+    super(vin, color);
     this.#sitsCapacity = sitsCapacity;
 }
 get sitsCapacity() {
@@ -71,6 +73,7 @@ set sitsCapacity(sitsCapacity) {
     this.#sitsCapacity = sitsCapacity;
 }
 }
+
 class Dealer {
 #title;
 #veicles;
@@ -87,20 +90,23 @@ set title(title) {
     }
     this.#title = title;
 }
-get veichles() {
+get veicles() {
     return this.#veicles;
 }
-set veichles(veichles) {
-    if (typeof veichles !== Veichle) {
-        throw new Error('veichles should be a massive');
+set veicles(veicles) {
+    if (typeof veicles !== new Veichle) {
+        throw new Error('veicles should be a massive');
     }
-    this.#veicles = veichles;
+    this.#veicles = veicles;
 }
-addVeichle(veichle){};
+addVeichle(Veichle){};
+
 sellVeichle(vin){};
 repaintVeichle(vin){};
 
 }
+const divan = new Dealer;
+console.log(divan);
 
 const DATABASE = {
     dealer: {
@@ -136,4 +142,5 @@ const DATABASE = {
       },
     ],
   };
- 
+  let dealer = DATABASE;
+console.log(dealer);

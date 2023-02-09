@@ -142,5 +142,5 @@ const DATABASE = {
         },
     ],
 };
-let dealer = DATABASE;
+const dealer = DATABASE;
 console.log(dealer);

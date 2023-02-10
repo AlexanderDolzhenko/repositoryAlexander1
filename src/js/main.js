@@ -97,8 +97,6 @@ class Bus extends Veichle {
         super.color = color;
     }
 }
-const ale = new Bus;
-console.log(ale);
 class Dealer {
     #title;
     #veicles;
@@ -119,19 +117,17 @@ class Dealer {
         return this.#veicles;
     }
     set veicles(veicles) {
-        if (typeof veicles !== new Veichle) {
+        if (typeof veicles !== []) {
             throw new Error('veicles should be a massive');
         }
         this.#veicles = veicles;
     }
-    addVeichle(Veichle) { };
+    addVeichle() { };
 
-    sellVeichle(vin) { };
-    repaintVeichle(vin) { };
+    sellVeichle() { };
+    repaintVeichle() { };
 
 }
-const divan = new Dealer;
-console.log(divan);
 
 const DATABASE = {
     dealer: {
@@ -167,9 +163,8 @@ const DATABASE = {
         },
     ],
 };
-const dealer = DATABASE;
-console.log(dealer);
-const busic = new Bus(7733, 'Light Green', 50);
-console.log(busic);
-const truckSell = new Truck(1112);
-console.log(truckSell);
+const bus = new Bus(7733, 'Light Green', 50);
+const truck = new Truck(1112);
+const dealer = new Dealer();
+dealer.addVeicle(truck);
+dealer.addVeichle(bus);

@@ -51,10 +51,10 @@ class Truck extends Veichle {
         return this.#loadcapacity;
     }
     get vin() {
-        return super.vin;
+        return this.vin;
     }
     get color() {
-        return super.color;
+        return this.color;
     }
     set loadcapacity(loadcapacity) {
         if (typeof loadcapacity !== 'number') {
@@ -79,10 +79,10 @@ class Bus extends Veichle {
         return this.#sitsCapacity;
     }
     get vin() {
-        return super.vin;
+        return this.vin;
     }
     get color() {
-        return super.color;
+        return this.color;
     }
     set sitsCapacity(sitsCapacity) {
         if (typeof sitsCapacity !== 'number') {
@@ -117,7 +117,7 @@ class Dealer {
         return this.#veicles;
     }
     set veicles(veicles) {
-        if (typeof veicles !== []) {
+        if (typeof veicles !== Veichle["Bus", "Truck"]) {
             throw new Error('veicles should be a massive');
         }
         this.#veicles = veicles;
@@ -166,5 +166,4 @@ const DATABASE = {
 const bus = new Bus(7733, 'Light Green', 50);
 const truck = new Truck(1112);
 const dealer = new Dealer();
-dealer.addVeicle(truck);
-dealer.addVeichle(bus);
+console.log(dealer);

@@ -123,8 +123,9 @@ class Dealer {
     }
 
     repaintVeichle(veicles) { 
-        if (this.#veichles.includes(this.#veichles[1])) {
-           
+        if (this.#veichles[1].includes(this.#veichles[1][1][2])) {
+            veicles = DATABASE.buses[1];
+           DATABASE.buses[1].splice('Yellow', 1, 'Blue') ;
         }
     };
 

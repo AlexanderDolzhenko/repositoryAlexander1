@@ -124,7 +124,7 @@ class Dealer {
 
     repaintVeichle(veicles) { 
         if (this.#veichles.includes(this.#veichles[1])) {
-            this.#veichles[1].splice(veicles[1], 1, "blue"); 
+           
         }
     };
 
@@ -201,7 +201,7 @@ new Bus(
     const bus2 = new Bus(7733, 'Light Green', 50);
     dealer.addVeichle(bus2);
     dealer.sellVeichle(0);
-    dealer.repaintVeichle()
+    dealer.repaintVeichle();
     
 
 console.log(dealer);

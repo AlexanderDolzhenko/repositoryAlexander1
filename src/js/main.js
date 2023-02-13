@@ -69,6 +69,7 @@ class Truck extends Veichle {
         super.color = color;
     }
 }
+
 class Bus extends Veichle {
     #sitsCapacity;
     constructor(vin, color, sitsCapacity) {
@@ -98,11 +99,22 @@ class Bus extends Veichle {
     }
 }
 class Dealer {
+    #veichles = [];
     #title;
-    #veicles;
+
     constructor(title, veicles) {
         this.#title = title;
-        this.#veicles = veicles;
+        if (typeof veicles !== 'object') {
+            throw new Error('should be a massive');
+        }            
+        this.#veichles = veicles;        
+    }
+
+    addVeichle(veicles) {
+        
+            this.#veichles.push(veicles);
+
+        
     }
     get title() {
         return this.#title;
@@ -113,16 +125,9 @@ class Dealer {
         }
         this.#title = title;
     }
-    get veicles() {
-        return this.#veicles;
-    }
-    set veicles(veicles) {
-        if (typeof veicles !== Veichle["Bus", "Truck"]) {
-            throw new Error('veicles should be a massive');
-        }
-        this.#veicles = veicles;
-    }
-    addVeichle() { };
+
+
+
 
     sellVeichle() { };
     repaintVeichle() { };
@@ -163,7 +168,33 @@ const DATABASE = {
         },
     ],
 };
-const bus = new Bus(7733, 'Light Green', 50);
-const truck = new Truck(1112);
-const dealer = new Dealer();
+const truck = [new Truck(
+    DATABASE.trucks[0].vin,
+    DATABASE.trucks[0].color,
+    DATABASE.trucks[0].loadCapacity),
+new Truck(
+    DATABASE.trucks[1].vin,
+    DATABASE.trucks[1].color,
+    DATABASE.trucks[1].loadCapacity),
+new Truck(
+    DATABASE.trucks[2].vin,
+    DATABASE.trucks[2].color,
+    DATABASE.trucks[2].loadCapacity
+)];
+
+const bus = [new Bus(
+    DATABASE.buses[0].vin,
+    DATABASE.buses[0].color,
+    DATABASE.buses[0].sitsCapacity),
+new Bus(
+    DATABASE.buses[1].vin,
+    DATABASE.buses[1].color,
+    DATABASE.buses[1].sitsCapacity)];
+
+    const dealer = new Dealer(DATABASE.dealer.title, [truck, bus]);
+
+    const bus2 = [new Bus(7733, 'Light Green', 50)];
+    dealer.addVeichle(bus2);
+    
+
 console.log(dealer);

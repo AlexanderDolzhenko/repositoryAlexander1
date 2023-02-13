@@ -111,11 +111,23 @@ class Dealer {
     }
 
     addVeichle(veicles) {
-        
-            this.#veichles.push(veicles);
-
-        
+        if (this.#veichles.includes(this.#veichles[1])) {
+            this.#veichles[1].push(veicles);    
+        }   
     }
+
+    sellVeichle(veicles) {
+        if (this.#veichles.includes(this.#veichles[0])) {
+            this.#veichles[0].splice(veicles, 1); 
+        }              
+    }
+
+    repaintVeichle(veicles) { 
+        if (this.#veichles.includes(this.#veichles[1])) {
+            this.#veichles[1].splice(veicles[1], 1, "blue"); 
+        }
+    };
+
     get title() {
         return this.#title;
     }
@@ -125,13 +137,6 @@ class Dealer {
         }
         this.#title = title;
     }
-
-
-
-
-    sellVeichle() { };
-    repaintVeichle() { };
-
 }
 
 const DATABASE = {
@@ -193,8 +198,10 @@ new Bus(
 
     const dealer = new Dealer(DATABASE.dealer.title, [truck, bus]);
 
-    const bus2 = [new Bus(7733, 'Light Green', 50)];
+    const bus2 = new Bus(7733, 'Light Green', 50);
     dealer.addVeichle(bus2);
+    dealer.sellVeichle(0);
+    dealer.repaintVeichle()
     
 
 console.log(dealer);

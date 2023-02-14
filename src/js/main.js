@@ -53,23 +53,12 @@ class Truck extends Veichle {
     get loadcapacity() {
         return this.#loadcapacity;
     }
-    get vin() {
-        return this.vin;
-    }
-    get color() {
-        return this.color;
-    }
+
     set loadcapacity(loadcapacity) {
         if (typeof loadcapacity !== 'number') {
             throw new Error('loadcapacity should be a number');
         }
         this.#loadcapacity = loadcapacity;
-    }
-    set vin(vin) {
-        super.vin = vin;
-    }
-    set color(color) {
-        super.color = color;
     }
 }
 
@@ -82,24 +71,14 @@ class Bus extends Veichle {
     get sitsCapacity() {
         return this.#sitsCapacity;
     }
-    get vin() {
-        return this.vin;
-    }
-    get color() {
-        return this.color;
-    }
+
     set sitsCapacity(sitsCapacity) {
         if (typeof sitsCapacity !== 'number') {
             throw new Error('sitsCapacity should be a number');
         }
         this.#sitsCapacity = sitsCapacity;
     }
-    set vin(vin) {
-        super.vin = vin;
-    }
-    set color(color) {
-        super.color = color;
-    }
+
 }
 class Dealer {
     #veichles = [];
@@ -107,25 +86,37 @@ class Dealer {
 
     constructor(title, veicles) {
         this.#title = title;
-        if (veicles instanceof Bus || Truck) {
-            this.#veichles = veicles;
-        } else {
-            throw new Error('should be a massive');
-        }       
-        
-    }
+        this.#veichles = veicles;
+        this.#veichles.forEach((veicles) => {
+            for (let i = 0; i < this.#veichles.length; i++) {
+                if (this.#veichles[i] instanceof Bus || this.#veichles[i] instanceof Truck ) {
+                    this.#veichles[i] = veicles;
+                }
+                else {
+                    throw new Error('should be a massive');
+                }
+            }
+        })
+    };
 
     addVeichle(veicles) {
-        if (this.#veichles.includes(this.#veichles[1])) {
-            this.#veichles[1].push(veicles);
+
+        const autoVin = this.#veichles.find((item) => item.vin === veicles.vin);
+        if (!autoVin) {
+            this.#veichles.push(veicles);
+        }
+        else {
+            throw new Error('should be a unique vin');
         }
     };
 
     sellVeichle(veicles) {
-        if (this.#veichles.includes(this.#veichles[0])) {
-            this.#veichles[0].splice(veicles, 1);
+        if (veicles) {
+            this.#veichles.splice(veicles, 1);
         }
     };
+
+
     repaintVeichle(vin, color, type) {
         const veiclesByType = this.#veichles.filter((veicles) =>
             type === 'bus' ?
@@ -137,12 +128,7 @@ class Dealer {
         if (veicles) {
             veicles.color = color;
         }
-    }
-    getVeichleById(vin) {
-        return this.#veichles.find((item) => item.vin === vin).info;
-    }
-
-
+    };
 
     get title() {
         return this.#title;
@@ -212,14 +198,14 @@ new Bus(
     DATABASE.buses[1].color,
     DATABASE.buses[1].sitsCapacity)];
 
-const dealer = new Dealer(DATABASE.dealer.title, [truck, bus]);
+const dealer = new Dealer(DATABASE.dealer.title, [...truck, ...bus]);
 
 const bus2 = new Bus(7733, 'Light Green', 50);
 dealer.addVeichle(bus2);
-dealer.sellVeichle(0);
+const truckSold = new Truck(1112, 'Red', 10);
+dealer.sellVeichle(truckSold);
 
-dealer.repaintVeichle(6543, 'Blue', 'bus');
-//console.log(dealer.getVeichleById(6543));
+dealer.repaintVeichle(6543, 'EXTRABLUE', 'bus');
 
 
 console.log(dealer);

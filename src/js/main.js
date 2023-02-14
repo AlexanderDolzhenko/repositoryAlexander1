@@ -107,37 +107,42 @@ class Dealer {
 
     constructor(title, veicles) {
         this.#title = title;
-        if (typeof veicles !== 'object') {
+        if (veicles instanceof Bus || Truck) {
+            this.#veichles = veicles;
+        } else {
             throw new Error('should be a massive');
-        }            
-        this.#veichles = veicles;        
+        }       
+        
     }
 
     addVeichle(veicles) {
         if (this.#veichles.includes(this.#veichles[1])) {
-            this.#veichles[1].push(veicles);    
-        }   
-    }
+            this.#veichles[1].push(veicles);
+        }
+    };
 
     sellVeichle(veicles) {
         if (this.#veichles.includes(this.#veichles[0])) {
-            this.#veichles[0].splice(veicles, 1); 
-        }              
-    }
-
-    repaintVeichle(vin, color, type) { 
-        const veiclesByType = this.#veichles.filter(veicles => type === 'bus'
-        ? veicles instanceof Bus
-        : veicles instanceof Truck);
+            this.#veichles[0].splice(veicles, 1);
+        }
+    };
+    repaintVeichle(vin, color, type) {
+        const veiclesByType = this.#veichles.filter((veicles) =>
+            type === "bus" ?
+                veicles instanceof Bus :
+                veicles instanceof Truck
+        );
         const veicles = veiclesByType.find((item) => item.vin === vin);
+
         if (veicles) {
             veicles.color = color;
         }
-    };
+    }
     getVeichleById(vin) {
         return this.#veichles.find((item) => item.vin === vin).info;
-      }
-    
+    }
+
+
 
     get title() {
         return this.#title;
@@ -207,14 +212,14 @@ new Bus(
     DATABASE.buses[1].color,
     DATABASE.buses[1].sitsCapacity)];
 
-    const dealer = new Dealer(DATABASE.dealer.title, [truck, bus]);
-    
-    const bus2 = new Bus(7733, 'Light Green', 50);
-    dealer.addVeichle(bus2);
-    dealer.sellVeichle(0);
-    console.log(dealer.getVeichleById(6543));
-    dealer.repaintVeichle(6543, 'Blue', 'bus');
-    console.log(dealer.getVeichleById(6543));
-    
+const dealer = new Dealer(DATABASE.dealer.title, [truck, bus]);
+
+const bus2 = new Bus(7733, 'Light Green', 50);
+dealer.addVeichle(bus2);
+dealer.sellVeichle(0);
+
+dealer.repaintVeichle(6543, 'Blue', 'bus');
+//console.log(dealer.getVeichleById(6543));
+
 
 console.log(dealer);

@@ -122,10 +122,13 @@ class Dealer {
         }              
     }
 
-    repaintVeichle(veicles) { 
-        if (this.#veichles[1].includes(this.#veichles[1][1][2])) {
-            veicles = DATABASE.buses[1];
-           DATABASE.buses[1].splice('Yellow', 1, 'Blue') ;
+    repaintVeichle(vin, color, type) { 
+        const veiclesByType = this.#veichles.filter(veicles => type === 'bus'
+        ? veicles instanceof Bus
+        : veicles instanceof Truck);
+        const veicles = veiclesByType.find((item) => item.vin === vin);
+        if (veicles) {
+            veicles.color = color;
         }
     };
 
@@ -202,7 +205,7 @@ new Bus(
     const bus2 = new Bus(7733, 'Light Green', 50);
     dealer.addVeichle(bus2);
     dealer.sellVeichle(0);
-    dealer.repaintVeichle();
+    dealer.repaintVeichle(6543, 'Blue', 'bus');
     
 
 console.log(dealer);

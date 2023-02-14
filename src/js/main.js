@@ -128,7 +128,7 @@ class Dealer {
     };
     repaintVeichle(vin, color, type) {
         const veiclesByType = this.#veichles.filter((veicles) =>
-            type === "bus" ?
+            type === 'bus' ?
                 veicles instanceof Bus :
                 veicles instanceof Truck
         );

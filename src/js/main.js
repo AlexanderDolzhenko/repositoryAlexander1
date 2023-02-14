@@ -12,7 +12,7 @@ const controller = new Controller(calculator, view);
 controller.initialize();
 
 
-// CLASS TASK
+// OOP CLASS TASK
 
 class Veichle {
     #vin;
@@ -39,6 +39,9 @@ class Veichle {
             throw new Error('Color should be a string');
         }
         this.#color = color;
+    }
+    get info() {
+        return `${this.#vin} ${this.#color}`;
     }
 }
 class Truck extends Veichle {
@@ -131,6 +134,10 @@ class Dealer {
             veicles.color = color;
         }
     };
+    getVeichleById(vin) {
+        return this.#veichles.find((item) => item.vin === vin).info;
+      }
+    
 
     get title() {
         return this.#title;
@@ -201,11 +208,13 @@ new Bus(
     DATABASE.buses[1].sitsCapacity)];
 
     const dealer = new Dealer(DATABASE.dealer.title, [truck, bus]);
-
+    
     const bus2 = new Bus(7733, 'Light Green', 50);
     dealer.addVeichle(bus2);
     dealer.sellVeichle(0);
+    console.log(dealer.getVeichleById(6543));
     dealer.repaintVeichle(6543, 'Blue', 'bus');
+    console.log(dealer.getVeichleById(6543));
     
 
 console.log(dealer);

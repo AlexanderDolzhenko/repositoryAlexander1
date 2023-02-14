@@ -89,7 +89,7 @@ class Dealer {
         this.#veichles = veicles;
         this.#veichles.forEach((veicles) => {
             for (let i = 0; i < this.#veichles.length; i++) {
-                if (this.#veichles[i] instanceof Bus || this.#veichles[i] instanceof Truck ) {
+                if (this.#veichles[i] instanceof Bus || this.#veichles[i] instanceof Truck) {
                     this.#veichles[i] = veicles;
                 }
                 else {

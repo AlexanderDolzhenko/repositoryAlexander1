@@ -10,4 +10,17 @@ all([prom1, prom2]).then(([a, b]) => {
 });
 
 //TASK 2
+const prom3 = Promise.resolve(3);
+const prom4 = Promise.resolve(4);
 
+function allSecond(arrayTwo) {
+    
+    return Promise.all(arrayTwo).then(function(sum) {
+        
+        return sum[0] + sum[1];
+    });
+       
+}
+allSecond([prom3, prom4]).then((sum) => {
+    console.log(sum);   
+});

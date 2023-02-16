@@ -42,7 +42,7 @@ allSecond([prom3, prom4]).then((sum) => {
 function debounce(fn, delay) {
     let timer;
     return function (...args) {
-        console.log(args);
+        //console.log(args);
         clearTimeout(timer);
         timer = setTimeout(() => {
             fn.apply(this, args)
@@ -56,4 +56,4 @@ result(2);
 
 setTimeout(() => result(3), 100);
 setTimeout(() => result(4), 500);
-setTimeout(() => result(5), 1100);
+setTimeout(() => result(5), 1600);

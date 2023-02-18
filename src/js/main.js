@@ -3,7 +3,7 @@ const prom1 = Promise.resolve(1);
 const prom2 = Promise.resolve(2);
 
 function all(array) {
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
         const results = [];
         let count = 0;
         array.forEach((element, i) => {
@@ -13,7 +13,7 @@ function all(array) {
                 if (count === array.length) {
                     resolve(results);
                 }
-            })
+            }).catch(result => reject(result));
 
         });
     });

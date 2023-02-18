@@ -13,7 +13,7 @@ function all(array) {
                 if (count === array.length) {
                     resolve(results);
                 }
-            }).catch(result => reject(result));
+            }).catch((e) => reject(e));
 
         });
     });

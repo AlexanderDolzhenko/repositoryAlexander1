@@ -163,10 +163,17 @@ class Dealer {
         })
     };
 
-    sellVeichle(veicles) {
-        return new Promise((res) => {
+    sellVeichle(vin, type) {
+        return new Promise((res) => {      
+            const veiclesByType = this.#veichles.filter(veicles =>
+                type === 'bus' ?
+                    veicles instanceof Bus :
+                    veicles instanceof Truck
+            );
+        const veicles = veiclesByType.filter(item => item.vin !== vin)
+        
             if (veicles) {
-                res(this.#veichles.splice(veicles, 1));
+                res(veicles);
             }
         })
 
@@ -174,12 +181,12 @@ class Dealer {
 
     repaintVeichle(vin, color, type) {
         return new Promise((res) => {
-            const veiclesByType = this.#veichles.filter((veicles) =>
+            const veiclesByType = this.#veichles.filter(veicles =>
                 type === 'bus' ?
                     veicles instanceof Bus :
                     veicles instanceof Truck
             );
-            const veicles = veiclesByType.find((item) => item.vin === vin);
+            const veicles = veiclesByType.find(item => item.vin === vin);
 
             if (veicles) {
                 res(veicles.color = color);
@@ -266,10 +273,10 @@ const bus2 = new Bus(7733, 'Light Green', 50);
 
 const truckSold = new Truck(1112, 'Red', 10);
 
-dealer.getVeichleByVin(123, 'bus')
-    .then(dealer.addVeichle(bus2))
-    .then(dealer.sellVeichle(truckSold))
-    .then(dealer.repaintVeichle(6543, 'EXTRABLUE', 'bus'))
+dealer.addVeichle(bus2)
+    .then(dealer.getVeichleByVin(7733, 'bus'))
+    .then(dealer.repaintVeichle(7733, 'EXTRABLUE', 'bus'))
+    .then(dealer.sellVeichle(7733, 'bus'))
     .catch(e => console.log(e));
 
 console.log(dealer);

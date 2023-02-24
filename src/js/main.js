@@ -134,49 +134,58 @@ class Dealer {
     constructor(title, veicles) {
         this.#title = title;
         this.#veichles = veicles;
-        
-       /* this.#veichles.forEach((veicles) => {
-            for (let i = 0; i < this.#veichles.length; i++) {
-                if (this.#veichles[i] instanceof Bus || this.#veichles[i] instanceof Truck) {
-                    this.#veichles[i] = veicles;
-                }
-                else {
-                    throw new Error('should be a massive');
-                }
-            }
-        }) */
     };
 
-    
-    addVeichle(veicles) {
+    getVeichleByVin(vin, type) {
+        return new Promise((res, rej) => {
+            const veichlesByType = this.#veichles.filter(item => type === 'bus'
+                ? item instanceof Bus
+                : item instanceof Truck);
+            const veichle = veichlesByType.find(item => item.vin === vin);
 
-        const autoVin = this.#veichles.find((item) => item.vin === veicles.vin);
-        if (!autoVin) {
-            this.#veichles.push(veicles);
-        }
-        else {
-            throw new Error('should be a unique vin');
-        }
+            if (veichle) {
+                res(veichle)
+            } else {
+                rej(new Error(`${type} with vin: ${vin} isn't in dealer`))
+            }
+        });
+    }
+
+    addVeichle(veicles) {
+        return new Promise((res, rej) => {
+            const autoVin = this.#veichles.find((item) => item.vin === veicles.vin);
+            if (!autoVin) {
+                res(this.#veichles.push(veicles))
+            }
+            else {
+                rej(new Error('should be a unique vin'));
+            }
+        })
     };
 
     sellVeichle(veicles) {
-        if (veicles) {
-            this.#veichles.splice(veicles, 1);
-        }
+        return new Promise((res) => {
+            if (veicles) {
+                res(this.#veichles.splice(veicles, 1));
+            }
+        })
+
     };
 
-
     repaintVeichle(vin, color, type) {
-        const veiclesByType = this.#veichles.filter((veicles) =>
-            type === 'bus' ?
-                veicles instanceof Bus :
-                veicles instanceof Truck
-        );
-        const veicles = veiclesByType.find((item) => item.vin === vin);
+        return new Promise((res) => {
+            const veiclesByType = this.#veichles.filter((veicles) =>
+                type === 'bus' ?
+                    veicles instanceof Bus :
+                    veicles instanceof Truck
+            );
+            const veicles = veiclesByType.find((item) => item.vin === vin);
 
-        if (veicles) {
-            veicles.color = color;
-        }
+            if (veicles) {
+                res(veicles.color = color);
+            }
+        })
+
     };
 
     get title() {
@@ -188,7 +197,7 @@ class Dealer {
         }
         this.#title = title;
     }
-    
+
 };
 
 const DATABASE = {
@@ -250,24 +259,17 @@ new Bus(
 
 
 
-function dealer(array) {
-    const results = [new Dealer(DATABASE.dealer.title, [...truck, ...bus])];
-    
-    return new Promise((resolve) => {
-        resolve (results)
-        
-        
-    })
-}
 
-dealer(array).then((veicle) => dealer.addVeichle(bus2))
+const dealer = new Dealer(DATABASE.dealer.title, [...truck, ...bus]);
 
 const bus2 = new Bus(7733, 'Light Green', 50);
-//dealer.addVeichle(bus2);
-const truckSold = new Truck(1112, 'Red', 10);
-//dealer.sellVeichle(truckSold);
 
-//dealer.repaintVeichle(6543, 'EXTRABLUE', 'bus');
-//dealer.
+const truckSold = new Truck(1112, 'Red', 10);
+
+dealer.getVeichleByVin(123, 'bus')
+    .then(dealer.addVeichle(bus2))
+    .then(dealer.sellVeichle(truckSold))
+    .then(dealer.repaintVeichle(6543, 'EXTRABLUE', 'bus'))
+    .catch(e => console.log(e));
 
 console.log(dealer);

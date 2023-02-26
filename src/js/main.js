@@ -171,7 +171,7 @@ class Dealer {
         const veichle = veichlesByType.find(item => item.vin === vin);
 
         if (veichle) {
-            res(this.#veichles.filter(item => item.vin !== vin))
+            res(this.#veichles.filter(item => item.vin === vin))
         }
         })
 

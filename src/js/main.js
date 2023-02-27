@@ -164,18 +164,12 @@ class Dealer {
     };
 
     sellVeichle(vin, type) {
-        return new Promise((res) => {
-            const veiclesByType = this.#veichles.filter(veicles =>
-                type === 'bus' ?
-                    veicles instanceof Bus :
-                    veicles instanceof Truck
-            );
-        const veicles = veiclesByType.findIndex(item => item.vin == vin);
-        
+        return new Promise((res) => {           
+        const veicles = this.#veichles.indexOf(item => item.vin === vin && type === 'bus' ?
+        veicles instanceof Bus :
+        veicles instanceof Truck);        
             if (veicles) {
-                res(this.#veichles.splice(veicles, 1));
-                console.log(veicles)
-                
+                res(this.#veichles.splice(veicles, 1));              
             }
         })
     };

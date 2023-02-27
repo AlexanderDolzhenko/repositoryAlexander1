@@ -164,17 +164,20 @@ class Dealer {
     };
 
     sellVeichle(vin, type) {
-        return new Promise((res) => {      
-            const veichlesByType = this.#veichles.filter(item => type === 'bus'
-            ? item instanceof Bus
-            : item instanceof Truck);
-        const veichle = veichlesByType.find(item => item.vin === vin);
-
-        if (veichle) {
-            res(this.#veichles.filter(item => item.vin === vin))
-        }
+        return new Promise((res) => {
+            const veiclesByType = this.#veichles.filter(veicles =>
+                type === 'bus' ?
+                    veicles instanceof Bus :
+                    veicles instanceof Truck
+            );
+        const veicles = veiclesByType.findIndex(item => item.vin == vin);
+        
+            if (veicles) {
+                res(this.#veichles.splice(veicles, 1));
+                console.log(veicles)
+                
+            }
         })
-
     };
 
     repaintVeichle(vin, color, type) {

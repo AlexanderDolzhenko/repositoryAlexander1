@@ -1,2 +1,40 @@
+.menu {
+    position: sticky;    
+    margin-top: 30%;
+    padding: 5px;    
+    color: white;
+}
+.accordion {
+    background-color: #962b2b;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
 
+    &:after {
+    content: '\02795'; 
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+    }
+  }
 
+  .active, .accordion:hover {
+    background-color: #962b2b;
+  }
+  .active:after {
+    content: "\2796"; 
+}
+  
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }

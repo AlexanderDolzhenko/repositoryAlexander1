@@ -36,6 +36,24 @@ allSecond([prom3, prom4]).then((sum) => {
     console.log(sum);
 });
 
+
+// TASK 2-1
+
+function sum(prom8, prom9) {
+    return new Promise((res, rej) => {
+        prom8.then(res1 => prom9.then(res2 => {
+            res(res1 + res2);
+        }))
+        .catch(e => rej(e))
+    })
+}
+const prom8 = new Promise((res, rej) => {
+    res(1)
+})
+const prom9 = new Promise((res, rej) => {
+    rej(2)
+})
+sum(prom8, prom9);
 // TASK 3
 
 

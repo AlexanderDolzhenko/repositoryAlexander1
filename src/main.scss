@@ -1,11 +1,9 @@
 @import "./variables.scss";
-@import "./reset.scss";
-@import "./partials/header/_head.scss";
+@import "./dip.styl";
 
 
 * {
-  outline: 1px solid  lightgreen;
-  
+  outline: 5px solid  lightgreen;  
 }
 
 html, body, div, span, applet, object, iframe,
@@ -49,9 +47,4 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
-.fdf {
-  color: red;
-  font-size: 18px;
-
 }

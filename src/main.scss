@@ -1,4 +1,4 @@
-@import "./partials/dip.scss";
+@import "./partials/header/header.scss";
 @import "./variables.scss";
 @import "./variables-css.scss";
 
@@ -34,8 +34,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
-	
+	line-height: 1;	
 }
 ol, ul {
 	list-style: none;
@@ -52,3 +51,57 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+.cover-space {
+    padding-bottom: 82%;
+}
+
+.section {
+	margin-bottom: 14rem;
+
+	&__main {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		position: absolute;
+		left: $mainpadding;
+		right: $mainpadding;
+		top: 14vw;
+	}
+}
+
+.main-title {
+	font-size: 1rem;
+	margin-bottom: 6.2em;
+
+	&__summary {
+		color: $highlite;
+		text-transform: uppercase;
+		letter-spacing: 0.36em;
+		display: flex;
+		align-items: center;
+		margin-bottom: 1.5em;
+
+		&::before {
+			content: '';
+			display: block;
+			width: 4em;
+			height: 2px;
+			margin-right: 1.5em;
+			background: $highlite;
+		}
+	}
+
+	&__text {
+		font-size: 5.4em;
+		font-weight: 700;
+		line-height: 1.1;
+		color: $lite;
+		
+		&_regular {
+			display: block;
+			font-size: 0.9em;
+			font-weight: 400;
+		}
+	}
+}
+

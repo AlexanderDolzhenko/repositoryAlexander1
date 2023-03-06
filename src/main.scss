@@ -93,14 +93,14 @@ table {
 
 	&__title {
 		writing-mode: vertical-rl;
-		margin-bottom: 1.3rem;
+		margin: 0 0 1.3rem 0;
 		color: $lite;
-		padding-left: 0.1rem;
+		
 	}
 	
 	&__item {
 		margin-bottom: 1rem;
-		margin-right: 1.3rem;
+		
 	}
 
 	&__link {
@@ -113,9 +113,8 @@ table {
 	}
 
 	&__list {
-		padding-left: 0.3rem;
+		padding: 0 0 1.3rem 0.150rem;
 	}
-
 }
 .scroll-down  {
     display: flex;

@@ -1,11 +1,7 @@
 @import "./variables.scss";
 @import "./variables-css.scss";
+@import "./partials/mainicons/icons.scss";
 
-body {
-	background: $dark url("/img/cover.jpg") no-repeat center top;
-	background-size: 100% auto;
-	color: $lite;
-}
 a {
 	color: $highlite;
 	text-decoration: none;

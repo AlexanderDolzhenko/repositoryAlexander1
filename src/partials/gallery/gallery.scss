@@ -1,0 +1,122 @@
+.gallery {
+    gallery {
+        position: relative;
+        overflow: hidden;
+        user-select: none;
+        -webkit-user-select: none;
+        padding: 0;
+    }
+
+    &__slide {
+        width: 100%;
+        padding-bottom: 67%;
+        pointer-events: none;
+        background-size: cover;
+    }
+
+    &__content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        background: linear-gradient(to top, rgba(0,0,0,0.75) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    }
+}
+
+.gallery-line-container {
+    overflow: hidden;
+}
+
+.gallery-draggable {
+    cursor: grabbing;
+}
+
+.gallery-line {
+    overflow: hidden;
+}
+
+.gallery-slide {
+    min-height: 1px;
+    float: left;
+    transform: translateZ(0);
+    overflow: hidden;
+}
+
+.gallery-dots {
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ccc;
+    margin: 0.4rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
+.gallery-dot:hover,
+.gallery-dot-active {
+    background: #888;
+}
+
+.gallery-nav {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    z-index: 4;
+    position: absolute;
+}
+
+.gallery-nav-left,
+.gallery-nav-right {
+    
+    width: 2rem;
+    height: 3rem;
+    border: none;
+    outline: none;
+    text-indent: -1234em;
+    top: 50%;
+    margin-top: -3rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.gallery-nav-disabled {
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.gallery-nav-left {
+    background: url('./img/icons/left.svg') no-repeat center;
+    background-size: contain;
+    left: 2rem;
+    right: 68rem;
+    top: -25rem;
+    position: absolute;
+}
+
+.gallery-nav-right {
+    position: absolute;
+    left: 68rem;
+    top: -25rem;
+    right: 2rem;
+    background: url('./img/icons/right.svg') no-repeat center;
+    background-size: contain;
+}
+
+@media screen and (max-width: 700px) {
+.gallery {
+    padding: 0;
+}
+
+.gallery-nav {
+    display: none;
+}
+}

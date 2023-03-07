@@ -2,12 +2,14 @@
 @import "./variables.scss";
 @import "./variables-css.scss";
 @import "./partials/mainicons/icons.scss";
-
+@import "./partials/gallery/gallery.scss";
 * {
   outline: 1px solid  lightgreen;  
 }
 html, body {
 	font: 18px/1.7 'Open Sans', sans-serif;
+	background: var(--main-color) url("/img/cover.jpg") no-repeat center top;
+	background-size: 100% auto;
 }
 .landingpage {
     overflow: hidden;
@@ -17,28 +19,17 @@ main {
 	background: var(--main-color) url("/img/cover.jpg") no-repeat center top;
 	background-size: 100% auto;
 }
-ol, ul {
+ul {
 	list-style: none;
 }
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+
 .cover-space {
     padding-bottom: 82%;
 	
 }
 
 .section {
-	margin-bottom: 14rem;
+	margin-bottom: 10rem;
 
 	&__main {
 		display: flex;
@@ -223,6 +214,13 @@ table {
 		width: 100%;
 	}
 }
+
+
+
+
+
+
+
 
 
 

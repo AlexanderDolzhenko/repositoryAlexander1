@@ -1,12 +1,23 @@
+.main-title_centered {
+    text-align: center;
+
+    .main-title__summary {
+        justify-content: center;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 4em;
+            height: 2px;
+            margin-left: calc(1.5em - 0.36em);
+            background: $highlite;
+        }
+    }
+}
 .gallery {
-    gallery {
         position: relative;
         overflow: hidden;
-        user-select: none;
-        -webkit-user-select: none;
         padding: 0;
-    }
-
     &__slide {
         width: 100%;
         padding-bottom: 67%;
@@ -16,11 +27,11 @@
 
     &__content {
         position: absolute;
-        bottom: 0;
+        bottom: -1.5rem;
         left: 0;
         right: 0;
         text-align: center;
-        background: linear-gradient(to top, rgba(0,0,0,0.75) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        background: linear-gradient(to top, rgba(0,0,0,0.75) 0%,rgba(0,0,0,0) 100%); 
     }
 }
 
@@ -43,28 +54,7 @@
     overflow: hidden;
 }
 
-.gallery-dots {
-    display: flex;
-    justify-content: center;
-}
 
-.gallery-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #ccc;
-    margin: 0.4rem;
-    cursor: pointer;
-    transition: all 0.3s;
-    border: none;
-    outline: none;
-    padding: 0;
-}
-
-.gallery-dot:hover,
-.gallery-dot-active {
-    background: #888;
-}
 
 .gallery-nav {
     display: flex;
@@ -76,7 +66,6 @@
 
 .gallery-nav-left,
 .gallery-nav-right {
-    
     width: 2rem;
     height: 3rem;
     border: none;

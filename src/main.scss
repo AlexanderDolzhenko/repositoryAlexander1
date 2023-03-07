@@ -29,7 +29,7 @@ ul {
 }
 
 .section {
-	margin-bottom: 10rem;
+	margin-bottom: 12rem;
 
 	&__main {
 		display: flex;
@@ -174,22 +174,7 @@ ul {
     }
 	
 }
-.main-title_centered {
-    text-align: center;
 
-    .main-title__summary {
-        justify-content: center;
-
-        &::after {
-            content: '';
-            display: block;
-            width: 4em;
-            height: 2px;
-            margin-left: calc(1.5em - 0.36em);
-            background: $highlite;
-        }
-    }
-}
 .section-cols {
 	display: flex;
 	justify-content: space-between;

@@ -58,7 +58,7 @@ function Slider() {
                 </div>
                 ${this.settings.dots ? '<div class="${GalleryDotsClassName}"></div>' : ''}
             `;
-            this.lineContainerNode = this.containerNode.querySelector(`.${GalleryLineContainerClassName}`);
+    
             this.lineContainerNode = this.containerNode.querySelector(`.${GalleryLineContainerClassName}`);
             this.lineNode = this.containerNode.querySelector(`.${GalleryLineClassName}`);
     

@@ -3,9 +3,10 @@
 @import "./variables-css.scss";
 @import "./partials/mainicons/icons.scss";
 @import "./partials/gallery/gallery.scss";
+@import "./partials/footer/footer.scss";
 * {
-  outline: 1px solid  lightgreen;  
-}
+	outline: 1px solid  lightgreen;  
+  }
 html, body {
 	font: 18px/1.7 'Open Sans', sans-serif;
 	background: var(--main-color) url("/img/cover.jpg") no-repeat center top;
@@ -182,7 +183,7 @@ ul {
 }
 .section-border {
 	padding-bottom: 3rem;
-	border-bottom: 1px $dark;
+	border-bottom: 2px solid $opacitycolorSecondary;
 	margin-bottom: 3rem;
 }
 .section-col {
@@ -201,7 +202,46 @@ ul {
 }
 
 
+.start {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+	
 
+    &__title {
+        font-size: 2.66rem;
+        font-weight: 700;
+        margin-right: 3rem;
+		color: $lite;
+    }
+
+    &__desc {
+        font-size: 1.22rem;
+        margin-right: 3rem;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+		
+    	transition: 0.3s;
+		color: $opacitycolor;
+
+    }
+}
+.button {
+    border: none;
+    background: $mainbuttons;
+    font: 700 0.9rem/1 'Open Sans', sans-serif;
+    padding: 1.6em 4.5em 1.4em;
+    border-radius: 0.4444em;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+        background: $highlite;
+    }
+}
 
 
 

@@ -29,4 +29,10 @@
 		background: url('/img/icons/arrow_rightward.svg') no-repeat center center;
 		background-size: contain;
 	}
+	&__right {
+		width: 1.5rem;
+		height: 1.5rem;
+		background: url('/img/icons/arrow_right.svg') no-repeat center center;
+		background-size: contain;
+	}
 }

@@ -23,7 +23,7 @@ a {
 
     &__content {
         display: grid;
-        grid-template-columns: auto 1fr auto;
+        grid-template-columns: auto 1fr;
         align-items: center;
         padding: 0 $mainpadding;
     }
@@ -83,7 +83,7 @@ a {
 		background: none;
 		border: none;
 		transition: width 0.3s;
-		width: 3.4rem;
+		width: 3.8rem;
 		font: 0.9rem/1 'Open Sans', sans-serif;
 		padding: 0.2rem 0.5rem;
 		border-radius: 5px;
@@ -106,7 +106,35 @@ a {
 	}
 }
 
+.burger-menu {
+    display: grid;
 
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr auto;
+    }
+
+    &__control {
+        display: none;
+    }
+}
+
+.body_burder-opened {
+    overflow: hidden;
+}
+
+.cover-space__burger {
+    opacity: 0;
+    position: fixed;
+    z-index:  -2;   
+    top: -2px;  
+    left: -2px;
+    right: -2px;
+    bottom: -2px;  
+    background: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
 
 
 

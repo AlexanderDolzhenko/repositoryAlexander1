@@ -4,6 +4,7 @@
 @import "./partials/mainicons/icons.scss";
 @import "./partials/gallery/gallery.scss";
 @import "./partials/footer/footer.scss";
+@import "./partials/adaptive/adaptiveLayout.scss";
 * {
 	outline: 1px solid  lightgreen;  
   }
@@ -249,56 +250,5 @@ ul {
 
 
 
-
-
-@media screen and (max-width: 1790px) {
-    html,
-    body {
-        font-size: 16px;
-    }
-
-    .section-col {
-        &:first-child {
-            width: 40%;
-        }
-
-        &:last-child {
-            width: 50%;
-        }
-    }
-
-    .content {
-        max-width: 1200px;
-    }
-}
-
-@media screen and (max-width: 1550px) {
-    html,
-    body {
-        font-size: 14px;
-    }
-}
-
-@media screen and (max-width: 1380px) {
-    .section-col {
-        &:first-child {
-            width: 43%;
-        }
-
-        &:last-child {
-            width: 50%;
-        }
-    }
-}
-
-@media screen and (max-width: 1310px) {
-    .main-title {
-        font-size: 0.9rem;
-    }
-
-    .subscribe {
-        width: 35%;
-    }
-}
 
 

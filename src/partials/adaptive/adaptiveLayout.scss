@@ -101,6 +101,7 @@
     }
 
     .body_burger-opened {     
+        
         .cover-space__burger {
             pointer-events: auto;
             z-index:  998;
@@ -115,10 +116,11 @@
             }
         }
     }
-        
+    
     .main-nav {
         display: block;
         margin-bottom: 1rem;
+        
     
         &__list {
             display: block;
@@ -143,8 +145,11 @@
     .burger-menu__control {
         left: calc(-1.5rem - 2rem);
     }
-
-
+    .header {
+        &__content {
+            padding: 0 1.5rem;
+        }
+    }
 
 
 

@@ -17,9 +17,11 @@ a {
 	}
 }
 .header {
-    position: absolute;
+    position: sticky;
+	z-index: 999;
     top: 2rem;
     width: 100%;
+	transition: background 0.3s;
 
     &__content {
         display: grid;
@@ -32,11 +34,15 @@ a {
         display: flex;
         justify-content: center;
     }
+
+	&_scrolled {
+		background: rgba(0, 0, 0, 0.5);
+	}
 }
 .logo {
 	color: $lite;
 	text-decoration: none;
-	letter-spacing: 1%;
+	letter-spacing: 1px;
 
 	&:visited {
 		color: $lite;

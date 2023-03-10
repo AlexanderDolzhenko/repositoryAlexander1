@@ -4,11 +4,12 @@
 @import "./partials/mainicons/icons.scss";
 
 
-@media screen and (min-width: 1551px) and (max-width: 1790px) {
+@media screen and (min-width: 1381px) and (max-width: 1790px) {
     main {
         font-size: 16px;      
 } 
-    .content {
+    .landingpage {
+        .content {
         max-width: 1200px;
         .section-col {
             &:first-child {
@@ -18,7 +19,7 @@
             &:last-child {
                 width: 50%;
             }
-        }
+        }}
      
 }
 }
@@ -85,7 +86,6 @@
             width: 2rem;
             height: 2rem;
             position: absolute;
-            left: calc(-4.7rem - 2rem);
             top: 2.1rem;
             background: url('../img/icons/menu.svg') no-repeat center center;
             background-size: contain;
@@ -102,9 +102,16 @@
         transition: transform 0.3s;
         .content {
             padding: 0 1.5rem 1.5rem;
+            .section {
+                margin-bottom: 6rem;
+            }
         }
     }
     .body_burger-opened {     
+        .logo {
+            transform: translate3D(-70vw, 0, 0);
+            transition: transform 0.3s;
+        }
         .cover-space__burger {
             pointer-events: auto;
             z-index:  998;
@@ -145,10 +152,18 @@
     .header {
         &__content {
             padding: 0 1.5rem;
+           
         }
     }
+    .logo {
+        position: absolute;
+        transform: translate3D(0, 0, 0);
+        transition: transform 0.3s;
+        top: 0;
+        margin-top: 0.3rem;
+        
+    }
     .section {
-        margin-bottom: 4rem;
         &__main {
             margin-bottom: 4rem;
             padding: 0 1.5rem;
@@ -167,15 +182,30 @@
                     &::before {
                         display: none;
                           }
+                }              
+            }
+            .social-networks {
+                position: relative;
+                display: flex;
+                
+                top: 0;
+                &__title {
+                    writing-mode: horizontal-tb;
+                }
+                &__list {
+                    display: flex;                
+                }
+                &__item {
+                    padding: 0.55rem;
                 }
                 
-               
             }
             
         }      
     }
     .section-cols {
         flex-direction: column;
+        margin-top: 6rem;
         .section-col {
             &:first-child,
             &:last-child {

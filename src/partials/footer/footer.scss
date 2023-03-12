@@ -4,7 +4,6 @@
 
 .subscribe {
     width: 27%;
-       
     &__title {
         font-size: 2rem;
         font-weight: bold;
@@ -14,32 +13,27 @@
     }
 }
 .footer {
-    
     &__content {
         display: flex;
         justify-content: space-between;
         margin-bottom: 7rem;
     }
-
     &__bottom {
         display: flex;
         justify-content: space-between;
         padding: 0 2.22rem;
     }
-
     &__link {
         color: $lite;
         text-decoration: none;
         font-size: 0.833rem;
         display: inline-block;
         margin-right: 4.5rem;
-
         &:hover,
         &:visited,
         &:active {
             color: $lite;
         }
-
         &:last-child {
             margin-right: 0;
         }
@@ -50,7 +44,6 @@
     display: grid;
     grid-template-columns: 1fr auto;
     border-bottom: 2px solid $opacitycolorSecondary;
-
     &__form {
         width: 100%;
         background: none;
@@ -59,18 +52,15 @@
         font: 0.83rem/1 'Open Sans', sans-serif;
         padding: 1.1rem 0.77rem 1.77rem;
         color: $lite;
-
         &::placeholder {
             color: $mainpadding;
             opacity: 1;
         }
-
         &:focus {
             border: none;
             outline: none;
         }
     }
-
     &__button {
         position: relative;
         padding: 0;
@@ -94,15 +84,12 @@
         font-size: 1.1rem;
         margin-bottom: 0.6em;
     }
-
     &__item {
         margin-bottom: 0.8rem;
     }
-
     &__link {
         color: $lite;
         text-decoration: none;
-
         &:hover,
         &:visited,
         &:active {
@@ -117,17 +104,14 @@
 .social-horisontal {
     display: flex;
     font-size: 1.3rem;
-
     &__item {
         display: inline-block;
         margin-left: 2rem;
     }
-
     &__link {
         display: inline-block;
         opacity: 1;
         transition: opacity 0.3s;
-
         &:hover {
             opacity: 0.7;
         }

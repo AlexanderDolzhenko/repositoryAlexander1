@@ -5,6 +5,7 @@
 @import "./partials/gallery/gallery.scss";
 @import "./partials/footer/footer.scss";
 @import "./partials/adaptive/adaptiveLayout.scss";
+
 * {
 	outline: 1px solid  lightgreen;  
   }
@@ -13,7 +14,7 @@ html, body {
 	background: var(--main-color) url("/img/cover.jpg") no-repeat center top;
 	background-size: 100% auto;
 }
-.landingpage {
+.landing-page {
     overflow: hidden;
 }
 main {
@@ -23,15 +24,11 @@ main {
 ul {
 	list-style: none;
 }
-
 .cover-space {
     padding-bottom: 82%;
-	
 }
-
 .section {
 	margin-bottom: 12rem;
-
 	&__main {
 		display: flex;
 		align-items: center;
@@ -42,11 +39,9 @@ ul {
 		top: 14vw;
 	}
 }
-
 .main-title {
 	font-size: 1rem;
 	margin-bottom: 6.2em;
-
 	&__summary {
 		color: $highliteSecondary;
 		text-transform: uppercase;
@@ -55,7 +50,6 @@ ul {
 		align-items: center;
 		margin-bottom: 1.5em;
 		font-weight: 700;
-
 		&::before {
 			content: '';
 			display: block;
@@ -70,7 +64,6 @@ ul {
 		font-weight: 700;
 		line-height: 1.1;
 		color: $lite;
-		
 		&_regular {
 			display: block;
 			font-size: 0.9em;
@@ -82,28 +75,21 @@ ul {
 	position: absolute;
 	left: 0;
 	top: 4rem;
-
 	&__title {
 		writing-mode: vertical-rl;
 		margin: 0 0 1.3rem 0;
 		color: $lite;
-		
 	}
-	
 	&__item {
 		margin-bottom: 1rem;
-		
 	}
-
 	&__link {
 		opacity: 1;
 		transition: opacity 0.3s;
-
 		&:hover {
 			opacity: 0.7;
 		}
 	}
-
 	&__list {
 		padding: 0 0 1.3rem 0.150rem;
 	}
@@ -114,11 +100,9 @@ ul {
     opacity: 1;
     transition: 0.3s;
     color: $lite;
-
     &:hover {
         opacity: 0.7;
     }
-
     &__icon {
         margin: 0.2em 0 0 0.5em;
     }
@@ -127,12 +111,10 @@ ul {
     padding: 0 $mainpadding $mainpadding;
     max-width: 1460px;
     margin: 0 auto;
-	
     p {
         margin-bottom: 1.3em;
 		color: $lite;
     }
-
     &_small {
         max-width: 934px;
         padding: 0 2.75rem 2.5rem;
@@ -142,16 +124,12 @@ ul {
 .main-title_small {
     font-size: 1rem;
     margin-bottom: 1.8em;
-
 	.main-title__summary {
 		color: $highlite;
-
 		&::before {
 			background: $highlite;
 		}
-		
 	}
-
     .main-title__text {
         font-size: 3.4em;
         line-height: 1.4;
@@ -162,21 +140,16 @@ ul {
     display: flex;
     align-items: center;
 	color: $highlite;
-
 	&:visited {
 		color: $highlite;
 	}
-
     &__icon {
         margin: 0.2em 0 0 0.4em;
     }
-
     &_centered {
         justify-content: center;
     }
-	
 }
-
 .section-cols {
 	display: flex;
 	justify-content: space-between;
@@ -188,46 +161,35 @@ ul {
 	margin-bottom: 3rem;
 }
 .section-col {
-
 	&:first-child {
 		width: 40%;
 	}
-
 	&:last-child {
 		width: 44%;
 	}
-
 	&__image {
 		width: 100%;
 	}
 }
-
-
 .start {
     display: flex;
     align-items: center;
     justify-content: space-between;
-	
-
     &__title {
         font-size: 2.66rem;
         font-weight: 700;
         margin-right: 3rem;
 		color: $lite;
     }
-
     &__desc {
         font-size: 1.22rem;
         margin-right: 3rem;
     }
-
     &__content {
         display: flex;
         align-items: center;
-		
     	transition: 0.3s;
 		color: $opacitycolor;
-
     }
 }
 .button {
@@ -238,7 +200,6 @@ ul {
     border-radius: 0.4444em;
     cursor: pointer;
     transition: background 0.3s;
-
     &:hover {
         background: $highlite;
     }

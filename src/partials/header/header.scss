@@ -7,11 +7,9 @@ a {
 	text-decoration: none;
 	transition: opacity 0.3s;
 	opacity: 1;  
-
 	&:visited {
 		color: $highlite;		
 	}
-
 	&:active, &:hover {
 		opacity: 0.7;
 	}
@@ -22,19 +20,16 @@ a {
     top: 2rem;
     width: 100%;
 	transition: background 0.3s;
-
     &__content {
         display: grid;
         grid-template-columns: auto 1fr;
         align-items: center;
         padding: 0 $mainpadding;
     }
-
     &__center {
         display: flex;
         justify-content: center;
     }
-
 	&_scrolled {
 		background: rgba(0, 0, 0, 0.5);
 	}
@@ -43,16 +38,13 @@ a {
 	color: $lite;
 	text-decoration: none;
 	letter-spacing: 1px;
-
 	&:visited {
 		color: $lite;
 	}
-
 	&__title {
 		font-size: 1.3rem;
 		font-weight: 700;
 	}
-	
 	&:active, &:hover {
 		color: $lite;
 }
@@ -66,7 +58,6 @@ a {
 	text-decoration: none;
 	padding: 1.8rem 1.38rem;
 	display: inline-block;
-
 	&:visited {
 		color: $lite;
 	}
@@ -75,8 +66,6 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	
-	
 	&__icon {
 		width: 1rem;
 		height: 1rem;
@@ -85,7 +74,6 @@ a {
 		cursor: pointer;
 		padding-right: 0.5rem;
 	}
-
 	&__form {
 		background: none;
 		border: none;
@@ -94,7 +82,6 @@ a {
 		font: 0.9rem/1 'Open Sans', sans-serif;
 		padding: 0.2rem 0.5rem;
 		border-radius: 5px;
-		
 		&::placeholder {
 			color: $opacitycolor;
 			opacity: 1;
@@ -104,7 +91,6 @@ a {
 			outline: none;
 			width: 10rem;
 			background: $lite;
-
 			&::placeholder {
 				color: $dark;
 				opacity: 1;
@@ -112,24 +98,19 @@ a {
 		}
 	}
 }
-
 .burger-menu {
     display: grid;
-
     &__content {
         display: grid;
         grid-template-columns: 1fr auto;
     }
-
     &__control {
         display: none;
     }
 }
-
 .body_burder-opened {
     overflow: hidden;
 }
-
 .cover-space__burger {
     opacity: 0;
     position: fixed;

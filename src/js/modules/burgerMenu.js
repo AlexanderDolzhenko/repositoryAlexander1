@@ -1,20 +1,20 @@
 function Burgermenu() {
-    const BODY_BURDER_OPENED = 'body_burger-opened';
+    const burgerOpened = 'body_burger-opened';
 
     const bodyNode = document.querySelector('body');
-    const burgerControlNode = document.querySelector('.burger-menu__control');
-    const burgerSpaceCoverNode = document.querySelector('.cover-space__burger');
+    const burgerControl = document.querySelector('.burger-menu__control');
+    const burgerCoverSpace = document.querySelector('.cover-space__burger');
     
-    burgerControlNode.addEventListener('click', (_event) => {
-        if (bodyNode.classList.contains(BODY_BURDER_OPENED)) {
-            bodyNode.classList.remove(BODY_BURDER_OPENED);
+    burgerControl.addEventListener('click', (_event) => {
+        if (bodyNode.classList.contains(burgerOpened)) {
+            bodyNode.classList.remove(burgerOpened);
         } else {
-            bodyNode.classList.add(BODY_BURDER_OPENED);
+            bodyNode.classList.add(burgerOpened);
         }
     });
     
-    burgerSpaceCoverNode.addEventListener('click', (_event) => {
-        bodyNode.classList.remove(BODY_BURDER_OPENED);
+    burgerCoverSpace.addEventListener('click', (_event) => {
+        bodyNode.classList.remove(burgerOpened);
     });
 }
 export {Burgermenu};

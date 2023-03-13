@@ -291,6 +291,23 @@
 .gallery-nav {
     display: none;
 }
+.section-timer {
+    .content_small {
+        padding: 0;
+    }
+    .timer {
+        &__block {
+            width: 3.8rem;
+            height: 5.2rem;
+            span {
+                font-size: 2.5rem;
+            }
+        }
+        &__descr {
+            font-size: 0.9rem;
+        }
+    }
+}
 }
 
 

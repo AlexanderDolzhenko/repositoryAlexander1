@@ -6,3 +6,5 @@ import { StickyMenu } from "./modules/stickyMenu.js";
 StickyMenu();
 import { scrollToPage } from "./modules/scrollTo.js";
 scrollToPage()
+import { remainingTimer } from "./modules/timer.js";
+remainingTimer();

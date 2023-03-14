@@ -53,8 +53,7 @@
         padding: 1.1rem 0.77rem 1.77rem;
         color: $lite;
         &::placeholder {
-            color: $mainpadding;
-            opacity: 1;
+            color: $opacitycolorSecondary;
         }
         &:focus {
             border: none;

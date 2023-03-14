@@ -8,3 +8,5 @@ import { scrollToPage } from "./modules/scrollTo.js";
 scrollToPage()
 import { remainingTimer } from "./modules/timer.js";
 remainingTimer();
+import { modalWindow } from "./modules/modal.js";
+modalWindow();

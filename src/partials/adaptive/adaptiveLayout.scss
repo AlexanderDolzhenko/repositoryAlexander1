@@ -146,7 +146,6 @@
     .header {
         &__content {
             padding: 0 1.5rem;
-           
         }
     }
     .logo {
@@ -154,7 +153,9 @@
         transform: translate3D(0, 0, 0);
         transition: transform 0.3s;
         top: 0;
-        margin-top: 0.3rem;
+        &__title {
+            margin: 0;
+        }
         
     }
     .section {
@@ -185,6 +186,7 @@
                 top: 0;
                 &__title {
                     writing-mode: horizontal-tb;
+                    margin: 1rem 0 0 0;
                 }
                 &__list {
                     display: flex;                
@@ -300,14 +302,26 @@
             width: 3.8rem;
             height: 5.2rem;
             span {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
         }
         &__descr {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
     }
 }
+.modal {
+   
+    &__dialog {
+        max-width: 300px;
+        
+    }
+}
+
+
+
+
+
 }
 
 

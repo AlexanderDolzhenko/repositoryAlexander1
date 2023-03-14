@@ -311,10 +311,30 @@
     }
 }
 .modal {
-   
+    top: 72%;    
     &__dialog {
         max-width: 300px;
-        
+    }
+    &__content {
+        padding: 0.8rem 2rem 0 0;
+    }
+    &__close {
+        color: $opacitycolorSecondary;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 2rem;
+        border: none;
+        cursor: pointer;
+    }
+    &__title {
+        font-size: 1.2rem;
+    }
+    &__input {
+        width: 13rem;
+    }
+    .form__button {
+        padding: 1.4em 2.5em 1.2em 2.5em;
     }
 }
 

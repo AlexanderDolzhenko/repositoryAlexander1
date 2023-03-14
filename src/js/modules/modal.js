@@ -2,6 +2,7 @@ function modalWindow() {
     const modalTrigger = document.querySelector('[data-modal]'),
         modal = document.querySelector('.modal'),
         modalCloseBtn = document.querySelector('[data-close]');
+        
 
     function openModal() {
         modal.style.display = "block";
@@ -34,11 +35,13 @@ function modalWindow() {
     })
 
     function showModalByScroll() {
+        viewPortWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
         if (window.pageYOffset + document.documentElement.clientHeight >= document.
-            documentElement.scrollHeight -1) {
+            documentElement.scrollHeight -1 && viewPortWidth > 700) {
             openModal();
             window.removeEventListener('scroll', showModalByScroll);
-        }
+        } 
+        
     }
     window.addEventListener('scroll', showModalByScroll);
 }

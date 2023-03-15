@@ -35,9 +35,9 @@ function modalWindow() {
     })
 
     function showModalByScroll() {
-        viewPortWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+        
         if (window.pageYOffset + document.documentElement.clientHeight >= document.
-            documentElement.scrollHeight -1 && viewPortWidth > 700) {
+            documentElement.scrollHeight -1 && document.documentElement.clientWidth > 700) {
             openModal();
             window.removeEventListener('scroll', showModalByScroll);
         } 

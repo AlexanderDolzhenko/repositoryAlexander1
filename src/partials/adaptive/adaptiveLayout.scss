@@ -20,12 +20,17 @@
             }
         }} 
 }
+.gallery-nav-right {
+    left: 53rem;
+    
+}
 }
 
 @media screen and (max-width: 1550px) {
     main {
         font-size: 14px;
     }
+
 }
 
 @media screen and (max-width: 1380px) {
@@ -39,6 +44,9 @@
             }
         }
     }
+    .gallery-nav-right {
+        left: 53rem;
+    }
 }
 
 @media screen and (max-width: 1310px) {
@@ -50,6 +58,14 @@
    .subscribe {
     width: 35%;
 }
+.gallery-nav-right {
+    left: 50rem;
+}
+}
+@media screen and (max-width: 1309px) {
+    .gallery-nav {
+        display: none;
+    }
 }
 
 //ONLY MOBILE-TABLET SETTINGS

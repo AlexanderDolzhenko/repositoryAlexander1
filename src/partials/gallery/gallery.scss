@@ -75,16 +75,14 @@
 .gallery-nav-left {
     background: url('./img/icons/left.svg') no-repeat center;
     background-size: contain;
-    left: 2rem;
-    right: 68rem;
+    left: 12rem;
     top: -25rem;
     position: absolute;
 }
 .gallery-nav-right {
     position: absolute;
-    left: 68rem;
+    left: 67rem;
     top: -25rem;
-    right: 2rem;
     background: url('./img/icons/right.svg') no-repeat center;
     background-size: contain;
 }

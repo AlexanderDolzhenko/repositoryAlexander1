@@ -7,6 +7,23 @@
         margin-top: 9rem;
 		
 }
+.buttonlogout {
+    display: none;
+    margin: 1rem;
+    border: none;
+    background: #FFA343;
+    font: 700 0.9rem/1 'Open Sans', sans-serif;
+    padding: 1.6em 4.5em 1.4em;
+    border-radius: 0.4444em;
+    cursor: pointer;
+    transition: background 0.3s;
+    &:hover {
+        background: #FBD784;
+    }
+    &.active {
+        display: block;
+    }
+}
 .authForm {
     display: flex;
     flex-direction: column;
@@ -94,6 +111,12 @@
                 color: $opacitycolorSecondary;
             }
         }
+        &.invalid:after {
+            content: attr(data-error);
+            color: $opacitycolorSecondary;
+            margin: 2px;
+            font-size: 0.8em;
+        }
     }
 }
 @keyframes fadeInScale {
@@ -108,10 +131,5 @@
     }
   }
  
-  #exitSite {
-    margin: 1rem;
-    display: none;
-    &.active {
-        display: block;
-    }
-  }
+  
+   

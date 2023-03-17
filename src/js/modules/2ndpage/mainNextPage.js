@@ -1,8 +1,8 @@
-import { Burgermenu } from "./modules/burgerMenu.js";
+import { Burgermenu } from "../burgerMenu.js";
 Burgermenu();
-import { StickyMenu } from "./modules/stickyMenu.js";
+import { StickyMenu } from "../stickyMenu.js";
 StickyMenu();
-import { authFormOpen, authFormClose } from "./modules/authFormSettings.js";
+import { authFormOpen, authFormClose, outlogShow, outlogHide } from "./authFormSettings.js";
 
 const LS_AUTH_KEY = 'auth';
 let currentUser = null;
@@ -62,13 +62,50 @@ const getUser = () => {
     })
 };
 
-const loginForm = document.querySelector('#enterSite');
-const outlog = document.querySelector('#exitSite');
+
+
+
+
+
+
+
+const loginForm = document.querySelector('#login');
+const emailField = loginForm.querySelector('input[name="email"]');
+const passwordField = loginForm.querySelector('input[name="password"]');
 
 const loginHandler = (e) => {
     e.preventDefault();
-    console.log('on login');
-    authFormClose
+    const {target: {
+    elements: {
+    email,
+    password}}
+    } = (e);
+    if(!email.value) {
+        email.parentElement.classList.add('invalid');
+        email.parentElement.dataset.error = 'Not empty!';
+        return;
+    }
+    if(!email.value.match(/[a-z0-9]+@[a-z]+\.\w{2,4}/)) {
+        email.parentElement.classList.add('invalid');
+        email.parentElement.dataset.error = 'Wrong email format!';
+        return;
+    }
+
+    if(!password.value) {
+        password.parentElement.classList.add('invalid');
+        password.parentElement.dataset.error = 'Not empty!';
+        return;
+    }
+
+    console.log(email, password);
+    authFormClose();
+    outlogShow();
     
 }
+const onFieldChangeHandler = ({target}) => {
+    target.parentElement.classList.remove('invalid');
+    target.parentElement.dataset.error = '';
+}
+emailField.addEventListener('input', onFieldChangeHandler);
+passwordField.addEventListener('input', onFieldChangeHandler);
 loginForm.addEventListener('submit', loginHandler);

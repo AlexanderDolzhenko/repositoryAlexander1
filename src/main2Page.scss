@@ -4,10 +4,10 @@
 		flex-direction: column;
 		left: $mainpadding;
 		right: $mainpadding;
-        margin-top: 7rem;
+        margin-top: 9rem;
 		
 }
-.auth {
+.authForm {
     display: flex;
     flex-direction: column;
     width: 900px;
@@ -19,9 +19,13 @@
         font-size: 1.93rem;
         font-weight: bold;
     }
+    &.hide {
+        display: none;
+    }
 }
 .tabs {
     color: $lite;
+    
     > input {
         display: none;
     }
@@ -42,6 +46,9 @@
         border-bottom: 3px solid $mainbuttons;
         transition: border-bottom 0.1s;
         opacity: 1;
+        -webkit-animation: fadeInScale 0.7s ease-in-out;
+        -moz-animation: fadeInScale 0.7s ease-in-out;
+        animation: fadeInScale 0.7s ease-in-out;
         &:hover {
             border-bottom: 3px solid $highlite;
         }
@@ -50,8 +57,6 @@
         display: flex;
         justify-content: space-between;
         border-bottom: 2px solid $opacitycolorSecondary;
-        
-
     }
     &__item {
         transition: color 0.3s;
@@ -64,6 +69,9 @@
     }
 }
 .form {
+    -webkit-animation: fadeInScale 0.7s ease-in-out;
+    -moz-animation: fadeInScale 0.7s ease-in-out;
+    animation: fadeInScale 0.7s ease-in-out;
     flex-direction: column;
     &__field {
         padding: 0.3rem 0;
@@ -86,12 +94,24 @@
                 color: $opacitycolorSecondary;
             }
         }
-        &.invalid:after {
-            content: attr(data-error);
-            color: red;
-            margin-top: 5px;
-            font-size: 12px;
-        }
     }
 }
-
+@keyframes fadeInScale {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+  }
+ 
+  #exitSite {
+    margin: 1rem;
+    display: none;
+    &.active {
+        display: block;
+    }
+  }

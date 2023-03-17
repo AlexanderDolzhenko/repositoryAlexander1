@@ -5,7 +5,7 @@ const authFormOpen = () => {
    auth.classList.remove('hide');
 }
 const authFormClose = () => {
-    auth.classList.add('hide');
+   auth.classList.add('hide');
 }
 
 
@@ -16,5 +16,7 @@ const outlogShow = () => {
  const outlogHide = () => {
     outLog.classList.remove('active');
  }
+
+
 
 export {authFormOpen, authFormClose, outlogShow, outlogHide};

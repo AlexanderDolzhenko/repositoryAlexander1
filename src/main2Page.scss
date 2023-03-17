@@ -119,6 +119,13 @@
         }
     }
 }
+#userName {
+    color: $highlite;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    margin: 0.5rem;
+    display: none;
+}
 @keyframes fadeInScale {
     0% {
         transform: scale(0.9);

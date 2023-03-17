@@ -6,7 +6,7 @@ import { authFormOpen, authFormClose, outlogShow, outlogHide } from "./authFormS
 
 const LS_AUTH_KEY = 'auth';
 let currentUser = null;
-
+const CURRENT_USER = 'currentUser';
 const createAccount = (email, password, userName) => {
     return new Promise((res, rej) => {
         const users = JSON.parse(localStorage.getItem(LS_AUTH_KEY) || '[]');
@@ -29,6 +29,7 @@ const createAccount = (email, password, userName) => {
         }
     });
 };
+
 
 const login = (email, password) => {
     return new Promise((res, rej) => {
@@ -61,14 +62,7 @@ const getUser = () => {
         res(currentUser);
     })
 };
-
-
-
-
-
-
-
-
+const outLog = document.querySelector('.buttonlogout');
 const loginForm = document.querySelector('#login');
 const emailField = loginForm.querySelector('input[name="email"]');
 const passwordField = loginForm.querySelector('input[name="password"]');
@@ -97,11 +91,20 @@ const loginHandler = (e) => {
         return;
     }
 
-    console.log(email, password);
-    authFormClose();
-    outlogShow();
-    
+    login(email.value, password.value)
+    .then((user) => {
+        authFormClose();
+        outlogShow();
+        const userNameSpan = document.querySelector('#userName');
+        userNameSpan.style.display = 'block';
+        userNameSpan.innerText = user.userName;
+        localStorage.setItem('CURRENT_USER', JSON.stringify(user));
+    })
+    .catch((e) => {
+        console.log(e)
+    }) 
 }
+
 const onFieldChangeHandler = ({target}) => {
     target.parentElement.classList.remove('invalid');
     target.parentElement.dataset.error = '';
@@ -109,3 +112,13 @@ const onFieldChangeHandler = ({target}) => {
 emailField.addEventListener('input', onFieldChangeHandler);
 passwordField.addEventListener('input', onFieldChangeHandler);
 loginForm.addEventListener('submit', loginHandler);
+outLog.addEventListener('click', outlogHide);
+
+const currentUserGet = localStorage.getItem(CURRENT_USER);
+if (currentUserGet) {
+        const userNameSpan = document.querySelector('#userName');
+        const {userName: name} = JSON.parse(currentUser)
+        userNameSpan.style.display = 'block';
+        userNameSpan.innerText = name;
+}
+

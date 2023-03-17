@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./main.scss">
+<link href="https://fonts.googleapis.com" rel="preconnect" />
+<link href="https://fonts.gstatic.com" crossorigin rel="preconnect" />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+<title>DiplomJS project-2</title>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous" defer></script>
+<script src="https://kit.fontawesome.com/cdb428d9a8.js" crossorigin="anonymous"></script>
+<script type="module" src="./js/mainNextPage.js" defer></script>
+</head>
+</head>
+<body style="background: #000">
+<main style="background: #000"> 
+    @@include('./partials/header/_header.html')
+    <div class="landing-page"> 
+        <section class="section__main_second">
+           
+            <div class="auth">
+                <div class="auth__title">Authentication form</div>
+                <div class="tabs">
+                    <input type="radio" name="tabs" id="tab-1" checked>
+                    <input type="radio" name="tabs" id="tab-2">
+                    <div class="tabs__items">
+                        <label class="tabs__item" for="tab-1">
+                            Login
+                        </label>
+                        <label class="tabs__item" for="tab-2">
+                            Create Account
+                        </label>
+                    </div>
+                    <form id="login" class="form">
+                        <label class="form__field">
+                            E-mail
+                            <input type="text" name="email">
+                        </label>
+                        <label class="form__field">
+                            Password
+                            <input type="password" name="password">
+                        </label>
+                        <button class="button">Login</button>
+                    </form>
+                    <form id="create" class="form">
+                        <label class="form__field">
+                            E-mail
+                            <input type="text" name="email">
+                        </label>
+                        <label class="form__field">
+                            Password
+                            <input type="password" name="password">
+                        </label>
+                        <label class="form__field">
+                            User Name
+                            <input type="text" name="userName">
+                        </label>
+                        <button class="button">Create Account</button>
+                    </form>
+                </div>  
+
+
+
+
+
+
+                </div>
+            
+            </div>
+        </section>
+   
+       
+    </div>
+</main>
+</body>

@@ -1,0 +1,97 @@
+.section__main_second {
+    display: flex;
+		align-items: center;
+		flex-direction: column;
+		left: $mainpadding;
+		right: $mainpadding;
+        margin-top: 7rem;
+		
+}
+.auth {
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    height: 100%;
+    align-items: center;
+    margin-bottom: 5rem;
+    &__title {
+        color: $highliteSecondary;
+        font-size: 1.93rem;
+        font-weight: bold;
+    }
+}
+.tabs {
+    color: $lite;
+    > input {
+        display: none;
+    }
+    #tab-1:checked ~ #login {
+        display: flex;
+    }
+    #tab-1:checked ~ #create {
+        display: none;
+    }
+    #tab-2:checked ~ #create {
+        display: flex;
+    }
+    #tab-2:checked ~ #login {
+        display: none;
+    }
+    #tab-1:checked ~ .tabs__items [for="tab-1"] ,
+    #tab-2:checked ~ .tabs__items [for="tab-2"] {
+        border-bottom: 3px solid $mainbuttons;
+        transition: border-bottom 0.1s;
+        opacity: 1;
+        &:hover {
+            border-bottom: 3px solid $highlite;
+        }
+    }
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid $opacitycolorSecondary;
+        
+
+    }
+    &__item {
+        transition: color 0.3s;
+        opacity: 1;
+        cursor: pointer;
+        padding: 0.2rem 0.65rem;
+        &:hover {
+            color: $opacitycolor;            
+        }
+    }
+}
+.form {
+    flex-direction: column;
+    &__field {
+        padding: 0.3rem 0;
+        display: flex;
+        flex-direction: column;
+        input {
+            color: $lite;
+            display: block;
+            margin: 0.5rem auto 0.5rem auto;
+            width: 18rem;
+            font: 1rem/1 'Open Sans', sans-serif;
+            background: #FFFFFF;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            background: none;
+            text-align: center;
+            padding: 0.7rem 0.77rem 0.7rem;
+            outline: none;
+            border: 2px solid $opacitycolorSecondary;
+            &::placeholder {
+                color: $opacitycolorSecondary;
+            }
+        }
+        &.invalid:after {
+            content: attr(data-error);
+            color: red;
+            margin-top: 5px;
+            font-size: 12px;
+        }
+    }
+}
+

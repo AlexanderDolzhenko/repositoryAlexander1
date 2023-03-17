@@ -84,6 +84,10 @@ function modalWindow() {
            /*const request = new XMLHttpRequest();
             request.open('POST', 'https://js-diploma-test-default-rtdb.europe-west1.firebasedatabase.app/');
             request.setRequestHeader('Content-type', 'application/json; charset=utf-8');*/
+
+/* closer.addEventListener('click', () => {})
+modal.classlist.remove('СЮДА ДИВ КОТОРЫЙ РЕМУВАЕМ') */
+
             const formData = new FormData(form); 
 
             const object = {};

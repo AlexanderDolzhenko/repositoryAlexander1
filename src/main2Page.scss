@@ -7,6 +7,19 @@
         margin-top: 9rem;
 		
 }
+.canvas-div {
+    
+    
+    canvas {
+        
+        display: block;
+        z-index: -1;
+        width: 100%;
+        height: 100%;;
+        
+    }
+}
+
 .buttonlogout {
     display: none;
     margin: 1rem;
@@ -27,10 +40,13 @@
 .authForm {
     display: flex;
     flex-direction: column;
-    width: 900px;
+    width: 330px;
     height: 100%;
     align-items: center;
     margin-bottom: 5rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 0.4444em;
+    padding-bottom: 0.5rem;
     &__title {
         color: $highliteSecondary;
         font-size: 1.93rem;
@@ -42,7 +58,6 @@
 }
 .tabs {
     color: $lite;
-    
     > input {
         display: none;
     }
@@ -125,6 +140,8 @@
     letter-spacing: 0.2em;
     margin: 0.5rem;
     display: none;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 0.4444em;
 }
 @keyframes fadeInScale {
     0% {
@@ -138,5 +155,5 @@
     }
   }
  
-  
+
    

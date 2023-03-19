@@ -16,17 +16,11 @@ import "./loginForm.js";
 
 const setUserStatus = (user) => {
     
-    
-
     const userName = document.querySelector('#userName');
     if(user) {
-            authFormClose;
-            outlogShow;
             userName.style.display = 'block';
             userName.innerText = user.displayName;
-    } else {
-        authFormOpen;
-        outlogHide;
+    } else { 
         userName.style.display = 'none';
         userName.innerText = '';
     }

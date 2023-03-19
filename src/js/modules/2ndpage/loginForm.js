@@ -2,9 +2,7 @@ import { eventBus } from "./EventBus.js";
 import { ACTIONS } from "./actions.js";
 
 import { login } from './firebase.js';
-import { withEmptyValueCheck,
-    withEmailValueCheck,
-} from './validators.js';
+import { withEmptyValueCheck, withEmailValueCheck} from './validators.js';
 const setWarning = (el, warning) => {
     el.parentElement.classList.add('invalid');
     el.parentElement.dataset.error = warning;

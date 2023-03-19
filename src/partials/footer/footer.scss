@@ -41,30 +41,44 @@
 }
 .email {
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr auto;
+    display: flex;
+    flex-direction: column;
     border-bottom: 2px solid $opacitycolorSecondary;
-    &__form {
+    
+    .formSubscribe {
+        display: flex;
         width: 100%;
-        background: none;
-        border: none;
-        transition: width 0.3s;
-        font: 0.83rem/1 'Open Sans', sans-serif;
-        padding: 1.1rem 0.77rem 1.77rem;
-        color: $lite;
-        &::placeholder {
+        &.invalid:after {
+            content: attr(data-error);
             color: $opacitycolorSecondary;
+            margin: 2px;
+            font-size: 0.8em;
         }
-        &:focus {
+        .email__form {
+            width: 100%;
+            background: none;
             border: none;
-            outline: none;
+            transition: width 0.3s;
+            font: 0.83rem/1 'Open Sans', sans-serif;
+            padding: 1.1rem 0.77rem 1.1rem;
+            color: $lite;
+            
+            &::placeholder {
+                color: $opacitycolorSecondary;
+            }
+            &:focus {
+                border: none;
+                outline: none;
+            }
+            
         }
+        
+        
     }
     &__button {
-        position: relative;
+        margin-left: auto;
         padding: 0;
-        height: 100%;
-        width: 100%;
+        max-width: 100%;
         border-radius: 0.4rem 0.4rem 0 0;;
         display: flex;
         align-items: center;
@@ -74,6 +88,7 @@
         position: absolute;
         margin-bottom: 0 0 0 -0.2rem;
     }
+    
 }
 .menu {
     padding-right: $mainpadding;

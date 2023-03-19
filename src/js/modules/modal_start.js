@@ -57,7 +57,7 @@ function modalWindow() {
     }
     window.addEventListener('scroll', showModalByScroll);
 
-
+/*
     const forms = document.querySelectorAll('form');
     const message = {
         loading: 'img/icons/spinner.svg',
@@ -86,7 +86,7 @@ function modalWindow() {
             request.setRequestHeader('Content-type', 'application/json; charset=utf-8');*/
 
 /* closer.addEventListener('click', () => {})
-modal.classlist.remove('СЮДА ДИВ КОТОРЫЙ РЕМУВАЕМ') */
+modal.classlist.remove('СЮДА ДИВ КОТОРЫЙ РЕМУВАЕМ') 
 
             const formData = new FormData(form); 
 
@@ -139,7 +139,7 @@ modal.classlist.remove('СЮДА ДИВ КОТОРЫЙ РЕМУВАЕМ') */
 
 
 
-
+*/
 }
 
 export { modalWindow }

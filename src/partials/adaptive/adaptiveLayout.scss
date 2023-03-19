@@ -24,6 +24,7 @@
     left: 53rem;
     
 }
+
 }
 
 @media screen and (max-width: 1550px) {
@@ -66,6 +67,24 @@
     .gallery-nav {
         display: none;
     }
+}
+@media screen and (min-width: 701px) and (max-width: 1100px) {
+    .subscribe__title {
+        font-size: 1.5rem;
+    }
+    .email {
+        .formSubscribe {
+            flex-direction: column;
+            .email__form {
+                width: auto;
+            
+        }
+    }
+    &__button {
+        width: 100%;
+        margin: 0;
+    }
+}
 }
 
 //ONLY MOBILE-TABLET SETTINGS

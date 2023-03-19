@@ -11,3 +11,9 @@ remainingTimer();
 import { modalWindow } from "./modules/modal_start.js";
 modalWindow();
 import "./modules/subscribe.js"
+const onBeforeUnload = (e) => {
+    e.preventDefault();
+    e.returnValue = "Are you sure?";
+   return "Are you sure?";
+   }
+    window.addEventListener('beforeunload', onBeforeUnload);

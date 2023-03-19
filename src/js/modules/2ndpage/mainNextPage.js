@@ -48,13 +48,18 @@ async function initialize() {
 initialize();
 
 
-
-
-
 const createForm = document.querySelector('#create');
 
 
+const onBeforeUnload = (e) => {
+ e.preventDefault();
+ e.returnValue = "Are you sure?";
+    
+return "Are you sure?";
 
+}
+
+ window.addEventListener('beforeunload', onBeforeUnload);
 
 
 

@@ -131,3 +131,15 @@
         }
     }
 }
+.subscribeMessage {
+    color: $lite;
+    font-weight: bold;
+    margin: 0.5rem 0 0.5rem 0;
+    font-size: 1.2rem;
+    display: none;
+
+    &.active {
+        display: block;
+    }
+
+}

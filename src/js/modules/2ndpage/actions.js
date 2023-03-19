@@ -1,5 +1,6 @@
 export const ACTIONS = {
     login: 'login',
     logout: 'logout',
-    changeRoute: 'changeRoute'
+    changeRoute: 'changeRoute',
+    createAccount: 'createAccount'
 }

@@ -4,33 +4,13 @@ function modalWindow() {
 
 
     function openModal() {
-        if (document.documentElement.clientWidth > 700) {
-            modal.style.display = "block";
-            modal.classList.add('show');
-            modal.classList.remove('hide');
-            document.body.style.overflow = 'hidden';
-        } else if (document.documentElement.clientWidth < 700) {
-            modal.style.display = "block";
-            modal.classList.add('show');
-            modal.classList.remove('hide');
-        }
+            modal.classList.add('active');
     }
 
     modalTrigger.addEventListener('click', openModal)
 
     function closeModal() {
-        if (document.documentElement.clientWidth > 700) {
-            modal.style.display = "none";
-            modal.classList.add('hide');
-            modal.classList.remove('show');
-            document.body.style.overflow = '';
-        }
-        else if (document.documentElement.clientWidth < 700) {
-            modal.style.display = "none";
-            modal.classList.add('hide');
-            modal.classList.remove('show');
-        }
-
+            modal.classList.remove('active');
     }
 
 

@@ -13,7 +13,7 @@ modalWindow();
 import "./modules/subscribe.js"
 const onBeforeUnload = (e) => {
     e.preventDefault();
-    e.returnValue = "Are you sure?";
-   return "Are you sure?";
+    e.returnValue = '';
+   return e
    }
-    window.addEventListener('beforeunload', onBeforeUnload);
+    window.addEventListener("beforeunload", onBeforeUnload);

@@ -14,7 +14,6 @@ function remainingTimer() {
                 minutes = Math.floor((t / 1000 / 60) % 60),
                 seconds = Math.floor((t / 1000) % 60);
         }
-
         return {
             'total': t,
             'days': days,
@@ -22,7 +21,6 @@ function remainingTimer() {
             'minutes': minutes,
             'seconds': seconds
         };
-
     }
     function getZero(num) {
         if (num >= 0 && num < 10) {
@@ -40,7 +38,6 @@ function remainingTimer() {
             timeInterval = setInterval(updateClock, 1000);
 
         updateClock();
-
         function updateClock() {
             const t = getTimeRemaining(endtime);
             days.innerText = getZero(t.days);
@@ -55,5 +52,4 @@ function remainingTimer() {
     }
     setClock('.timer', deadline);
 }
-
 export { remainingTimer };

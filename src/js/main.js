@@ -85,10 +85,7 @@ const message = {
 
 function showThanksModal(message) {
     const prevModalDialog = document.querySelector('.modal__dialog');
-
     prevModalDialog.classList.add('hide');
-    
-
     const thanksModal = document.createElement('div');
     thanksModal.classList.add('modal__dialog');
     thanksModal.innerHTML = `
@@ -116,7 +113,7 @@ function showThanksModal(message) {
         thanksModal.remove();
         prevModalDialog.classList.remove('hide');
     }, 4000);
-}
+};
 
 
 

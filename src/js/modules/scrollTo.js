@@ -8,7 +8,6 @@ function scrollToPage() {
     scrollDown.addEventListener('click', (event) => {
         event.preventDefault();
         stopAnimation();
-
         currentScroll = window.scrollY;
         startAnimation(scrollToNode.offsetTop - 80);
     });
@@ -24,11 +23,9 @@ function scrollToPage() {
             stopAnimation();
         }
     }
-
     function stopAnimation() {
         window.cancelAnimationFrame(scrollAnimation);
         scrollAnimation = undefined;
     }
 }
-
 export { scrollToPage };

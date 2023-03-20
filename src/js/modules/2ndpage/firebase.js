@@ -22,7 +22,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-
 const createAccount = async (email, password, displayName) => {
     await createUserWithEmailAndPassword(auth, email, password)
     await await updateProfile(auth.currentUser, {
@@ -33,12 +32,9 @@ const createAccount = async (email, password, displayName) => {
 
 const login = (email, password) => signInWithEmailAndPassword(auth, email, password);
 
-
 const logout = () => signOut(auth).then(() => {
     eventBus.dispatch(ACTIONS.logout);
 });
-
-
 
 const application = async() => {
     await signin('gispapirke@gufum.com', 'test123');
@@ -48,7 +44,6 @@ const application = async() => {
     })
     console.log(auth.currentUser);
 }
-
 
 const getUser = () => {  
     return new Promise(res => {
@@ -61,7 +56,5 @@ const getUser = () => {
           });
     })
 }
-
-
 
 export {logout, getUser, login, createAccount}

@@ -23,7 +23,6 @@ function Slider() {
                 margin: options.margin || 0,
                 dots: options.dots || false
             }
-    
             this.manageHTML = this.manageHTML.bind(this);
             this.setParameters = this.setParameters.bind(this);
             this.setEvents = this.setEvents.bind(this);
@@ -43,7 +42,6 @@ function Slider() {
             this.setParameters();
             this.setEvents();
         }
-    
         manageHTML() {
             this.containerNode.classList.add(GalleryClassName);
             this.containerNode.innerHTML = `
@@ -271,7 +269,6 @@ function Slider() {
             this.lineNode.style.transition = `all 0s ease 0s`;
         }
     }
-    
     
     function wrapElementByDiv({element, className}) {
         const wrapperNode = document.createElement('div');

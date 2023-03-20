@@ -12,8 +12,6 @@ const authFormClose = () => {
    auth.classList.add('hide');
 }
 
-
-
 const outlogShow = () => {
     outLog.classList.add('active');
  }

@@ -1,8 +1,6 @@
 function StickyMenu() {
     const headerScroll = 'header_scrolled';
     const headerClass = document.querySelector('.header');
-    
-
     toggleHeader();
     window.addEventListener('scroll', (toggleHeader));
 function toggleHeader() {
@@ -14,7 +12,5 @@ function toggleHeader() {
         headerClass.classList.remove(headerScroll);
     }
 }
-
 }
-
 export { StickyMenu };

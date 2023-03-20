@@ -29,7 +29,6 @@ const sendEmail = (email) => {
         }
     })
 }
-
 const subscribeHandler = (e) => {
     e.preventDefault();
     const { target: {
@@ -57,5 +56,4 @@ const onFieldChangeHandlerSub = ({ target }) => {
     target.parentElement.dataset.error = '';
 }
 emailFieldSub.addEventListener('input', onFieldChangeHandlerSub);
-
 subscribeButton.addEventListener('submit', subscribeHandler)

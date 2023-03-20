@@ -28,12 +28,11 @@ const callRequest = (name, phone) => {
                 callers.push(newCaller);
                 localStorage.setItem(LS_CONTACT_KEY, JSON.stringify(callers));
                 currentCaller = newCaller;
-
-
-
+                showThanksModal(message.success);
                 res(newCaller);
             }
             else {
+                showThanksModal(message.failure);
                 rej(new Error("You have already left your contacts!"))
             }
     });
@@ -59,7 +58,7 @@ const callHandler = (e) => {
         // 8 (999) 123-45-64 типа такого
         if (!phone.value.match(/^[\d]{1}\ \([\d]{2,3}\)\ [\d]{2,3}-[\d]{2,3}-[\d]{2,3}$/)) {
             phone.parentElement.classList.add('invalid');
-            phone.parentElement.dataset.error = 'Wrong phone format!';
+            phone.parentElement.dataset.error = 'Wrong phone format! Should be * (***) ***-**-**';
             return;
         }
         callRequest(name.value, phone.value)
@@ -79,7 +78,45 @@ nameFieldCont.addEventListener('input', onFieldChangeHandCall);
 phoneFieldCont.addEventListener('input', onFieldChangeHandCall);
 getStarted.addEventListener('submit', callHandler)
 
+const message = {
+    success: 'Thank you! We will call you soon',
+    failure: 'You have already left your contacts!'
+};
 
+function showThanksModal(message) {
+    const prevModalDialog = document.querySelector('.modal__dialog');
+
+    prevModalDialog.classList.add('hide');
+    
+
+    const thanksModal = document.createElement('div');
+    thanksModal.classList.add('modal__dialog');
+    thanksModal.innerHTML = `
+        <div class="modal__content">
+            <div class="modal__close" data-close>×</div>
+            <div class="peeek-loading">
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+            <div class="modal__title">${message}</div>
+        </div>
+    `;
+    document.querySelector('.modal').append(thanksModal);
+    setTimeout(() => {
+        thanksModal.remove();
+        prevModalDialog.classList.remove('hide');
+    }, 4000);
+}
 
 
 

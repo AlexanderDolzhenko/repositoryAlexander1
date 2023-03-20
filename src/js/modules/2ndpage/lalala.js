@@ -1,8 +1,4 @@
-import { Burgermenu } from "../burgerMenu.js";
-Burgermenu();
-import { StickyMenu } from "../stickyMenu.js";
-StickyMenu();
-import { authFormOpen, authFormClose, outlogShow, outlogHide } from "./authFormSettings.js";
+
 
 const LS_AUTH_KEY = 'auth';
 let currentUser = null;

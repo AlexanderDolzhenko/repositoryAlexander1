@@ -16,6 +16,17 @@
         max-width: 500px;
         margin: 10rem auto;
     }
+    .cont {
+        
+        &.invalid:after {
+            display: flex;
+           justify-content: center;
+            content: attr(data-error);
+            color: $opacitycolorSecondary;
+            margin: 0 0 1rem 0;
+            font-size: 0.8em;
+        }
+    }
     &__content {
         color: $lite;
         position: relative;
@@ -26,6 +37,7 @@
         border-radius: 5px;
         max-height: 80vh;
         overflow-y: auto;
+        
     }
     &__close {
         color: $opacitycolorSecondary;
@@ -45,7 +57,7 @@
     &__input {
         color: $lite;
         display: block;
-        margin: 2.5rem auto 2.5rem auto;
+        margin: 1.5rem auto 1.5rem auto;
         width: 18rem;
         font: 1rem/1 'Open Sans', sans-serif;
         background: #FFFFFF;

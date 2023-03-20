@@ -7,9 +7,8 @@ const subscribemod = document.querySelector('.subscribeMessage');
 const sendEmail = (email) => {
     return new Promise((res, rej) => {
         const subscribers = JSON.parse(localStorage.getItem(LS_EMAIL_KEY) || '[]');
-        const uniqueEmail = !subscribers.some(subscriber => subscriber.email === email)
+        const uniqueEmail = !subscribers.some(subscriber => subscriber.email === email);
         if (uniqueEmail) {
-
             const newSubscriber = {
                 id: Date.now(),
                 email

@@ -12,7 +12,12 @@ import { logout, getUser, login, createAccount} from './firebase.js';
 
 import "./loginForm.js";
 
-
+const onBeforeUnload = (e) => {
+    e.preventDefault();
+    e.returnValue = '';
+   return e
+   }
+    window.addEventListener("beforeunload", onBeforeUnload);
 
 const setUserStatus = (user) => {
     
@@ -51,12 +56,7 @@ initialize();
 const createForm = document.querySelector('#create');
 
 
-const onBeforeUnload = (e) => {
-    e.preventDefault();
-    e.returnValue = '';
-   return e
-   }
-    window.addEventListener("beforeunload", onBeforeUnload);
+
 
 
 

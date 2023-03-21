@@ -45,6 +45,8 @@ const loginHandler = (e) => {
         })
         .catch((e) => {
             eventBus.dispatch(ACTIONS.logout);
+            const noLogin = document.querySelector('#loginBtn');
+            noLogin.innerText = 'Please, create a new account';
             console.log(e)
         })
 }

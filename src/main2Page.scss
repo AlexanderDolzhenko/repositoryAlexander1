@@ -8,6 +8,7 @@
 }
 .canvas-div {
     canvas {
+        position: absolute;
         display: block;
         z-index: -1;
         width: 100%;

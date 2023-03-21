@@ -26,6 +26,17 @@ export const withPasswordLengthCheck = (value) => {
     return value.length > 5
         ? value
         : {
-            error: 'Password to short!'
+            error: 'Password too short!'
+        };
+}
+
+export const withUserNameLengthCheck = (value) => {
+    if(value?.error) {
+        return value;
+    }
+    return value.length > 2
+        ? value
+        : {
+            error: 'Username too short!'
         };
 }

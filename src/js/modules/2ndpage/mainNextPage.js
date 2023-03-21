@@ -3,7 +3,7 @@ Burgermenu();
 import { StickyMenu } from "../stickyMenu.js";
 StickyMenu();
 import { canvasAnimation } from "./canvasAnimation.js";
-import { authFormOpen, authFormClose, outlogShow, outlogHide } from "./authFormSettings.js";
+import "./authFormSettings.js";
 canvasAnimation();
 import { eventBus } from "./EventBus.js";
 import { ACTIONS } from "./actions.js";
@@ -11,6 +11,7 @@ import { ACTIONS } from "./actions.js";
 import { logout, getUser, login, createAccount} from './firebase.js';
 
 import "./loginForm.js";
+import "./createForm.js";
 
 const onBeforeUnload = (e) => {
     e.preventDefault();
@@ -33,13 +34,21 @@ const setUserStatus = (user) => {
 
 eventBus.subscribe(ACTIONS.login, setUserStatus);
 eventBus.subscribe(ACTIONS.logout, setUserStatus);
+eventBus.subscribe(ACTIONS.createAccount, setUserStatus);
 
+const createBtn = document.querySelector('#createBtn');
+createBtn.addEventListener('click', () => {
+    createAccount;
+    
+});
 
 const loginBtn = document.querySelector('#loginBtn');
 loginBtn.addEventListener('click', login)
 
 const outLog = document.querySelector('.buttonlogout');
 outLog.addEventListener('click', logout)
+
+
 
 
 async function initialize() {
@@ -53,7 +62,6 @@ async function initialize() {
 initialize();
 
 
-const createForm = document.querySelector('#create');
 
 
 

@@ -23,5 +23,5 @@ const outlogShow = () => {
  eventBus.subscribe(ACTIONS.login, authFormClose);
  eventBus.subscribe(ACTIONS.logout, outlogHide);
  eventBus.subscribe(ACTIONS.logout, authFormOpen);
+ 
 
-export {authFormOpen, authFormClose, outlogShow, outlogHide};

@@ -1,8 +1,14 @@
 import { eventBus } from "./EventBus.js";
 import { ACTIONS } from "./actions.js";
 
-import { createAccount, login } from './firebase.js';
+import { createAccount} from './firebase.js';
+import {
+    updateProfile,
+    getAuth} from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js';
+  
 import { withEmptyValueCheck, withEmailValueCheck, withUserNameLengthCheck } from './validators.js';
+
+
 
 const setWarning = (el, warning) => {
     el.parentElement.classList.add('invalid');
@@ -41,11 +47,10 @@ const createHandler = (e) => {
     if(formError) {
         return;
     }
-
+    const auth = getAuth();
     createAccount(elements.email.value, elements.password.value, elements.userName.value)
-        .then(({user}) => {
-            eventBus.dispatch(ACTIONS.createAccount, user);
-            
+        .then(() => {
+            updateProfile(auth.currentUser, {displayName: elements.userName.value});
             const noCreate = document.querySelector('#createBtn');
             noCreate.innerText = 'Account created successfully!';
         })

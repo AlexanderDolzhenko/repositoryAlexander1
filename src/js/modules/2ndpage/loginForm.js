@@ -46,7 +46,7 @@ const loginHandler = (e) => {
         .catch((e) => {
             eventBus.dispatch(ACTIONS.logout);
             const noLogin = document.querySelector('#loginBtn');
-            noLogin.innerText = 'Please, create a new account';
+            noLogin.innerText = 'Wrong credentials!';
             console.log(e)
         })
 }

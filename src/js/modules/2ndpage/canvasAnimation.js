@@ -41,5 +41,7 @@ function canvasAnimation() {
         ctx.drawImage(img, x, y, imgW, imgH);
         x += dx;
     }
+    var canvas = document.getElementById("canvas");
+    document.body.style.backgroundImage = "url(\"" + canvas.toDataURL() + "\"";
 }
 export { canvasAnimation };

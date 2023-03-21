@@ -24,7 +24,7 @@ const createHandler = (e) => {
     const validators = {
         email: emailValidators,
         password: passwordValidators,
-        
+        userName: userNameValidators
     }
 
     let formError = false;
@@ -42,16 +42,15 @@ const createHandler = (e) => {
         return;
     }
 
-    createAccount(elements.email.value, elements.password.value)
+    createAccount(elements.email.value, elements.password.value, elements.userName.value)
         .then(({user}) => {
             eventBus.dispatch(ACTIONS.createAccount, user);
             const noCreate = document.querySelector('#createBtn');
             noCreate.innerText = 'Successful account creation';
         })
         .catch((e) => {
-            eventBus.dispatch(ACTIONS.logout);
             const noCreate = document.querySelector('#createBtn');
-            noCreate.innerText = 'System error or such user already exists';
+            noCreate.innerText = 'System error or Such user already exists';
             console.log(e)
         })
 }

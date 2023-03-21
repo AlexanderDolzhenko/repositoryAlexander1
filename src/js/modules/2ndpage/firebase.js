@@ -4,7 +4,8 @@ import {
     createUserWithEmailAndPassword,
     sendEmailVerification,
     signInWithEmailAndPassword,
-    signOut
+    signOut,
+    updateProfile
 } from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js';
 
 import { eventBus } from "./EventBus.js";

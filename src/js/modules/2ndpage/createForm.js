@@ -45,8 +45,9 @@ const createHandler = (e) => {
     createAccount(elements.email.value, elements.password.value, elements.userName.value)
         .then(({user}) => {
             eventBus.dispatch(ACTIONS.createAccount, user);
+            
             const noCreate = document.querySelector('#createBtn');
-            noCreate.innerText = 'Successful account creation';
+            noCreate.innerText = 'Account created successfully!';
         })
         .catch((e) => {
             const noCreate = document.querySelector('#createBtn');

@@ -25,6 +25,7 @@ function canvasAnimation() {
         if (imgH > CanvasYSize) { clearY = imgH; }
         else { clearY = CanvasYSize; }
         ctx = document.getElementById('canvas').getContext('2d');
+        
         return setInterval(draw, speed);
     }
 
@@ -41,5 +42,6 @@ function canvasAnimation() {
         ctx.drawImage(img, x, y, imgW, imgH);
         x += dx;
     }
+    
 }
 export { canvasAnimation };

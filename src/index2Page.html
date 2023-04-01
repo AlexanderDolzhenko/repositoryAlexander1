@@ -15,7 +15,28 @@
 </head>
 <body style="background: #000">
 <main style="background: none"> 
-    @@include('./partials/header/_header.html')
+    <header class="header">
+        <div class="header__content"><a class="logo" style="text-decoration: none;"href="/index.html">
+            <h1 class="logo__title">QWERy</h1></a>
+            <div class="burger-menu burger-menu_opened">
+              <div class="burger-menu__content">
+          <nav class="main-nav header__center">
+            <ul class="main-nav__list">
+              <li class="main-nav__item"><a class="main-nav__link main-nav__link_active" style="text-decoration: none;" href="/index.html">Information</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" style="text-decoration: none;" href="/index.html">Culture</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" style="text-decoration: none;" href="/index.html">About&nbsp;us</a></li>
+            </ul>
+          </nav>
+          <label class="search">
+            <div class="search__icon"></div>
+            <input class="search__form" type="text" placeholder="Search"/>
+          </label>
+        </div>
+        <button class="burger-menu__control"></button>
+      </div>
+      <div class="cover-space__burger"></div>
+    </div>
+      </header>    
     <div class="landing-page"> 
         <section class="section__main_second">
                <button class="buttonlogout">Logout, <span id="userName"></span></button>

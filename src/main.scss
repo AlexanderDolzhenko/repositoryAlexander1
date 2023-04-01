@@ -10,9 +10,7 @@
 @import "./partials/additionalLoader/loader.scss";
 @import "./main2Page.scss";
 
-* {
-	outline: 1px solid  lightgreen;  
-  }
+
 body {
 	font: 18px/1.7 'Open Sans', sans-serif;
 	background: var(--main-color) url("/img/cover.jpg") no-repeat center top;

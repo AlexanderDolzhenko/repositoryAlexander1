@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/css/main.css">
+<link href="https://fonts.googleapis.com" rel="preconnect" />
+<link href="https://fonts.gstatic.com" crossorigin rel="preconnect" />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+<title>DiplomJS project-2</title>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous" defer></script>
+<script src="https://kit.fontawesome.com/cdb428d9a8.js" crossorigin="anonymous"></script>
+<script type="module" src="./js/modules/2ndpage/mainNextPage.js" defer></script>
+</head>
+</head>
+<body style="background: #000">
+<main style="background: none"> 
+    <header class="header">
+        <div class="header__content"><a class="logo" style="text-decoration: none;"href="/index.html">
+            <h1 class="logo__title">QWERy</h1></a>
+            <div class="burger-menu burger-menu_opened">
+              <div class="burger-menu__content">
+          <nav class="main-nav header__center">
+            <ul class="main-nav__list">
+              <li class="main-nav__item"><a class="main-nav__link main-nav__link_active" style="text-decoration: none;" href="/index.html">Information</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" style="text-decoration: none;" href="/index.html">Culture</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" style="text-decoration: none;" href="/index.html">About&nbsp;us</a></li>
+            </ul>
+          </nav>
+          <label class="search">
+            <div class="search__icon"></div>
+            <input class="search__form" type="text" placeholder="Search"/>
+          </label>
+        </div>
+        <button class="burger-menu__control"></button>
+      </div>
+      <div class="cover-space__burger"></div>
+    </div>
+      </header>    
+    <div class="landing-page"> 
+        <section class="section__main_second">
+               <button class="buttonlogout">Logout, <span id="userName"></span></button>
+            <div class="authForm">
+                <div class="authForm__title">Authentication form</div>
+                <div class="tabs">
+                    <input type="radio" name="tabs" id="tab-1" checked>
+                    <input type="radio" name="tabs" id="tab-2">
+                    <div class="tabs__items">
+                        <label class="tabs__item" for="tab-1">
+                            Login
+                        </label>
+                        <label class="tabs__item" for="tab-2">
+                            Create Account
+                        </label>
+                    </div>
+                    <form id="login" class="form">
+                        <label class="form__field">
+                            E-mail
+                            <input type="text" name="email">
+                        </label>
+                        <label class="form__field">
+                            Password
+                            <input type="password" name="password">
+                        </label>
+                        <button class="button" id="loginBtn">Login</button>
+                    </form>
+                    <form id="create" class="form">
+                        <label class="form__field">
+                            E-mail
+                            <input type="text" name="email">
+                        </label>
+                        <label class="form__field">
+                            Password
+                            <input type="password" name="password">
+                        </label>
+                        <label class="form__field">
+                            User Name
+                            <input type="text" name="userName">
+                        </label>
+                        <button class="button" id="createBtn">Create Account</button>
+                    </form>
+                </div>  
+            </div>
+        </section>
+        <div class="canvas-div">
+            <canvas id="canvas" width="1920px" height="1080"></canvas>  
+        </div>
+    </div>
+</main>
+</body>

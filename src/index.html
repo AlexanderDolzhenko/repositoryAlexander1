@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./main.scss">
+<link href="https://fonts.googleapis.com" rel="preconnect" />
+<link href="https://fonts.gstatic.com" crossorigin rel="preconnect" />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+<title>DiplomJS project</title>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous" defer></script>
+<script src="https://kit.fontawesome.com/cdb428d9a8.js" crossorigin="anonymous"></script>
+<script type="module" src="./js/main.js" defer></script>
+</head>
+</head>
+<body>
+<main> 
+  @@include('./partials/header/_header.html')
+  <div class="landing-page"> 
+  <div class="cover-space"></div>
+    <section class="section__main">
+      <div class="main-title">
+        <span class="main-title__summary">Explore the Nature Beauty</span>
+        <h1 class="main-title__text">Discover <span class="main-title__text_regular">Wonderful Indonesia</span></h1>
+      </div>
+      <div class="social-networks">
+        <h3 class="social-networks__title">Follow&nbsp;us</h3>
+        <ul class="social-networks__list">
+          <li class="social-networks__item"><a class="social-networks__link" href="#">
+            <div class="icon__instagram"></div></a></li>
+          <li class="social-networks__item"><a class="social-networks__link" href="#">
+            <div class="icon__twitter"></div></a></li>
+          <li class="social-networks__item"><a class="social-networks__link" href="#">
+            <div class="icon__facebook"></div></a></li>
+        </ul>
+      </div>
+      <div class="scroll-down" id="scroll-action">Scroll down
+        <div class="scroll-down__icon icon__arrow_downward"></div>
+      </div>
+    </section>
+  <div class="content" id="scroll-to">
+    <section class="section section-cols">
+      <img class="section-col section-col__image" src="/img/enjoy.jpg" alt="Mountains"/>
+      <div class="section-col section-col__content">
+        <div class="main-title main-title_small"><span class="main-title__summary">EAST NUSA TENGGARA</span>
+          <h2 class="main-title__text">Have you enjoyed&nbsp;your holiday?</h2>
+        </div>
+        <p>You will be&nbsp;amazed if&nbsp;you take part in&nbsp;
+          this sailing Komodo island tour package. So&nbsp;it&nbsp;
+          is&nbsp;also mandatory for you, besides enjoying
+          Komodo tourism on&nbsp;Komodo Island, you also have to&nbsp;
+          taste the marine tourism. The beautiful waters of&nbsp;
+          Komodo will make you meet many travelers from other countries.</p>
+          <a class="arrow-link" href="/index2Page.html">read more
+          <div class="arrow-link__icon icon__arrow_rightward"></div></a>
+      </div>
+    </section>
+    @@include('./partials/gallery/_gallery.html') 
+    <section class="section section-cols" id="elementCulture">
+      <div class="section-col section-col__content">
+        <div class="main-title main-title_small"><span class="main-title__summary">INDONESIAN CULTURE</span>
+          <h2 class="main-title__text">Our culture here is&nbsp;very friendly to&nbsp;people</h2>
+        </div>
+        <p>Known for his politeness, manners and gentleness. This becomes a&nbsp;
+          characteristic when they mingle with other tribes and become basic traits that are passed down by&nbsp;
+          their ancestors.</p>
+          <a class="arrow-link" href="/index2Page.html">read more
+          <div class="arrow-link__icon icon__arrow_rightward"></div></a>
+      </div><img class="section-col section-col__image" src="/img/culture.jpg" alt="Culture"/>
+    </section>
+    @@include('./partials/timer/_timer.html')
+    <section class="section-border">     
+      <div class="start">
+        <h2 class="start__title">QWERy</h2>
+        <div class="start__content">
+          <h4 class="start__desc">Ready to explore?</h4>
+          <button data-modal class="button" >Get started</button>
+        </div>
+      </div>
+    </section>
+    @@include('./partials/modal/_modal.html')
+    @@include('./partials/footer/_footer.html') 
+  </div>
+</div>
+</main>
+</body>
+</html>
+</html>

@@ -1,7 +1,7 @@
 function canvasAnimation() {
     var img = new Image();
 
-    img.src = '/img/canvasImg.jpg';
+    img.src = './img/canvasImg.jpg';
     var CanvasXSize = 1920;
     var CanvasYSize = 1080;
     var speed = 5;
